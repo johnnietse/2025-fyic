@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography, Button } from "@material-tailwind/react";
-import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook, FaEnvelope } from "react-icons/fa";
 import AboutCard from "@/components/about-card";
 import "./globals.css";
 import { TypographyProps } from "@material-tailwind/react";
