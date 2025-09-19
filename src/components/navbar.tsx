@@ -117,7 +117,7 @@ export function Navbar() {
         <div className="flex items-center">
           <div className="h-20 w-20 mr-4 flex items-center justify-center rounded-full overflow-hidden border-2 border-white bg-white p-1">
             <img 
-              src="/image/fyic-logo.png" 
+              src="/image/IMG_9334.png" 
               alt="FYIC Logo" 
               className="h-full w-full object-contain"
             />
