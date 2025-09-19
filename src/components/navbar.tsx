@@ -128,8 +128,8 @@ export function Navbar() {
             <img 
               src="/image/fyic-logo-cropped.png" 
               alt="FYIC Logo" 
-              className="h-[90%] w-[90%] object-contain"
-            />
+{/*               className="h-[90%] w-[90%] object-contain"
+            /> */}
           </div>
 
           <Typography
