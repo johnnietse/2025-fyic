@@ -124,15 +124,22 @@ export function Navbar() {
           </div> */}
 
 
-          <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-1.5 border-white bg-white overflow-hidden">
+{/*           <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-1.5 border-white bg-white overflow-hidden">
             <img 
               src="/image/fyic-logo-cropped.png" 
               alt="FYIC Logo" 
             />
-{/*               className="h-[90%] w-[90%] object-contain"
-            /> */}
+          </div> */}
+
+          <div className="size-24 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden">
+            <img 
+              src="/image/fyic-logo-cropped.png" 
+              alt="FYIC Logo" 
+              className="h-[90%] w-[90%] object-contain"
+            />
           </div>
 
+          
           <Typography
             color={isScrolling ? "blue-gray" : "white"}
             className="text-xl font-bold"
