@@ -115,13 +115,23 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="h-20 w-20 mr-4 flex items-center justify-center rounded-full overflow-hidden border-2 border-white bg-white p-1">
+{/*           <div className="h-20 w-20 mr-4 flex items-center justify-center rounded-full overflow-hidden border-2 border-white bg-white p-1">
             <img 
               src="/image/IMG_9334.png" 
               alt="FYIC Logo" 
               className="h-full w-full object-contain"
             />
+          </div> */}
+
+
+          <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-4 border-white bg-white overflow-hidden">
+            <img 
+              src="/image/fyic-logo-cropped.png" 
+              alt="FYIC Logo" 
+              className="h-[85%] w-[85%] object-contain"
+            />
           </div>
+
           <Typography
             color={isScrolling ? "blue-gray" : "white"}
             className="text-xl font-bold"
