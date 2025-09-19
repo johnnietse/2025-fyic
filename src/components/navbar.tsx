@@ -124,11 +124,11 @@ export function Navbar() {
           </div> */}
 
 
-          <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-4 border-white bg-white overflow-hidden">
+          <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-2 border-white bg-white overflow-hidden">
             <img 
               src="/image/fyic-logo-cropped.png" 
               alt="FYIC Logo" 
-              className="h-[85%] w-[85%] object-contain"
+              className="h-[90%] w-[90%] object-contain"
             />
           </div>
 
