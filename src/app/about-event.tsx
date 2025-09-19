@@ -253,20 +253,11 @@ export function AboutEvent() {
             </a>
 
 
-            <a
-              href="mailto:fyic@engsoc.queensu.ca"
-              target="_self"
-              rel="noopener noreferrer"
-            >
+            <a href="mailto:fyic@engsoc.queensu.ca" target="_self" rel="noopener noreferrer">
               <FaEnvelope className="text-white hover:text-yellow-400 text-3xl transition duration-300" />
             </a>
             
-{/*             <a href="https://linkedin.com" target="_self" rel="noopener noreferrer">
-              <FaLinkedin className="text-white hover:text-blue-400 text-3xl transition duration-300" />
-            </a>
-            <a href="https://facebook.com" target="_self" rel="noopener noreferrer">
-              <FaFacebook className="text-white hover:text-blue-500 text-3xl transition duration-300" />
-            </a> */}
+
 
 
             
