@@ -119,7 +119,7 @@ const teamMembers = [
           {
             name: 'Johnnie Tse',
             role: 'Webmaster',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Johnnie_Tse_Headshot.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/johnnie-tse/',
           },
 
