@@ -9,13 +9,13 @@ const teamMembers = [
                 name: 'Flaminia Testa',
                 role: 'Co-Chair',
                 imageUrl: '/image/pfp.png',
-                linkedInUrl: '#',
+                linkedInUrl: 'https://www.linkedin.com/in/flaminia-testa/',
             },
             {
                 name: 'Jaden Belliveau',
                 role: 'Co-Chair',
                 imageUrl: '/image/pfp.png',
-                linkedInUrl: '#',
+                linkedInUrl: 'https://www.linkedin.com/in/jaden-belliveau-044062230/',
             },
         ],
     },
@@ -26,7 +26,7 @@ const teamMembers = [
                 name: 'Bronwyn Faulkner',
                 role: 'Logistics Director',
                 imageUrl: '/image/pfp.png',
-                linkedInUrl: '#',
+                linkedInUrl: 'https://www.linkedin.com/in/bronwyn-faulkner/',
             },
             // {
             //     name: 'Greyson Martyn',
@@ -39,14 +39,14 @@ const teamMembers = [
                 name: 'Sachin Khandelwal',
                 role: 'Logistics Coordinator',
                 imageUrl: '/image/pfp.png',
-                linkedInUrl: '#',
+                linkedInUrl: 'https://www.linkedin.com/in/sachin-khandelwal-272667305/',
 
             },
             {
                 name: 'Elizabeth Cox',
                 role: 'Logistics Coordinator',
                 imageUrl: '/image/pfp.png',
-                linkedInUrl: '#',
+                linkedInUrl: 'https://www.linkedin.com/in/elizabeth-cox-4a5250335/',
 
             },
 
@@ -60,13 +60,13 @@ const teamMembers = [
             name: 'Abbie Houlding',
             role: 'Relationships Director',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/abigail-houlding-braunberger-b74b00226/',
           },
           {
             name: 'Abby Rath',
             role: 'Relationships Coordinator',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/abby-rath-5b76a8340/',
           },
         ],
     },
@@ -78,14 +78,14 @@ const teamMembers = [
             name: 'Noah Del Rizzo',
             role: 'Sponsorship Director',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/noah-del-rizzo-7b3b4b2a7/',
           },
 
           {
             name: 'Luke Page',
             role: 'Sponsorship Coordinator',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/luke-page-564b432b0/',
           },
 
 
@@ -100,27 +100,27 @@ const teamMembers = [
             name: 'Grace Franklin',
             role: 'Communications Director',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/grace-franklin-077aa3323/',
           },
           {
             name: 'Lauren Colaiacovo',
             role: 'Communications Coordinator',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/lauren-colaiacovo-b9a9932ab/',
           },
 
           {
             name: 'Sydney Sharpe',
             role: 'Communications Coordinator',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/sydney-sharpe-275879327/',
           },
 
           {
             name: 'Johnnie Tse',
             role: 'Webmaster',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/johnnie-tse/',
           },
 
 
@@ -136,7 +136,7 @@ const teamMembers = [
             name: 'Grace Smerchinski',
             role: 'Finance Director',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/grace-smerchinski-4688b3252/',
           },
         ],
     },
@@ -148,7 +148,7 @@ const teamMembers = [
             name: 'Kalena McCloskey',
             role: 'EDII Director',
             imageUrl: '/image/pfp.png',
-            linkedInUrl: '#',
+            linkedInUrl: 'https://www.linkedin.com/in/kalenamccloskey/',
           },
         ],
     },
