@@ -8,13 +8,15 @@ const teamMembers = [
             {
                 name: 'Flaminia Testa',
                 role: 'Co-Chair',
-                imageUrl: '/image/Flaminia_Testa_Headshot.JPG',
+                // imageUrl: '/image/Flaminia_Testa_Headshot.JPG',
+                imageUrl: '/image/pfp.png',
                 linkedInUrl: 'https://www.linkedin.com/in/flaminia-testa/',
             },
             {
                 name: 'Jaden Belliveau',
                 role: 'Co-Chair',
-                imageUrl: '/image/Jaden_Belliveau_Headshot.jpeg',
+                // imageUrl: '/image/Jaden_Belliveau_Headshot.jpeg',
+                imageUrl: '/image/pfp.png',
                 linkedInUrl: 'https://www.linkedin.com/in/jaden-belliveau-044062230/',
             },
         ],
