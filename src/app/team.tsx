@@ -8,14 +8,14 @@ const teamMembers = [
             {
                 name: 'Flaminia Testa',
                 role: 'Co-Chair',
-                // imageUrl: '/image/Flaminia_Testa_Headshot.JPG',
+                imageUrl: '/image/Flaminia_Testa_Headshot_2025.jpg',
                 imageUrl: '/image/pfp.png',
                 linkedInUrl: 'https://www.linkedin.com/in/flaminia-testa/',
             },
             {
                 name: 'Jaden Belliveau',
                 role: 'Co-Chair',
-                // imageUrl: '/image/Jaden_Belliveau_Headshot.jpeg',
+                imageUrl: '/image/Jaden_Belliveau_Headshot_2025.jpeg',
                 imageUrl: '/image/pfp.png',
                 linkedInUrl: 'https://www.linkedin.com/in/jaden-belliveau-044062230/',
             },
@@ -47,7 +47,7 @@ const teamMembers = [
             {
                 name: 'Elizabeth Cox',
                 role: 'Logistics Coordinator',
-                imageUrl: '/image/pfp.png',
+                imageUrl: '/image/Elizabeth_Cox_Headshot_2025.jpg',
                 linkedInUrl: 'https://www.linkedin.com/in/elizabeth-cox-4a5250335/',
 
             },
@@ -61,7 +61,7 @@ const teamMembers = [
           {
             name: 'Abbie Houlding',
             role: 'Relationships Director',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Abbie_Houlding_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/abigail-houlding-braunberger-b74b00226/',
           },
           {
@@ -101,20 +101,20 @@ const teamMembers = [
           {
             name: 'Grace Franklin',
             role: 'Communications Director',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Grace_Franklin_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/grace-franklin-077aa3323/',
           },
           {
             name: 'Lauren Colaiacovo',
             role: 'Communications Coordinator',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Lauren_Colaiacovo_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/lauren-colaiacovo-b9a9932ab/',
           },
 
           {
             name: 'Sydney Sharpe',
             role: 'Communications Coordinator',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Sydney_Sharpe_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/sydney-sharpe-275879327/',
           },
 
@@ -149,7 +149,7 @@ const teamMembers = [
           {
             name: 'Kalena McCloskey',
             role: 'EDII Director',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Kalena_McCloskey_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/kalenamccloskey/',
           },
         ],
