@@ -25,7 +25,7 @@ const teamMembers = [
             {
                 name: 'Bronwyn Faulkner',
                 role: 'Logistics Director',
-                imageUrl: '/image/pfp.png',
+                imageUrl: '/image/Bronwyn_Faulkner_Headshot_2025.jpg',
                 linkedInUrl: 'https://www.linkedin.com/in/bronwyn-faulkner/',
             },
             // {
@@ -38,7 +38,7 @@ const teamMembers = [
             {
                 name: 'Sachin Khandelwal',
                 role: 'Logistics Coordinator',
-                imageUrl: '/image/pfp.png',
+                imageUrl: '/image/Sachin_Khandelwal_Headshot_2025.jpg',
                 linkedInUrl: 'https://www.linkedin.com/in/sachin-khandelwal-272667305/',
 
             },
@@ -65,7 +65,7 @@ const teamMembers = [
           {
             name: 'Abby Rath',
             role: 'Relationships Coordinator',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Abby_Rath_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/abby-rath-5b76a8340/',
           },
         ],
@@ -77,7 +77,7 @@ const teamMembers = [
           {
             name: 'Noah Del Rizzo',
             role: 'Sponsorship Director',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Noah_Del_Rizzo_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/noah-del-rizzo-7b3b4b2a7/',
           },
 
@@ -135,7 +135,7 @@ const teamMembers = [
           {
             name: 'Grace Smerchinski',
             role: 'Finance Director',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Grace_Smerchinski_Headshot_2025.jpg',
             linkedInUrl: 'https://www.linkedin.com/in/grace-smerchinski-4688b3252/',
           },
         ],
