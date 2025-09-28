@@ -84,7 +84,7 @@ const teamMembers = [
           {
             name: 'Luke Page',
             role: 'Sponsorship Coordinator',
-            imageUrl: '/image/pfp.png',
+            imageUrl: '/image/Luke_Page_Headshot_2025.JPG',
             linkedInUrl: 'https://www.linkedin.com/in/luke-page-564b432b0/',
           },
 
