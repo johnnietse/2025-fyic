@@ -26,7 +26,7 @@ export function AboutSpeakers() {
           </br>
 
           <Typography variant="h1" className="text-center lg:max-w-3xl" color="white" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
-            Speakers
+            Speakers & Workshops
           </Typography>
 
         
