@@ -39,15 +39,15 @@ export function CoChairsSection() {
               style={{ fontFamily: 'Montserrat, sans-serif' }}
               {...({} as any)}
             >
-              Dear Future Delegates,
+              Dear Delegates,
               <br /><br />
-              On behalf of our organizing team, we are delighted to welcome you to the First Year Integration Conference (FYIC) 2025, hosted at Queen's University. This year's conference, themed "A Present for the Future," will bring together over one hundred first-year engineering students from across Ontario for a weekend of growth, connection, and inspiration.
+              On behalf of our organizing team, we are excited to welcome you to FYIC 2025! This year’s conference, themed “A Present for the Future,” will bring together over one hundred first-year engineering students from across Ontario for a weekend of growth, connection, and inspiration
               <br /><br />
-              FYIC is more than just a conference—it is an opportunity to meet peers from 17 universities across the province, gain valuable leadership and professional skills, and immerse yourself in a community dedicated to shaping the future of engineering. Through interactive workshops, thought-provoking sessions, and meaningful networking opportunities, you will have the chance to discover new perspectives and forge your path forward as both a student and a future professional.
+              This year’s program has been thoughtfully designed to provide an engaging balance of learning, collaboration, and celebration. You can look forward to hearing from industry experts and academic leaders, participating in an exciting case competition, and joining in discussions that highlight creativity, sustainability, and innovation. Alongside this, you will experience the supportive, vibrant spirit of Queen’s Engineering—a spirit that we cannot wait to share with you.
               <br /><br />
-              This year's program has been thoughtfully designed to provide an engaging balance of learning, collaboration, and celebration. You can look forward to hearing from industry experts and academic leaders, participating in an exciting case competition, and joining in discussions that highlight creativity, sustainability, and innovation. Alongside this, you will experience the supportive, vibrant spirit of Queen's Engineering—a spirit that we cannot wait to share with you.
+              FYIC is more than just a conference; it is an opportunity to meet peers from across the province, gain valuable leadership and professional skills, and immerse yourself in a community dedicated to shaping the future of engineering. Knowing firsthand how tough it is to be an engineering student, we aim to help ease that transition into whatever path you choose to take.
               <br /><br />
-              We are thrilled to welcome you to campus and to be part of the beginning of your engineering journey. Together, let's make FYIC 2025 an unforgettable experience that sparks lasting friendships, inspires bold ideas, and equips you with skills that will benefit you throughout your career.
+              We are thrilled to welcome you to Queen's campus and to be part of the beginning of your engineering journey. Together, let’s make FYIC 2025 an unforgettable experience that sparks lasting friendships, inspires bold ideas, and equips you with skills that will benefit you throughout your career.
               <br /><br />
               We can't wait to meet you this November!
             </Typography>
