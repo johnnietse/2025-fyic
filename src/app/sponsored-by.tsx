@@ -27,14 +27,18 @@ export function SponsoredBy() {
         <Typography variant="lead" color="gray" className="mb-8 max-w-4xl mx-auto" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
           FYIC 2025 is proudly presented by OSPE. 
           <br />
+          <br />
           OSPE is the only organization committed to supporting the entire
           engineering community – from students throughout the entire
           lifespan of an engineering career.
+          <br />
           <br />
           <strong>Their Goal:</strong> To create the most robust operating environment for engineers, of all disciplines, and to
           ensure the long-term health and safety of the profession, our
           communities, and the economy.
           <br />
+          <br />
+          
           <strong>Thank you to our sponsors – Talent4Energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!</strong>
         </Typography>
 
