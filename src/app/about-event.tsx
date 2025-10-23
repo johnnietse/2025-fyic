@@ -276,7 +276,7 @@ export function AboutEvent() {
             </a>
 
 
-            <a href="mailto:fyic@engsoc.queensu.ca" target="_self" rel="noopener noreferrer">
+            <a href="mailto:fyic@essco.ca" target="_self" rel="noopener noreferrer">
               <FaEnvelope className="text-white hover:text-yellow-400 text-3xl transition duration-300" />
             </a>
             
