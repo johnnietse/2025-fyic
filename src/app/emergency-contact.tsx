@@ -20,6 +20,12 @@ const EMERGENCY_CONTACTS = [
     type: "phone"
   },
   {
+    title: "Non-life-threatening mental health distress: Addictions and Mental Health KFL&A (Kingston,
+ Frontenac, Lennox & Addington) Crisis Line",
+    contact: "613-544-4229 (Canadian plans) or 1-866-616-6005",
+    type: "phone"
+  },
+  {
     title: "Abbie Houlding - Relationships Director",
     contact: "+1 (807) 630-7454",
     email: "fyic.relationships@engsoc.queensu.ca",
