@@ -265,7 +265,7 @@ export function HotelInfoSection() {
                 Amenities
               </Typography>
               
-              <ul className="space-y-2 ml-4 list-disc">
+              <ul className="space-y-2 ml-4 list-disc white-bullets">
                 <li>
                   <Typography
                     color="white"
@@ -344,7 +344,7 @@ export function HotelInfoSection() {
                     >
                       Friday
                     </Typography>
-                    <ul className="space-y-1 ml-4 list-disc">
+                    <ul className="space-y-1 ml-4 list-disc white-bullets">
                       <li>
                         <Typography
                           color="white"
@@ -376,7 +376,7 @@ export function HotelInfoSection() {
                     >
                       Saturday
                     </Typography>
-                    <ul className="space-y-1 ml-4 list-disc">
+                    <ul className="space-y-1 ml-4 list-disc white-bullets">
                       <li>
                         <Typography
                           color="white"
@@ -408,7 +408,7 @@ export function HotelInfoSection() {
                     >
                       Sunday
                     </Typography>
-                    <ul className="space-y-1 ml-4 list-disc">
+                    <ul className="space-y-1 ml-4 list-disc white-bullets">
                       <li>
                         <Typography
                           color="white"
@@ -434,7 +434,7 @@ export function HotelInfoSection() {
                 >
                   Electronics
                 </Typography>
-                <ul className="space-y-2 ml-4 list-disc">
+                <ul className="space-y-2 ml-4 list-disc white-bullets">
                   <li>
                     <Typography
                       color="white"
@@ -476,7 +476,7 @@ export function HotelInfoSection() {
                 >
                   Miscellaneous
                 </Typography>
-                <ul className="space-y-2 ml-4 list-disc">
+                <ul className="space-y-2 ml-4 list-disc white-bullets">
                   <li>
                     <Typography
                       color="white"
@@ -566,7 +566,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    *Ask your Head Delegate if there's anything else you should bring!*
+                    Ask your Head Delegate if there's anything else you should bring!
                   </Typography>
                 </div>
               </div>
@@ -578,6 +578,20 @@ export function HotelInfoSection() {
 
       <br />
       <br />
+
+      {/* Custom CSS for white bullet points */}
+      <style jsx global>{`
+        .white-bullets {
+          list-style-type: disc;
+          color: white;
+        }
+        .white-bullets li::marker {
+          color: white;
+        }
+        ul.white-bullets {
+          color: white;
+        }
+      `}</style>
     
     </div>
   );
