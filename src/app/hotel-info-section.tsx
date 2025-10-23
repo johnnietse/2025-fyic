@@ -558,7 +558,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    Ask your Head Delegate if there's anything else you should bring!
+                    *Ask your Head Delegate if there's anything else you should bring!*
                   </Typography>
                 </div>
               </div>
