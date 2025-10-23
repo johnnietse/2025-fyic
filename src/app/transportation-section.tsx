@@ -632,7 +632,7 @@ export function TransportationSection() {
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
-                The Incident Response Committee (IRC) is in place to ensure a safe and respectful environment at the FVC 2025 conference.
+                The Incident Response Committee (IRC) is in place to ensure a safe and respectful environment at the FYIC 2025 conference.
               </Typography>
               <Typography
                 color="white"
