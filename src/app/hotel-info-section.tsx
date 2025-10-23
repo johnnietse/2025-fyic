@@ -126,6 +126,8 @@ export function HotelInfoSection() {
                 {...({} as any)}
               >
                 Rooming assignments will be 4 delegates per room. Each room has 2 queen-size beds. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest extent possible. Delegates who have requested their own room or a room with only two people will receive invoices for additional payment for their own room.
+                {/* Rooming assignments will be 4 delegates per room, unless otherwise requested. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest
+                extent possible. */}
               </Typography>
             </div>
           </div>
@@ -159,7 +161,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    3:00 PM Friday, November 7
+                    2:00 PM Friday, November 7
                   </Typography>
                 </div>
                 
@@ -178,7 +180,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    A member of the FYIC 2025 Executive Team will greet delegates at the hotel for conference check-in and will be happy to answer any questions and concerns at the time of check-in.
+                    A member of the FYIC 2025 Executive Team will greet delegates at the hotel for conference check-in and will be happy to answer any questions and concerns at the time of check-in. Please note one credit card from each room will be required by the front desk to have on file.
                   </Typography>
                 </div>
                 
@@ -197,7 +199,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    If arriving before 12:00 PM or after 6:00 PM, please reach out to the FYIC Executive Team at (807) 630-7454.
+                    If arriving before 2:00 PM or after 6:00 PM, please reach out to the FYIC Executive Team at (807) 630-7454.
                   </Typography>
                 </div>
               </div>
@@ -230,7 +232,7 @@ export function HotelInfoSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    11:00 AM (latest)
+                    11:00 AM Sunday, November 9 (latest)
                   </Typography>
                 </div>
                 
