@@ -289,6 +289,69 @@ export function TransportationSection() {
                 </Typography>
               </li>
             </ul>
+
+            {/* Kingston Map Image */}
+            <div className="mt-6">
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/kingston-map.png" 
+                  alt="Kingston Map with Common Locations" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Common Locations List */}
+            <div className="mt-4">
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-3 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Common Locations
+              </Typography>
+              
+              <ol className="space-y-2 ml-4 list-decimal white-numbers">
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Holiday Inn</strong>
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Via Rail Station</strong>
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>MegaBus Station</strong>
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Queen's University</strong>
+                  </Typography>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
 
@@ -297,7 +360,7 @@ export function TransportationSection() {
                   
       </section>
 
-      {/* Custom CSS for white bullet points */}
+      {/* Custom CSS for white bullet points and numbers */}
       <style jsx global>{`
         .white-bullets {
           list-style-type: disc;
@@ -307,6 +370,16 @@ export function TransportationSection() {
           color: white;
         }
         ul.white-bullets {
+          color: white;
+        }
+        .white-numbers {
+          list-style-type: decimal;
+          color: white;
+        }
+        .white-numbers li::marker {
+          color: white;
+        }
+        ol.white-numbers {
           color: white;
         }
       `}</style>
