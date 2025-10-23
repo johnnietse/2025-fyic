@@ -265,36 +265,44 @@ export function HotelInfoSection() {
                 Amenities
               </Typography>
               
-              <div className="space-y-2">
-                <Typography
-                  color="white"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  • Laundry and daily housekeeping
-                </Typography>
-                <Typography
-                  color="white"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  • On-site parking ($30/night) and pet-friendly ($60)
-                </Typography>
-                <Typography
-                  color="white"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  • On-site restaurant, Fitness center (6 am – 12 am), and Pool (8 am – 10 pm)
-                </Typography>
-                <Typography
-                  color="white"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  • Smoke-free hotel
-                </Typography>
-              </div>
+              <ul className="space-y-2 ml-4 list-disc">
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Laundry and daily housekeeping
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    On-site parking ($30/night) and pet-friendly ($60)
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    On-site restaurant, Fitness center (6 am – 12 am), and Pool (8 am – 10 pm)
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Smoke-free hotel
+                  </Typography>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -336,7 +344,7 @@ export function HotelInfoSection() {
                     >
                       Friday
                     </Typography>
-                    <ul className="space-y-1 ml-4">
+                    <ul className="space-y-1 ml-4 list-disc">
                       <li>
                         <Typography
                           color="white"
@@ -368,7 +376,7 @@ export function HotelInfoSection() {
                     >
                       Saturday
                     </Typography>
-                    <ul className="space-y-1 ml-4">
+                    <ul className="space-y-1 ml-4 list-disc">
                       <li>
                         <Typography
                           color="white"
@@ -400,7 +408,7 @@ export function HotelInfoSection() {
                     >
                       Sunday
                     </Typography>
-                    <ul className="space-y-1 ml-4">
+                    <ul className="space-y-1 ml-4 list-disc">
                       <li>
                         <Typography
                           color="white"
@@ -426,7 +434,7 @@ export function HotelInfoSection() {
                 >
                   Electronics
                 </Typography>
-                <ul className="space-y-2 ml-4">
+                <ul className="space-y-2 ml-4 list-disc">
                   <li>
                     <Typography
                       color="white"
@@ -468,7 +476,7 @@ export function HotelInfoSection() {
                 >
                   Miscellaneous
                 </Typography>
-                <ul className="space-y-2 ml-4">
+                <ul className="space-y-2 ml-4 list-disc">
                   <li>
                     <Typography
                       color="white"
