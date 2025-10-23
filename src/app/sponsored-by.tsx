@@ -26,19 +26,16 @@ export function SponsoredBy() {
         <br />
         <Typography variant="lead" color="gray" className="mb-8 max-w-4xl mx-auto" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
           FYIC 2025 is proudly presented by OSPE. 
-          <br>
-          </br>
+          <br />
           OSPE is the only organization committed to supporting the entire
           engineering community – from students throughout the entire
           lifespan of an engineering career.
-          <br>
-          </br>
+          <br />
           <strong>Their Goal:</strong> To create the most robust operating environment for engineers, of all disciplines, and to
           ensure the long-term health and safety of the profession, our
           communities, and the economy.
-          <br>
-          </br>
-          Thank you to our sponsors – talent4energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!
+          <br />
+          Thank you to our sponsors – Talent4Energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!
         </Typography>
 
         <br />
@@ -60,6 +57,35 @@ export function SponsoredBy() {
               />
             </div>
           ))}
+        </div>
+
+        {/* About Talent4Energy Section */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <Typography variant="h3" color="blue-gray" className="mb-8" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
+            About Talent4Energy
+          </Typography>
+          
+          {/* Larger Talent4Energy Logo */}
+          <div className="flex justify-center mb-8">
+            <div className="flex items-center justify-center">
+              <Image
+                width={400}
+                height={200}
+                src="/logos/talent4energy.png"
+                alt="Talent4Energy"
+                className="max-w-[350px] max-h-[175px] object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Description Paragraph */}
+          <Typography variant="lead" color="gray" className="text-justify" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
+            Attracting and retaining young professionals is vital to Canada's energy future—driving economic growth, enabling
+            major projects, and expanding the global supply of low-carbon energy. Talent4Energy, funded by the Government
+            of Alberta, bridges energy employers with diverse talent, offering industry insights, career pathways, and skill
+            requirements. It also equips employers with practical tools to attract, retain, and advance inclusive talent pipelines
+            across the sector.
+          </Typography>
         </div>
       </div>
 
