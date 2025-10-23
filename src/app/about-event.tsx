@@ -53,10 +53,15 @@ export function AboutEvent() {
             A conference hosted by engineering students, for engineering students.
             <br />
             <br />
-            Presented by the Ontario Society of Professional Engineers (OSPE), FYIC gives first-year engineering students from across Ontario the opportunity to connect with peers from around the province and participate in sessions designed to develop leadership skills, break down first-year barriers, and advance their career exploration. Attended by over 130 first-year and upper-year students from 18 universities across Ontario, this conference serves to inspire students and build connections to last their whole careers.
+            Presented by the Ontario Society of Professional Engineers (OSPE), the First Year Integration Conference (FYIC) gives first-
+            year engineering students from across Ontario the opportunity to connect with peers from around the province and
+            participate in sessions designed to develop leadership skills, break down first-year barriers, and advance their career
+            exploration. Attended by over 130 first-year and upper-year students from 18 universities across Ontario, this conference serves to inspire students and build connections to last their
+            whole careers.
             <br />
             <br />
-            Hosted with the Engineering Student Societies' Council of Ontario (ESSCO), FYIC 2025 will take place at Queen's University, a world-renowned institution and a leader in engineering research and innovation.
+            Hosted with the Engineering Student Societies’ Council of Ontario (ESSCO), FYIC 2025 will take place at Queen’s
+            University, a world-renowned institution and a leader in engineering research and innovation.
             <br />
             <br />
             The First Year Integration Conference (FYIC) is a unique, province-wide initiative that brings together first-year engineering students from 18 universities across Ontario. Our goal is to ease the transition into university life by providing a welcoming and inspiring space where students can build connections, develop leadership skills, and gain valuable insight into the world of engineering.
@@ -65,7 +70,11 @@ export function AboutEvent() {
             Through a dynamic lineup of interactive workshops, seminars, and dedicated industry networking events, FYIC empowers students to explore their academic and professional potential. By connecting with peers and industry professionals alike, participants begin their engineering journey with confidence, curiosity, and community.
             <br />
             <br />
-            This year, our theme is 'A Present for the Future'. We aim to inspire the next generation of bright minds to design sustainable solutions that will benefit generations to come. With additional emphasis on personal development, delegates will learn skills that will help them grow into the engineers they want to be.
+            This year, our theme is
+            ‘A Present for the Future’. We aim to inspire the next
+            generation of bright minds to design sustainable solutions that will benefit generations to come.
+            With additional emphasis on personal development, delegates will learn skills that will help them
+            grow into the engineers they want to be.
           </Typography>
           
           <br />
@@ -105,21 +114,35 @@ export function AboutEvent() {
             {...({} as any)}
           >
             <p className="mb-4">
-              FYIC 2025 is proudly hosted by Smith Engineering at Queen's University, where we are reimagining engineering education. Located in historic Kingston, Queen's is one of Canada's most distinguished institutions, recognized globally for academic excellence, impactful research, and community engagement.
+              FYIC 2025 is proudly hosted by Smith
+              Engineering at Queen’s University, where we
+              are reimagining engineering education.
+              Located in historic Kingston, Queen’s is one
+              of Canada’s most distinguished institutions,
+              recognized globally for academic
+              excellence, impactful research, and
+              community engagement.
             </p>
 
             <br />
             <br />
 
             <p className="mb-4">
-              Smith Engineering is cultivating a new generation of engineers—leaders with deep technical expertise and a strong sense of societal, environmental, and ethical responsibility. Through interdisciplinary collaboration, hands-on learning, and a vibrant research culture, we are preparing problem-solvers for the challenges of tomorrow.
+              Smith Engineering is cultivating a new generation of engineers—leaders with deep
+              technical expertise and a strong sense of societal, environmental, and ethical
+              responsibility. Through interdisciplinary collaboration, hands-on learning, and a
+              vibrant research culture, we are preparing problem-solvers for the challenges of
+              tomorrow.
             </p>
 
             <br />
             <br />
 
             <p>
-              Ranked among the top 10 universities worldwide in the 2022 Times Higher Education Impact Rankings, Queen's is committed to sustainability, equity, and global collaboration. As delegates, you'll experience the energy and excellence that define Queen's and Smith Engineering—a place where tradition meets innovation and the future of engineering is being built today.
+              Ranked among the top 10 universities worldwide in the 2022 Times Higher Education Impact
+              Rankings, Queen’s is committed to sustainability, equity, and global collaboration. As delegates,
+              you’ll experience the energy and excellence that define Queen’s and Smith Engineering—a place where tradition meets innovation and the future
+              of engineering is being built today.
             </p>
           </Typography>
           
