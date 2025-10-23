@@ -4,7 +4,11 @@ import {
   Collapse,
   IconButton,
   Typography,
-  Button
+  Button,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem
 } from "@material-tailwind/react";
 import {
   XMarkIcon,
@@ -14,7 +18,8 @@ import {
   CalendarDaysIcon,
   UsersIcon,
   BriefcaseIcon,
-  PencilSquareIcon
+  PencilSquareIcon,
+  ChevronDownIcon
 } from "@heroicons/react/24/solid";
 
 interface NavItemProps {
@@ -72,6 +77,19 @@ const NAV_MENU = [
   },
 ];
 
+const DELEGATE_PACKAGES = [
+  {
+    name: "Pre-Delegate Package",
+    href: "https://www.canva.com/design/DAGx3UuONwY/LehcEmNT2kfjp_8-qwHBPA/view?utm_content=DAGx3UuONwY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb01af3c8ea",
+    type: "external"
+  },
+  {
+    name: "Delegate Package",
+    href: "/files/FYIC_2025_Delegate_Package.pdf",
+    type: "pdf"
+  }
+];
+
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
@@ -99,8 +117,8 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleDelegatePackageClick = () => {
-    window.open("/files/FYIC_2025_Delegate_Package.pdf", "_blank");
+  const handlePackageClick = (href: string) => {
+    window.open(href, "_blank");
   };
 
   return (
@@ -146,17 +164,38 @@ export function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Button
-            size="sm"
-            variant={isScrolling ? "filled" : "outlined"}
-            color={isScrolling ? "blue" : "white"}
-            className="flex items-center gap-2 rounded-full"
-            onClick={handleDelegatePackageClick}
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
-          >
-            <PencilSquareIcon className="h-4 w-4" />
-            Delegate Package
-          </Button>
+          <Menu>
+            <MenuHandler>
+              <Button
+                size="sm"
+                variant={isScrolling ? "filled" : "outlined"}
+                color={isScrolling ? "blue" : "white"}
+                className="flex items-center gap-2 rounded-full"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                <PencilSquareIcon className="h-4 w-4" />
+                Delegate Packages
+                <ChevronDownIcon className="h-3 w-3" />
+              </Button>
+            </MenuHandler>
+            <MenuList
+              className="bg-white"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+              {...({} as any)}
+            >
+              {DELEGATE_PACKAGES.map((packageItem, index) => (
+                <MenuItem
+                  key={index}
+                  onClick={() => handlePackageClick(packageItem.href)}
+                  className="flex items-center gap-2 hover:bg-blue-50 transition-colors"
+                  {...({} as any)}
+                >
+                  <PencilSquareIcon className="h-4 w-4" />
+                  {packageItem.name}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
         </div>
 
         <IconButton
@@ -183,10 +222,35 @@ export function Navbar() {
                 {name}
               </NavItem>
             ))}
-            <NavItem href="/files/FYIC_2025_Delegate_Package.pdf">
-              <PencilSquareIcon className="h-5 w-5" style={{ fontFamily: 'Montserrat, sans-serif' }}/>
-              Delegate Package
-            </NavItem>
+            {/* Separate items for mobile view */}
+            <li className="border-t pt-4">
+              <Typography
+                variant="small"
+                className="font-semibold text-gray-500 mb-2"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Delegate Packages
+              </Typography>
+              <div className="flex flex-col gap-2">
+                {DELEGATE_PACKAGES.map((packageItem, index) => (
+                  <Typography
+                    key={index}
+                    as="a"
+                    href={packageItem.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="paragraph"
+                    className="flex items-center gap-2 font-medium transition-colors hover:text-blue-500 pl-2"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <PencilSquareIcon className="h-4 w-4" />
+                    {packageItem.name}
+                  </Typography>
+                ))}
+              </div>
+            </li>
           </ul>
         </div>
       </Collapse>
