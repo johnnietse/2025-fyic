@@ -253,7 +253,7 @@ export function HotelInfoSection() {
               </div>
             </div>
 
-            {/* New Amenities Section */}
+            {/* Amenities Section */}
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
               <Typography
                 variant="h3"
@@ -294,6 +294,273 @@ export function HotelInfoSection() {
                 >
                   • Smoke-free hotel
                 </Typography>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Packing Section - Full Width */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
+            <Typography
+              variant="h2"
+              color="white"
+              className="text-center mb-8"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+              {...({} as any)}
+            >
+              PACKING
+            </Typography>
+
+            <div className="space-y-8">
+              {/* Conference Attire */}
+              <div>
+                <Typography
+                  variant="h4"
+                  color="white"
+                  className="mb-4 border-b border-white/30 pb-2"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  {...({} as any)}
+                >
+                  Conference Attire
+                </Typography>
+                
+                <div className="space-y-4">
+                  <div>
+                    <Typography
+                      variant="h6"
+                      color="white"
+                      className="mb-2"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      Friday
+                    </Typography>
+                    <ul className="space-y-1 ml-4">
+                      <li>
+                        <Typography
+                          color="white"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}
+                          {...({} as any)}
+                        >
+                          <strong>Travel:</strong> comfortable clothing
+                        </Typography>
+                      </li>
+                      <li>
+                        <Typography
+                          color="white"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}
+                          {...({} as any)}
+                        >
+                          <strong>Friday Social:</strong> casual
+                        </Typography>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <Typography
+                      variant="h6"
+                      color="white"
+                      className="mb-2"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      Saturday
+                    </Typography>
+                    <ul className="space-y-1 ml-4">
+                      <li>
+                        <Typography
+                          color="white"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}
+                          {...({} as any)}
+                        >
+                          <strong>Sessions:</strong> business casual
+                        </Typography>
+                      </li>
+                      <li>
+                        <Typography
+                          color="white"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}
+                          {...({} as any)}
+                        >
+                          <strong>Banquet:</strong> semi-formal (e.g. suits, blazers, dresses, skirts, dress pants)
+                        </Typography>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <Typography
+                      variant="h6"
+                      color="white"
+                      className="mb-2"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      Sunday
+                    </Typography>
+                    <ul className="space-y-1 ml-4">
+                      <li>
+                        <Typography
+                          color="white"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}
+                          {...({} as any)}
+                        >
+                          <strong>Case Competition:</strong> business casual
+                        </Typography>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="border-t border-white/30 pt-4">
+                <Typography
+                  variant="h4"
+                  color="white"
+                  className="mb-4"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  {...({} as any)}
+                >
+                  Electronics
+                </Typography>
+                <ul className="space-y-2 ml-4">
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Cell Phone</strong> – Be sure to have Discord and email notifications on to receive conference updates throughout the weekend!
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Laptop/Tablet</strong> – needed for case competition
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Chargers, etc.</strong>
+                    </Typography>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Divider */}
+              <div className="border-t border-white/30 pt-4">
+                <Typography
+                  variant="h4"
+                  color="white"
+                  className="mb-4"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  {...({} as any)}
+                >
+                  Miscellaneous
+                </Typography>
+                <ul className="space-y-2 ml-4">
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Government Issued ID</strong> (required for hotel check-in)
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Credit Card</strong> (required for hotel check-in)
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Medication and Toiletries</strong>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Reusable Water Bottle</strong>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Extra Snacks</strong> (optional)
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>Patches to trade</strong>
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>School merch</strong> (coveralls, jackets)
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      color="white"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                      {...({} as any)}
+                    >
+                      <strong>School mascot</strong>
+                    </Typography>
+                  </li>
+                </ul>
+                
+                <div className="mt-4 space-y-2">
+                  <Typography
+                    color="white"
+                    className="italic"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    And leave some extra space in your bag for FYIC merch!
+                  </Typography>
+                  <Typography
+                    color="white"
+                    className="italic"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Ask your Head Delegate if there's anything else you should bring!
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
