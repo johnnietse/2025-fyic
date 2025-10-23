@@ -10,7 +10,7 @@ import { AttendeesSection } from "@/app/attendees-section";
 
 import { CoChairsSection } from "@/app/co-chairs-section";
 
-
+import { ThankYou } from "@/app/thank-you";
 
 
 import AnimatedSection from "@/components/AnimatedSection";
@@ -86,6 +86,7 @@ export default function Portfolio() {
       <main className="w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16 bg-white">
         <Contact /> 
       </main>
+      
 
       {/* </Animation> */}
 
@@ -94,8 +95,12 @@ export default function Portfolio() {
         <EmergencyContact />
       </AnimatedSection>
 
-
       <AnimatedSection delay={3.3}>
+        <ThankYou />
+      </AnimatedSection>
+
+
+      <AnimatedSection delay={3.6}>
         <Footer />
       </AnimatedSection>
     </>
