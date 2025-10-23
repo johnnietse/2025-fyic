@@ -13,7 +13,7 @@ const INTERNAL_LINKS = [{ name: "Home", path: "/"},
 
 const SOCIAL_LINKS = [
   {icon: "fa-brands fa-instagram", url: "https://www.instagram.com/fyic2025/"},
-  {icon: "fa-solid fa-envelope", url: "mailto:fyic@engsoc.queensu.ca" } // email link
+  {icon: "fa-solid fa-envelope", url: "mailto:fyic@essco.ca" } // email link
 
 
 ];
