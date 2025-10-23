@@ -1,3 +1,390 @@
+// Most recent code
+"use client";
+
+import { useState } from "react";
+
+const SCHEDULE_DATA = {
+  "Friday": [
+    {
+      time: "11:45 AM - 5:30 PM",
+      title: "Arrival and Hotel Check In",
+      location: "Holiday Inn",
+      stream: "All Streams"
+    },
+    {
+      time: "5:45 PM - 6:00 PM",
+      title: "Travel to Campus",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "6:15 PM - 7:00 PM",
+      title: "Dinner",
+      location: "Ellis Hall - 321",
+      stream: "All Streams"
+    },
+    {
+      time: "7:15 PM - 8:30 PM",
+      title: "Opening Ceremonies",
+      location: "Ellis Hall - Auditorium",
+      stream: "All Streams"
+    },
+    {
+      time: "8:45 PM - 9:45 PM",
+      title: "Social",
+      location: "Campus & Downtown",
+      stream: "All Streams"
+    }
+  ],
+  "Saturday": [
+    {
+      time: "8:00 AM - 8:30 AM",
+      title: "Walk/Shuttle to Campus",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "9:00 AM - 9:30 AM",
+      title: "Breakfast",
+      location: "Ellis Hall - 321",
+      stream: "All Streams"
+    },
+    {
+      time: "10:00 AM - 10:30 AM",
+      title: "SASS: Uncrunching the numbers",
+      location: "",
+      stream: "Present"
+    },
+    {
+      time: "10:00 AM - 10:30 AM",
+      title: "Relectric",
+      location: "",
+      stream: "Future"
+    },
+    {
+      time: "10:00 AM - 11:00 AM",
+      title: "Sessions",
+      location: "",
+      stream: "VPX Stream"
+    },
+    {
+      time: "11:00 AM - 1:00 PM",
+      title: "Roundtable",
+      location: "",
+      stream: "VPX Stream"
+    },
+    {
+      time: "11:00 AM - 11:30 AM",
+      title: "4th & 5th Year Panel",
+      location: "",
+      stream: "Present"
+    },
+    {
+      time: "11:00 AM - 11:30 AM",
+      title: "Baker Lab",
+      location: "",
+      stream: "Future"
+    },
+    {
+      time: "12:00 PM - 1:00 PM",
+      title: "2nd & 3rd Year Panel",
+      location: "",
+      stream: "Present"
+    },
+    {
+      time: "12:00 PM - 1:00 PM",
+      title: "DDQIC",
+      location: "",
+      stream: "Future"
+    },
+    {
+      time: "1:30 PM - 2:15 PM",
+      title: "Lunch",
+      location: "Ellis Hall - 321",
+      stream: "All Streams"
+    },
+    {
+      time: "2:30 PM - 3:15 PM",
+      title: "Resume & Cover Letter",
+      location: "",
+      stream: "Present"
+    },
+    {
+      time: "2:30 PM - 3:15 PM",
+      title: "YCR",
+      location: "",
+      stream: "Future"
+    },
+    {
+      time: "2:30 PM - 3:15 PM",
+      title: "Roundtable",
+      location: "",
+      stream: "VPX Stream"
+    },
+    {
+      time: "3:15 PM - 4:45 PM",
+      title: "Sessions",
+      location: "",
+      stream: "VPX Stream"
+    },
+    {
+      time: "3:30 PM - 4:45 PM",
+      title: "Talent4Energy",
+      location: "",
+      stream: "Present"
+    },
+    {
+      time: "3:30 PM - 4:45 PM",
+      title: "Talent4Energy",
+      location: "",
+      stream: "Future"
+    },
+    {
+      time: "5:00 PM - 5:15 PM",
+      title: "Walk/Shuttle to Hotel",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "5:30 PM - 6:30 PM",
+      title: "Downtime - Prepare for banquet",
+      location: "Holiday Inn",
+      stream: "All Streams"
+    },
+    {
+      time: "6:30 PM - 6:45 PM",
+      title: "Shuttle From Hotel to Campus",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "7:30 PM - 9:45 PM",
+      title: "Dinner/Banquet",
+      location: "Wallace Hall - JDUC",
+      stream: "All Streams"
+    },
+    {
+      time: "10:00 PM - 10:15 PM",
+      title: "Shuttle From Campus to Hotel",
+      location: "",
+      stream: "All Streams"
+    }
+  ],
+  "Sunday": [
+    {
+      time: "8:00 AM - 8:30 AM",
+      title: "Walk/Shuttle to Campus",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "9:00 AM - 10:00 AM",
+      title: "Networking Breakfast",
+      location: "Biosciences Complex - Atrium",
+      stream: "All Streams"
+    },
+    {
+      time: "10:15 AM - 10:30 AM",
+      title: "Walk to Jeffrey Hall",
+      location: "",
+      stream: "All Streams"
+    },
+    // {
+    //   time: "10:30 AM - 11:15 AM",
+    //   title: "Speaker",
+    //   location: "",
+    //   stream: "Present"
+    // },
+    // {
+    //   time: "10:30 AM - 11:15 AM",
+    //   title: "Speaker",
+    //   location: "",
+    //   stream: "Future"
+    // },
+    {
+      time: "10:30 AM - 3:45 PM",
+      title: "Plenary",
+      location: "Kingston Hall - 204",
+      stream: "VPX Stream"
+    },
+    {
+      time: "11:30 AM - 3:45 PM",
+      title: "Case Competition",
+      location: "Jeffrey Hall - 155, 156, 225, 234",
+      stream: "Present"
+    },
+    {
+      time: "11:30 AM - 3:45 PM",
+      title: "Case Competition",
+      location: "Jeffrey Hall - 155, 156, 225, 234",
+      stream: "Future"
+    },
+    {
+      time: "4:00 PM - 4:15 PM",
+      title: "Walk to Biosciences Complex",
+      location: "",
+      stream: "All Streams"
+    },
+    {
+      time: "4:15 PM - 5:15 PM",
+      title: "Closing Ceremonies",
+      location: "Biosciences Complex - Atrium",
+      stream: "All Streams"
+    },
+    {
+      time: "5:30 PM - 6:30 PM",
+      title: "Lunch",
+      location: "Biosciences Complex - Atrium",
+      stream: "All Streams"
+    }
+  ]
+};
+
+const StreamColors = {
+  "All Streams": "bg-blue-100 border-blue-500 text-blue-800",
+  "Present": "bg-red-100 border-red-500 text-red-800",
+  "Future": "bg-green-100 border-green-500 text-green-800",
+  "VPX Stream": "bg-yellow-100 border-yellow-500 text-yellow-800",
+  // "Present & B": "bg-purple-100 border-purple-500 text-purple-800"
+};
+
+export default function ConferenceSchedule() {
+  const [activeDay, setActiveDay] = useState<keyof typeof SCHEDULE_DATA>("Friday");
+
+  return (
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
+      {/* Day Navigation Tabs */}
+      <div className="flex justify-center mb-6 md:mb-8 gap-2 bg-gray-100 rounded-full p-1">
+        {Object.keys(SCHEDULE_DATA).map((day) => (
+          <button
+            key={day}
+            onClick={() => setActiveDay(day as keyof typeof SCHEDULE_DATA)}
+            className={`px-4 md:px-6 py-2 rounded-full transition font-medium text-sm md:text-base ${
+              activeDay === day
+                ? "bg-blue-600 text-white shadow"
+                : "text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            {day}
+          </button>
+        ))}
+      </div>
+
+      {/* Schedule */}
+      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
+          {/* Header Row */}
+          <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 hidden md:block">
+            Time
+          </div>
+          <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 md:col-span-4 grid grid-cols-4 text-sm">
+            <div className="text-center">All Streams</div>
+            <div className="text-center">Present</div>
+            <div className="text-center">Future</div>
+            <div className="text-center">VPX Stream</div>
+          </div>
+
+          {/* Schedule Content */}
+          {SCHEDULE_DATA[activeDay].map((event, index) => (
+            <>
+              {/* Time Column */}
+              <div key={`time-${index}`} className="p-3 md:p-4 bg-gray-50 border-b border-gray-200 font-medium hidden md:block">
+                {event.time}
+              </div>
+              
+              {/* Event Cells */}
+              <div className="p-3 md:p-4 border-b border-gray-200 md:col-span-4 grid grid-cols-4 gap-2">
+                {["All Streams", "Present", "Future", "VPX Stream"].map((stream) => {
+                  if (event.stream === stream || 
+                      (event.stream === "Present & B" && (stream === "Present" || stream === "Future"))) {
+                    return (
+                      <div
+                        key={`${stream}-${index}`}
+                        className={`p-3 rounded-lg border-l-4 ${StreamColors[stream as keyof typeof StreamColors]}`}
+                      >
+                        <div className="font-semibold text-sm md:text-base">{event.title}</div>
+                        <div className="text-xs md:text-sm text-gray-600 mt-1">{event.time}</div>
+                        {event.location && (
+                          <div className="text-xs text-gray-500 mt-1 italic">{event.location}</div>
+                        )}
+                      </div>
+                    );
+                  }
+                  return <div key={`${stream}-${index}`} className="p-3"></div>;
+                })}
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="mt-6 flex justify-center gap-4 flex-wrap">
+        {Object.entries(StreamColors).map(([stream, colorClass]) => (
+          <div key={stream} className="flex items-center">
+            <div className={`w-4 h-4 rounded-sm mr-2 ${colorClass}`}></div>
+            <span className="text-sm">{stream}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Schedule Change Notice */}
+      <div className="mt-6 text-center text-sm text-gray-600">
+        This schedule will be subject to change before and throughout the conference. For the most updated version, please refer to{" "}
+        <a 
+          href="https://queensuca.sharepoint.com/:x:/t/GROUP-FYIC2025/EUN9Bz_V51BDsboA72bkh54BDQYQ6jXDgJJiVUQgl20fbw?e=5jaMex"
+          className="text-blue-600 hover:text-blue-800 underline"
+        >
+          this link
+        </a>{" "}
+        instead.
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // "use client";
 
 // // import {
@@ -575,336 +962,336 @@
 
 
 
+// For quick recovery in case if the most recent code doesn't work, please uncomment and use the following code:
 
+// "use client";
 
-"use client";
+// import { useState } from "react";
 
-import { useState } from "react";
+// const SCHEDULE_DATA = {
+//   "Friday": [
+//     {
+//       time: "11:45 AM - 5:30 PM",
+//       title: "Arrival and Hotel Check In",
+//       location: "Holiday Inn",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "5:45 PM - 6:00 PM",
+//       title: "Travel to Campus",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "6:15 PM - 7:00 PM",
+//       title: "Dinner",
+//       location: "Ellis Hall - 321",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "7:15 PM - 8:30 PM",
+//       title: "Opening Ceremonies",
+//       location: "Ellis Hall - Auditorium",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "8:45 PM - 9:45 PM",
+//       title: "Social",
+//       location: "Campus & Downtown",
+//       stream: "All Streams"
+//     }
+//   ],
+//   "Saturday": [
+//     {
+//       time: "8:00 AM - 8:30 AM",
+//       title: "Walk/Shuttle to Campus",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "9:00 AM - 9:30 AM",
+//       title: "Breakfast",
+//       location: "Ellis Hall - 321",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "10:00 AM - 10:30 AM",
+//       title: "SASS: Uncrunching the numbers",
+//       location: "",
+//       stream: "Present"
+//     },
+//     {
+//       time: "10:00 AM - 10:30 AM",
+//       title: "Relectric",
+//       location: "",
+//       stream: "Future"
+//     },
+//     {
+//       time: "10:00 AM - 11:00 AM",
+//       title: "Sessions",
+//       location: "",
+//       stream: "VPX Stream"
+//     },
+//     {
+//       time: "11:00 AM - 1:00 PM",
+//       title: "Roundtable",
+//       location: "",
+//       stream: "VPX Stream"
+//     },
+//     {
+//       time: "11:00 AM - 11:30 AM",
+//       title: "4th & 5th Year Panel",
+//       location: "",
+//       stream: "Present"
+//     },
+//     {
+//       time: "11:00 AM - 11:30 AM",
+//       title: "Baker Lab",
+//       location: "",
+//       stream: "Future"
+//     },
+//     {
+//       time: "12:00 PM - 1:00 PM",
+//       title: "2nd & 3rd Year Panel",
+//       location: "",
+//       stream: "Present"
+//     },
+//     {
+//       time: "12:00 PM - 1:00 PM",
+//       title: "DDQIC",
+//       location: "",
+//       stream: "Future"
+//     },
+//     {
+//       time: "1:30 PM - 2:15 PM",
+//       title: "Lunch",
+//       location: "Ellis Hall - 321",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "2:30 PM - 3:15 PM",
+//       title: "Resume & Cover Letter",
+//       location: "",
+//       stream: "Present"
+//     },
+//     {
+//       time: "2:30 PM - 3:15 PM",
+//       title: "YCR",
+//       location: "",
+//       stream: "Future"
+//     },
+//     {
+//       time: "2:30 PM - 3:15 PM",
+//       title: "Roundtable",
+//       location: "",
+//       stream: "VPX Stream"
+//     },
+//     {
+//       time: "3:15 PM - 4:45 PM",
+//       title: "Sessions",
+//       location: "",
+//       stream: "VPX Stream"
+//     },
+//     {
+//       time: "3:30 PM - 4:45 PM",
+//       title: "Talent4Energy",
+//       location: "",
+//       stream: "Present"
+//     },
+//     {
+//       time: "3:30 PM - 4:45 PM",
+//       title: "Talent4Energy",
+//       location: "",
+//       stream: "Future"
+//     },
+//     {
+//       time: "5:00 PM - 5:15 PM",
+//       title: "Walk/Shuttle to Hotel",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "5:30 PM - 6:30 PM",
+//       title: "Downtime - Prepare for banquet",
+//       location: "Holiday Inn",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "6:30 PM - 6:45 PM",
+//       title: "Shuttle From Hotel to Campus",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "7:30 PM - 9:45 PM",
+//       title: "Dinner/Banquet",
+//       location: "Wallace Hall - JDUC",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "10:00 PM - 10:15 PM",
+//       title: "Shuttle From Campus to Hotel",
+//       location: "",
+//       stream: "All Streams"
+//     }
+//   ],
+//   "Sunday": [
+//     {
+//       time: "8:00 AM - 8:30 AM",
+//       title: "Walk/Shuttle to Campus",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "9:00 AM - 10:00 AM",
+//       title: "Networking Breakfast",
+//       location: "Biosciences Complex - Atrium",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "10:15 AM - 10:30 AM",
+//       title: "Walk to Jeffrey Hall",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     // {
+//     //   time: "10:30 AM - 11:15 AM",
+//     //   title: "Speaker",
+//     //   location: "",
+//     //   stream: "Present"
+//     // },
+//     // {
+//     //   time: "10:30 AM - 11:15 AM",
+//     //   title: "Speaker",
+//     //   location: "",
+//     //   stream: "Future"
+//     // },
+//     {
+//       time: "10:30 AM - 3:45 PM",
+//       title: "Plenary",
+//       location: "Kingston Hall - 204",
+//       stream: "VPX Stream"
+//     },
+//     {
+//       time: "11:30 AM - 3:45 PM",
+//       title: "Case Competition",
+//       location: "Jeffrey Hall - 155, 156, 225, 234",
+//       stream: "Present"
+//     },
+//     {
+//       time: "11:30 AM - 3:45 PM",
+//       title: "Case Competition",
+//       location: "Jeffrey Hall - 155, 156, 225, 234",
+//       stream: "Future"
+//     },
+//     {
+//       time: "4:00 PM - 4:15 PM",
+//       title: "Walk to Biosciences Complex",
+//       location: "",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "4:15 PM - 5:15 PM",
+//       title: "Closing Ceremonies",
+//       location: "Biosciences Complex - Atrium",
+//       stream: "All Streams"
+//     },
+//     {
+//       time: "5:30 PM - 6:30 PM",
+//       title: "Lunch",
+//       location: "Biosciences Complex - Atrium",
+//       stream: "All Streams"
+//     }
+//   ]
+// };
 
-const SCHEDULE_DATA = {
-  "Friday": [
-    {
-      time: "11:45 AM - 5:30 PM",
-      title: "Arrival and Hotel Check In",
-      location: "Holiday Inn",
-      stream: "All Streams"
-    },
-    {
-      time: "5:45 PM - 6:00 PM",
-      title: "Travel to Campus",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "6:15 PM - 7:00 PM",
-      title: "Dinner",
-      location: "Ellis Hall - 321",
-      stream: "All Streams"
-    },
-    {
-      time: "7:15 PM - 8:30 PM",
-      title: "Opening Ceremonies",
-      location: "Ellis Hall - Auditorium",
-      stream: "All Streams"
-    },
-    {
-      time: "8:45 PM - 9:45 PM",
-      title: "Social",
-      location: "Campus & Downtown",
-      stream: "All Streams"
-    }
-  ],
-  "Saturday": [
-    {
-      time: "8:00 AM - 8:30 AM",
-      title: "Walk/Shuttle to Campus",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "9:00 AM - 9:30 AM",
-      title: "Breakfast",
-      location: "Ellis Hall - 321",
-      stream: "All Streams"
-    },
-    {
-      time: "10:00 AM - 10:30 AM",
-      title: "SASS: Uncrunching the numbers",
-      location: "",
-      stream: "Present"
-    },
-    {
-      time: "10:00 AM - 10:30 AM",
-      title: "Relectric",
-      location: "",
-      stream: "Future"
-    },
-    {
-      time: "10:00 AM - 11:00 AM",
-      title: "Sessions",
-      location: "",
-      stream: "VPX Stream"
-    },
-    {
-      time: "11:00 AM - 1:00 PM",
-      title: "Roundtable",
-      location: "",
-      stream: "VPX Stream"
-    },
-    {
-      time: "11:00 AM - 11:30 AM",
-      title: "4th & 5th Year Panel",
-      location: "",
-      stream: "Present"
-    },
-    {
-      time: "11:00 AM - 11:30 AM",
-      title: "Baker Lab",
-      location: "",
-      stream: "Future"
-    },
-    {
-      time: "12:00 PM - 1:00 PM",
-      title: "2nd & 3rd Year Panel",
-      location: "",
-      stream: "Present"
-    },
-    {
-      time: "12:00 PM - 1:00 PM",
-      title: "DDQIC",
-      location: "",
-      stream: "Future"
-    },
-    {
-      time: "1:30 PM - 2:15 PM",
-      title: "Lunch",
-      location: "Ellis Hall - 321",
-      stream: "All Streams"
-    },
-    {
-      time: "2:30 PM - 3:15 PM",
-      title: "Resume & Cover Letter",
-      location: "",
-      stream: "Present"
-    },
-    {
-      time: "2:30 PM - 3:15 PM",
-      title: "YCR",
-      location: "",
-      stream: "Future"
-    },
-    {
-      time: "2:30 PM - 3:15 PM",
-      title: "Roundtable",
-      location: "",
-      stream: "VPX Stream"
-    },
-    {
-      time: "3:15 PM - 4:45 PM",
-      title: "Sessions",
-      location: "",
-      stream: "VPX Stream"
-    },
-    {
-      time: "3:30 PM - 4:45 PM",
-      title: "Talent4Energy",
-      location: "",
-      stream: "Present"
-    },
-    {
-      time: "3:30 PM - 4:45 PM",
-      title: "Talent4Energy",
-      location: "",
-      stream: "Future"
-    },
-    {
-      time: "5:00 PM - 5:15 PM",
-      title: "Walk/Shuttle to Hotel",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "5:30 PM - 6:30 PM",
-      title: "Downtime - Prepare for banquet",
-      location: "Holiday Inn",
-      stream: "All Streams"
-    },
-    {
-      time: "6:30 PM - 6:45 PM",
-      title: "Shuttle From Hotel to Campus",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "7:30 PM - 9:45 PM",
-      title: "Dinner/Banquet",
-      location: "Wallace Hall - JDUC",
-      stream: "All Streams"
-    },
-    {
-      time: "10:00 PM - 10:15 PM",
-      title: "Shuttle From Campus to Hotel",
-      location: "",
-      stream: "All Streams"
-    }
-  ],
-  "Sunday": [
-    {
-      time: "8:00 AM - 8:30 AM",
-      title: "Walk/Shuttle to Campus",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "9:00 AM - 10:00 AM",
-      title: "Networking Breakfast",
-      location: "Biosciences Complex - Atrium",
-      stream: "All Streams"
-    },
-    {
-      time: "10:15 AM - 10:30 AM",
-      title: "Walk to Jeffrey Hall",
-      location: "",
-      stream: "All Streams"
-    },
-    // {
-    //   time: "10:30 AM - 11:15 AM",
-    //   title: "Speaker",
-    //   location: "",
-    //   stream: "Present"
-    // },
-    // {
-    //   time: "10:30 AM - 11:15 AM",
-    //   title: "Speaker",
-    //   location: "",
-    //   stream: "Future"
-    // },
-    {
-      time: "10:30 AM - 3:45 PM",
-      title: "Plenary",
-      location: "Kingston Hall - 204",
-      stream: "VPX Stream"
-    },
-    {
-      time: "11:30 AM - 3:45 PM",
-      title: "Case Competition",
-      location: "Jeffrey Hall - 155, 156, 225, 234",
-      stream: "Present"
-    },
-    {
-      time: "11:30 AM - 3:45 PM",
-      title: "Case Competition",
-      location: "Jeffrey Hall - 155, 156, 225, 234",
-      stream: "Future"
-    },
-    {
-      time: "4:00 PM - 4:15 PM",
-      title: "Walk to Biosciences Complex",
-      location: "",
-      stream: "All Streams"
-    },
-    {
-      time: "4:15 PM - 5:15 PM",
-      title: "Closing Ceremonies",
-      location: "Biosciences Complex - Atrium",
-      stream: "All Streams"
-    },
-    {
-      time: "5:30 PM - 6:30 PM",
-      title: "Lunch",
-      location: "Biosciences Complex - Atrium",
-      stream: "All Streams"
-    }
-  ]
-};
+// const StreamColors = {
+//   "All Streams": "bg-blue-100 border-blue-500 text-blue-800",
+//   "Present": "bg-red-100 border-red-500 text-red-800",
+//   "Future": "bg-green-100 border-green-500 text-green-800",
+//   "VPX Stream": "bg-yellow-100 border-yellow-500 text-yellow-800",
+//   // "Present & B": "bg-purple-100 border-purple-500 text-purple-800"
+// };
 
-const StreamColors = {
-  "All Streams": "bg-blue-100 border-blue-500 text-blue-800",
-  "Present": "bg-red-100 border-red-500 text-red-800",
-  "Future": "bg-green-100 border-green-500 text-green-800",
-  "VPX Stream": "bg-yellow-100 border-yellow-500 text-yellow-800",
-  // "Present & B": "bg-purple-100 border-purple-500 text-purple-800"
-};
+// export default function ConferenceSchedule() {
+//   const [activeDay, setActiveDay] = useState<keyof typeof SCHEDULE_DATA>("Friday");
 
-export default function ConferenceSchedule() {
-  const [activeDay, setActiveDay] = useState<keyof typeof SCHEDULE_DATA>("Friday");
+//   return (
+//     <div className="max-w-4xl mx-auto p-4 md:p-6">
+//       {/* Day Navigation Tabs */}
+//       <div className="flex justify-center mb-6 md:mb-8 gap-2 bg-gray-100 rounded-full p-1">
+//         {Object.keys(SCHEDULE_DATA).map((day) => (
+//           <button
+//             key={day}
+//             onClick={() => setActiveDay(day as keyof typeof SCHEDULE_DATA)}
+//             className={`px-4 md:px-6 py-2 rounded-full transition font-medium text-sm md:text-base ${
+//               activeDay === day
+//                 ? "bg-blue-600 text-white shadow"
+//                 : "text-gray-700 hover:bg-gray-200"
+//             }`}
+//           >
+//             {day}
+//           </button>
+//         ))}
+//       </div>
 
-  return (
-    <div className="max-w-4xl mx-auto p-4 md:p-6">
-      {/* Day Navigation Tabs */}
-      <div className="flex justify-center mb-6 md:mb-8 gap-2 bg-gray-100 rounded-full p-1">
-        {Object.keys(SCHEDULE_DATA).map((day) => (
-          <button
-            key={day}
-            onClick={() => setActiveDay(day as keyof typeof SCHEDULE_DATA)}
-            className={`px-4 md:px-6 py-2 rounded-full transition font-medium text-sm md:text-base ${
-              activeDay === day
-                ? "bg-blue-600 text-white shadow"
-                : "text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            {day}
-          </button>
-        ))}
-      </div>
+//       {/* Schedule */}
+//       <div className="bg-white rounded-lg shadow-md overflow-hidden">
+//         <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
+//           {/* Header Row */}
+//           <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 hidden md:block">
+//             Time
+//           </div>
+//           <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 md:col-span-4 grid grid-cols-4 text-sm">
+//             <div className="text-center">All Streams</div>
+//             <div className="text-center">Present</div>
+//             <div className="text-center">Future</div>
+//             <div className="text-center">VPX Stream</div>
+//           </div>
 
-      {/* Schedule */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
-          {/* Header Row */}
-          <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 hidden md:block">
-            Time
-          </div>
-          <div className="bg-gray-50 p-3 md:p-4 font-medium border-b border-gray-200 md:col-span-4 grid grid-cols-4 text-sm">
-            <div className="text-center">All Streams</div>
-            <div className="text-center">Present</div>
-            <div className="text-center">Future</div>
-            <div className="text-center">VPX Stream</div>
-          </div>
-
-          {/* Schedule Content */}
-          {SCHEDULE_DATA[activeDay].map((event, index) => (
-            <>
-              {/* Time Column */}
-              <div key={`time-${index}`} className="p-3 md:p-4 bg-gray-50 border-b border-gray-200 font-medium hidden md:block">
-                {event.time}
-              </div>
+//           {/* Schedule Content */}
+//           {SCHEDULE_DATA[activeDay].map((event, index) => (
+//             <>
+//               {/* Time Column */}
+//               <div key={`time-${index}`} className="p-3 md:p-4 bg-gray-50 border-b border-gray-200 font-medium hidden md:block">
+//                 {event.time}
+//               </div>
               
-              {/* Event Cells */}
-              <div className="p-3 md:p-4 border-b border-gray-200 md:col-span-4 grid grid-cols-4 gap-2">
-                {["All Streams", "Present", "Future", "VPX Stream"].map((stream) => {
-                  if (event.stream === stream || 
-                      (event.stream === "Present & B" && (stream === "Present" || stream === "Future"))) {
-                    return (
-                      <div
-                        key={`${stream}-${index}`}
-                        className={`p-3 rounded-lg border-l-4 ${StreamColors[event.Presents keyof typeof StreamColors]}`}
-                      >
-                        <div className="font-semibold text-sm md:text-base">{event.title}</div>
-                        <div className="text-xs md:text-sm text-gray-600 mt-1">{event.time}</div>
-                        {event.location && (
-                          <div className="text-xs text-gray-500 mt-1 italic">{event.location}</div>
-                        )}
-                      </div>
-                    );
-                  }
-                  return <div key={`${stream}-${index}`} className="p-3"></div>;
-                })}
-              </div>
-            </>
-          ))}
-        </div>
-      </div>
+//               {/* Event Cells */}
+//               <div className="p-3 md:p-4 border-b border-gray-200 md:col-span-4 grid grid-cols-4 gap-2">
+//                 {["All Streams", "Present", "Future", "VPX Stream"].map((stream) => {
+//                   if (event.stream === stream || 
+//                       (event.stream === "Present & B" && (stream === "Present" || stream === "Future"))) {
+//                     return (
+//                       <div
+//                         key={`${stream}-${index}`}
+//                         className={`p-3 rounded-lg border-l-4 ${StreamColors[event.Presents keyof typeof StreamColors]}`}
+//                       >
+//                         <div className="font-semibold text-sm md:text-base">{event.title}</div>
+//                         <div className="text-xs md:text-sm text-gray-600 mt-1">{event.time}</div>
+//                         {event.location && (
+//                           <div className="text-xs text-gray-500 mt-1 italic">{event.location}</div>
+//                         )}
+//                       </div>
+//                     );
+//                   }
+//                   return <div key={`${stream}-${index}`} className="p-3"></div>;
+//                 })}
+//               </div>
+//             </>
+//           ))}
+//         </div>
+//       </div>
 
-      {/* Legend */}
-      <div className="mt-6 flex justify-center gap-4 flex-wrap">
-        {Object.entries(StreamColors).map(([stream, colorClass]) => (
-          <div key={stream} className="flex items-center">
-            <div className={`w-4 h-4 rounded-sm mr-2 ${colorClass}`}></div>
-            <span className="text-sm">{stream}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+//       {/* Legend */}
+//       <div className="mt-6 flex justify-center gap-4 flex-wrap">
+//         {Object.entries(StreamColors).map(([stream, colorClass]) => (
+//           <div key={stream} className="flex items-center">
+//             <div className={`w-4 h-4 rounded-sm mr-2 ${colorClass}`}></div>
+//             <span className="text-sm">{stream}</span>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
