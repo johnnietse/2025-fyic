@@ -366,6 +366,145 @@ export function TransportationSection() {
           </div>
         </div>
 
+        {/* WASHROOM GUIDE Section */}
+        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+          <Typography
+            variant="h2"
+            color="white"
+            className="text-center mb-6"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            {...({} as any)}
+          >
+            WASHROOM GUIDE
+          </Typography>
+
+          <div className="space-y-6">
+            {/* Gender Inclusive Washroom Image */}
+            <div className="w-full rounded-lg overflow-hidden">
+              <img 
+                src="/image/gender-inclusive-washroom-location.png" 
+                alt="Gender Inclusive Washroom Locations" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            {/* Washroom Locations List */}
+            <div>
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-4 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Gender Inclusive Washroom Locations
+              </Typography>
+              
+              <ul className="space-y-3 ml-4 list-disc white-bullets">
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Ellis Hall</strong> - 039, 137, 433, 436
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Jeffrey Hall</strong> - 121, 324, 425, 522
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Kingston Hall</strong> - None – closest to Jeffrey
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>Biosci (BioSciences Complex)</strong> - 0591, 0594, 1389, 2288, 2289, 3288, 3289, 3490
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
+                    color="white"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    <strong>JDUC (John Deutsch University Centre)</strong> - 120, 215, 3348, 428, 430L, A102, A103, A104, A202, A203, A204, A302, A303, A304
+                  </Typography>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* BLUE LIGHT EMERGENCY PHONES Section */}
+        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+          <Typography
+            variant="h2"
+            color="white"
+            className="text-center mb-6"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            {...({} as any)}
+          >
+            BLUE LIGHT EMERGENCY PHONES
+          </Typography>
+
+          <div className="space-y-6">
+            {/* Two Images Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/blue-light-emergency-phones.png" 
+                  alt="Blue Light Emergency Phones" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/blue-light-emergency-phones-map.png" 
+                  alt="Blue Light Emergency Phones Map" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Description Text */}
+            <div className="space-y-4">
+              <Typography
+                color="white"
+                className="text-justify"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                When the red button is pushed, the phone is connected directly to the Emergency Report Centre (ERC), where the exact location of the phone is indicated, and two-way audio communication is established. The phones are intended to be used in any situation where you feel threatened or anxious, if you witness an accident or a crime, or if you wish to be escorted.
+              </Typography>
+
+              <Typography
+                color="white"
+                className="text-justify"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Make yourself familiar with the location of the blue lights along the routes you typically walk. If you begin to feel uneasy, concerned, or afraid, don't hesitate to use them.
+              </Typography>
+            </div>
+          </div>
+        </div>
+
         <br />
         <br />
                   
