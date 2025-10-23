@@ -505,6 +505,205 @@ export function TransportationSection() {
           </div>
         </div>
 
+
+
+        {/* AMENITIES Section */}
+        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+          <Typography
+            variant="h2"
+            color="white"
+            className="text-center mb-6"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            {...({} as any)}
+          >
+            AMENITIES
+          </Typography>
+        
+          <div className="grid grid-cols-2 gap-6">
+            {/* Water Bottle Fill Stations */}
+            <div className="flex flex-col items-center">
+              <Typography
+                variant="h5"
+                color="white"
+                className="mb-2 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                WATER BOTTLE FILL STATIONS
+              </Typography>
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/waterbottle-fill-stations.png" 
+                  alt="Water Bottle Fill Stations" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+        
+            {/* AEDs */}
+            <div className="flex flex-col items-center">
+              <Typography
+                variant="h5"
+                color="white"
+                className="mb-2 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                AUTOMATED EXTERNAL DEFIBRILLATORS (AEDS)
+              </Typography>
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/aeds.png" 
+                  alt="Automated External Defibrillators" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+        
+            {/* Prayer and Meditation Spaces */}
+            <div className="flex flex-col items-center">
+              <Typography
+                variant="h5"
+                color="white"
+                className="mb-2 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                PRAYER AND MEDITATION SPACES
+              </Typography>
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/prayer-and-meditation-spaces.png" 
+                  alt="Prayer and Meditation Spaces" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+        
+            {/* Food Available for Purchase */}
+            <div className="flex flex-col items-center">
+              <Typography
+                variant="h5"
+                color="white"
+                className="mb-2 text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                FOOD AVAILABLE FOR PURCHASE
+              </Typography>
+              <div className="w-full rounded-lg overflow-hidden">
+                <img 
+                  src="/image/food-available-for-purchase.png" 
+                  alt="Food Available for Purchase" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* INCIDENT RESPONSE COMMITTEE Section */}
+        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+          <Typography
+            variant="h2"
+            color="white"
+            className="text-center mb-6"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            {...({} as any)}
+          >
+            INCIDENT RESPONSE COMMITTEE
+          </Typography>
+        
+          <div className="space-y-6">
+            {/* What is the IRC? */}
+            <div>
+              <Typography
+                variant="h3"
+                color="white"
+                className="mb-4"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                What is the IRC?
+              </Typography>
+              <Typography
+                color="white"
+                className="text-justify"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                The Incident Response Committee (IRC) is in place to ensure a safe and respectful environment at the FVC 2025 conference.
+              </Typography>
+              <Typography
+                color="white"
+                className="text-justify mt-2"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                If you experience or witness an incident that causes concern and cannot be easily resolved, you are encouraged to submit a confidential incident Report Form. You may choose whether or not you are comfortable being contacted. All identifying details will remain private. The IRC's role is to listen, respond, and support delegates when issues arise.
+              </Typography>
+            </div>
+        
+            <hr className="border-white/30" />
+        
+            {/* IRC Chair Contact */}
+            <div>
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-3"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                IRC Chair Contact
+              </Typography>
+              <Typography
+                color="white"
+                className="font-semibold"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Monica Paul
+              </Typography>
+              <Typography
+                color="white"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Provincial Councilor, ESSCO
+              </Typography>
+              <Typography
+                color="white"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                irc@essco.ca
+              </Typography>
+            </div>
+        
+            {/* Submitting an Incident Report */}
+            <div>
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-3"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                Submitting an Incident Report
+              </Typography>
+              <Typography
+                color="white"
+                className="text-justify"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
+              >
+                A link to the Incident Report Form will be provided shortly before the conference. We strongly recommend submitting all concerns through the form, rather than using the IRC Chair email.
+              </Typography>
+            </div>
+          </div>
+        </div>
+
         <br />
         <br />
                   
