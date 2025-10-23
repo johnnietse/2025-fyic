@@ -35,7 +35,7 @@ export function SponsoredBy() {
           ensure the long-term health and safety of the profession, our
           communities, and the economy.
           <br />
-          Thank you to our sponsors – Talent4Energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!
+          <strong>Thank you to our sponsors – Talent4Energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!</strong>
         </Typography>
 
         <br />
