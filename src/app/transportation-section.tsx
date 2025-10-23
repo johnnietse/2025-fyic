@@ -452,7 +452,7 @@ export function TransportationSection() {
         </div>
 
         {/* BLUE LIGHT EMERGENCY PHONES Section */}
-        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+        <div id="blue-light-emergency-phones" className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
           <Typography
             variant="h2"
             color="white"
@@ -603,7 +603,7 @@ export function TransportationSection() {
         </div>
         
         {/* INCIDENT RESPONSE COMMITTEE Section */}
-        <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+        <div id="incident-response-committee" className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
           <Typography
             variant="h2"
             color="white"
