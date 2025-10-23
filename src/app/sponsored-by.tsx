@@ -35,15 +35,15 @@ export function SponsoredBy() {
           SPONSORED BY
         </Typography>
         
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
           {SPONSORS.map((logo, key) => (
             <div key={key} className="flex items-center justify-center">
               <Image
-                width={200}
-                height={100}
+                width={300}
+                height={150}
                 src={`/logos/${logo}`}
                 alt={logo.replace('.png', '').replace('.jpg', '').replace(/-/g, ' ')}
-                className="max-w-[180px] max-h-[80px] object-contain hover:scale-105 transition-transform duration-300"
+                className="max-w-[280px] max-h-[140px] object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}
