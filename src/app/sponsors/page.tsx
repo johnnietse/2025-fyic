@@ -9,6 +9,8 @@ import OurStats from "../our-stats";
 // import EventContent from "./event-content";
 import Contact from "@/components/contact";
 import Faq from "../faq";
+import { SponsorsSection } from "@/app/sponsors-section";
+
 
 
 export default function Page() {
@@ -17,6 +19,7 @@ export default function Page() {
       <Navbar />
       {/* <Hero /> */}
       <AboutSponsors />
+      <SponsorsSection />
       <SponsoredBy />
       {/* <AboutEvent /> */}
       {/* <OurStats /> */}
