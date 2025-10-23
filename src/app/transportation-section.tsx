@@ -12,110 +12,109 @@ export function TransportationSection() {
       <br />
                 
       <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-12">
-        {/* Section Header */}
-        <Typography 
-          variant="h1" 
-          className="text-center mb-8 text-white" 
-          style={{ fontFamily: 'Montserrat, sans-serif' }}
-          {...({} as any)}
-        >
-          Getting to Kingston
-        </Typography>
+        {/* Main TRANSPORTATION Section */}
+        <div className="w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+          <Typography
+            variant="h2"
+            color="white"
+            className="text-center mb-6"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            {...({} as any)}
+          >
+            TRANSPORTATION
+          </Typography>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl">
-          {/* Left Column - Transportation Options */}
-          <div className="space-y-4">
-            <Typography
-              variant="h3"
-              color="white"
-              className="mb-4 text-center lg:text-left border-b border-white/30 pb-2"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-              {...({} as any)}
-            >
-              Transportation Options
-            </Typography>
-            
-            <div className="space-y-3">
-              <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                <Typography
-                  variant="h5"
-                  color="white"
-                  className="mb-1"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  Mega Bus
-                </Typography>
-                <Typography
-                  color="white"
-                  className="text-sm"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  Affordable bus service with multiple daily departures from various locations.
-                </Typography>
-              </div>
-              
-              <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                <Typography
-                  variant="h5"
-                  color="white"
-                  className="mb-1"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  FlixBus
-                </Typography>
-                <Typography
-                  color="white"
-                  className="text-sm"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  Comfortable bus service connecting Kingston to major cities.
-                </Typography>
-              </div>
-              
-              <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                <Typography
-                  variant="h5"
-                  color="white"
-                  className="mb-1"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  Via Rail
-                </Typography>
-                <Typography
-                  color="white"
-                  className="text-sm"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  {...({} as any)}
-                >
-                  Train service with Kingston located on the Ontario-Quebec route.
-                </Typography>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm mt-4">
+          <div className="space-y-6">
+            {/* Transportation Options */}
+            <div>
               <Typography
+                variant="h3"
                 color="white"
-                className="text-sm"
+                className="mb-4 text-center border-b border-white/30 pb-2"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
-                When you arrive in Kingston, both the Megabus and Via Rail stations have bus routes that can take you to your hotel.
+                Transportation Options
               </Typography>
+              
+              <div className="space-y-4">
+                <div>
+                  <Typography
+                    variant="h4"
+                    color="white"
+                    className="mb-2"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Mega Bus
+                  </Typography>
+                  <Typography
+                    color="white"
+                    className="text-justify"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Affordable bus service with multiple daily departures from various locations.
+                  </Typography>
+                </div>
+                
+                <div>
+                  <Typography
+                    variant="h4"
+                    color="white"
+                    className="mb-2"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    FlixBus
+                  </Typography>
+                  <Typography
+                    color="white"
+                    className="text-justify"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Comfortable bus service connecting Kingston to major cities.
+                  </Typography>
+                </div>
+                
+                <div>
+                  <Typography
+                    variant="h4"
+                    color="white"
+                    className="mb-2"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Via Rail
+                  </Typography>
+                  <Typography
+                    color="white"
+                    className="text-justify"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    {...({} as any)}
+                  >
+                    Train service with Kingston located on the Ontario-Quebec route.
+                  </Typography>
+                </div>
+                
+                <Typography
+                  color="white"
+                  className="text-justify bg-white/10 p-4 rounded-lg"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  {...({} as any)}
+                >
+                  When you arrive in Kingston, both the Megabus and Via Rail stations have bus routes that can take you to your hotel.
+                </Typography>
+              </div>
             </div>
-          </div>
-          
-          {/* Right Column - Via Rail Info */}
-          <div className="space-y-4">
-            <div className="bg-white/10 p-5 rounded-lg backdrop-blur-sm">
+
+            {/* Via Rail Route */}
+            <div>
               <Typography
-                variant="h4"
+                variant="h3"
                 color="white"
-                className="mb-3 text-center"
+                className="mb-4 text-center border-b border-white/30 pb-2"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
@@ -124,7 +123,7 @@ export function TransportationSection() {
               
               <Typography
                 color="white"
-                className="mb-3 text-center text-sm"
+                className="text-justify mb-4"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
@@ -132,20 +131,21 @@ export function TransportationSection() {
               </Typography>
               
               {/* Flexible image container */}
-              <div className="w-full rounded-lg overflow-hidden mt-3">
+              <div className="w-full rounded-lg overflow-hidden">
                 <img 
                   src="/image/map.png" 
                   alt="Via Rail Route Map" 
-                  className="w-full h-auto max-h-64 object-contain"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
-            
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+
+            {/* Conference Venue */}
+            <div>
               <Typography
-                variant="h5"
+                variant="h4"
                 color="white"
-                className="mb-1 text-center"
+                className="mb-3 text-center"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
@@ -153,7 +153,7 @@ export function TransportationSection() {
               </Typography>
               <Typography
                 color="white"
-                className="text-center text-sm"
+                className="text-center bg-white/10 p-4 rounded-lg"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 {...({} as any)}
               >
@@ -164,63 +164,8 @@ export function TransportationSection() {
             </div>
           </div>
         </div>
-        
-        {/* Additional Transportation Info */}
-        <div className="mt-8 w-full max-w-4xl bg-white/10 p-5 rounded-lg backdrop-blur-sm">
-          <Typography
-            variant="h4"
-            color="white"
-            className="mb-4 text-center border-b border-white/30 pb-2"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
-            {...({} as any)}
-          >
-            Local Transportation in Kingston
-          </Typography>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-white/15 p-4 rounded-lg">
-              <Typography
-                variant="h5"
-                color="white"
-                className="mb-1"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-                {...({} as any)}
-              >
-                Kingston Transit
-              </Typography>
-              <Typography
-                color="white"
-                className="text-sm"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-                {...({} as any)}
-              >
-                The local bus service can take you from transportation hubs to your accommodation and the conference venue.
-              </Typography>
-            </div>
-            
-            <div className="bg-white/15 p-4 rounded-lg">
-              <Typography
-                variant="h5"
-                color="white"
-                className="mb-1"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-                {...({} as any)}
-              >
-                Taxi & Ride-Sharing
-              </Typography>
-              <Typography
-                color="white"
-                className="text-sm"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-                {...({} as any)}
-              >
-                Taxis and ride-sharing services are readily available throughout Kingston.
-              </Typography>
-            </div>
-          </div>
-        </div>
 
-        {/* New "Within Kingston" Section */}
+        {/* "Within Kingston" Section */}
         <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
           <Typography
             variant="h2"
@@ -388,6 +333,417 @@ export function TransportationSection() {
 }
 
 export default TransportationSection;
+
+// "use client";
+
+// import { Typography } from "@material-tailwind/react";
+
+// export function TransportationSection() {
+//   return (
+//     <div className="relative w-full bg-[url('/image/transportation-bg.png')] bg-cover bg-center bg-no-repeat">
+//       {/* More translucent overlay */}
+//       <div className="absolute inset-0 h-full w-full bg-black/40" />
+
+//       <br />
+//       <br />
+                
+//       <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-12">
+//         {/* Section Header */}
+//         <Typography 
+//           variant="h1" 
+//           className="text-center mb-8 text-white" 
+//           style={{ fontFamily: 'Montserrat, sans-serif' }}
+//           {...({} as any)}
+//         >
+//           Getting to Kingston
+//         </Typography>
+
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl">
+//           {/* Left Column - Transportation Options */}
+//           <div className="space-y-4">
+//             <Typography
+//               variant="h3"
+//               color="white"
+//               className="mb-4 text-center lg:text-left border-b border-white/30 pb-2"
+//               style={{ fontFamily: 'Montserrat, sans-serif' }}
+//               {...({} as any)}
+//             >
+//               Transportation Options
+//             </Typography>
+            
+//             <div className="space-y-3">
+//               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+//                 <Typography
+//                   variant="h5"
+//                   color="white"
+//                   className="mb-1"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   Mega Bus
+//                 </Typography>
+//                 <Typography
+//                   color="white"
+//                   className="text-sm"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   Affordable bus service with multiple daily departures from various locations.
+//                 </Typography>
+//               </div>
+              
+//               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+//                 <Typography
+//                   variant="h5"
+//                   color="white"
+//                   className="mb-1"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   FlixBus
+//                 </Typography>
+//                 <Typography
+//                   color="white"
+//                   className="text-sm"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   Comfortable bus service connecting Kingston to major cities.
+//                 </Typography>
+//               </div>
+              
+//               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+//                 <Typography
+//                   variant="h5"
+//                   color="white"
+//                   className="mb-1"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   Via Rail
+//                 </Typography>
+//                 <Typography
+//                   color="white"
+//                   className="text-sm"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   Train service with Kingston located on the Ontario-Quebec route.
+//                 </Typography>
+//               </div>
+//             </div>
+            
+//             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm mt-4">
+//               <Typography
+//                 color="white"
+//                 className="text-sm"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 When you arrive in Kingston, both the Megabus and Via Rail stations have bus routes that can take you to your hotel.
+//               </Typography>
+//             </div>
+//           </div>
+          
+//           {/* Right Column - Via Rail Info */}
+//           <div className="space-y-4">
+//             <div className="bg-white/10 p-5 rounded-lg backdrop-blur-sm">
+//               <Typography
+//                 variant="h4"
+//                 color="white"
+//                 className="mb-3 text-center"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Via Rail Route
+//               </Typography>
+              
+//               <Typography
+//                 color="white"
+//                 className="mb-3 text-center text-sm"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Kingston is located on the Ontario-Quebec route for ViaRail. Cities that have train stations are shown in the figure below.
+//               </Typography>
+              
+//               {/* Flexible image container */}
+//               <div className="w-full rounded-lg overflow-hidden mt-3">
+//                 <img 
+//                   src="/image/map.png" 
+//                   alt="Via Rail Route Map" 
+//                   className="w-full h-auto max-h-64 object-contain"
+//                 />
+//               </div>
+//             </div>
+            
+//             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+//               <Typography
+//                 variant="h5"
+//                 color="white"
+//                 className="mb-1 text-center"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Conference Venue
+//               </Typography>
+//               <Typography
+//                 color="white"
+//                 className="text-center text-sm"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Holiday Inn Kingston Waterfront
+//                 <br />
+//                 2 Princess St, Kingston, ON K7L 1A2
+//               </Typography>
+//             </div>
+//           </div>
+//         </div>
+        
+//         {/* Additional Transportation Info */}
+//         <div className="mt-8 w-full max-w-4xl bg-white/10 p-5 rounded-lg backdrop-blur-sm">
+//           <Typography
+//             variant="h4"
+//             color="white"
+//             className="mb-4 text-center border-b border-white/30 pb-2"
+//             style={{ fontFamily: 'Montserrat, sans-serif' }}
+//             {...({} as any)}
+//           >
+//             Local Transportation in Kingston
+//           </Typography>
+          
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+//             <div className="bg-white/15 p-4 rounded-lg">
+//               <Typography
+//                 variant="h5"
+//                 color="white"
+//                 className="mb-1"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Kingston Transit
+//               </Typography>
+//               <Typography
+//                 color="white"
+//                 className="text-sm"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 The local bus service can take you from transportation hubs to your accommodation and the conference venue.
+//               </Typography>
+//             </div>
+            
+//             <div className="bg-white/15 p-4 rounded-lg">
+//               <Typography
+//                 variant="h5"
+//                 color="white"
+//                 className="mb-1"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Taxi & Ride-Sharing
+//               </Typography>
+//               <Typography
+//                 color="white"
+//                 className="text-sm"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Taxis and ride-sharing services are readily available throughout Kingston.
+//               </Typography>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* New "Within Kingston" Section */}
+//         <div className="mt-8 w-full max-w-4xl bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+//           <Typography
+//             variant="h2"
+//             color="white"
+//             className="text-center mb-4"
+//             style={{ fontFamily: 'Montserrat, sans-serif' }}
+//             {...({} as any)}
+//           >
+//             WITHIN KINGSTON
+//           </Typography>
+
+//           <div className="space-y-4">
+//             <Typography
+//               color="white"
+//               className="text-center italic mb-4"
+//               style={{ fontFamily: 'Montserrat, sans-serif' }}
+//               {...({} as any)}
+//             >
+//               *Transportation will be provided throughout the conference via shuttles on Saturday and Sunday*
+//             </Typography>
+
+//             <Typography
+//               color="white"
+//               className="text-justify"
+//               style={{ fontFamily: 'Montserrat, sans-serif' }}
+//               {...({} as any)}
+//             >
+//               Delegates are responsible for arranging travel to and from the hotel and on Friday evening to campus. Feel free to coordinate travel from train or bus stations with other delegates through the appropriate FYIC Discord channel.
+//             </Typography>
+
+//             <Typography
+//               color="white"
+//               className="text-justify"
+//               style={{ fontFamily: 'Montserrat, sans-serif' }}
+//               {...({} as any)}
+//             >
+//               Available methods of transportation in Kingston include city buses and taxi/uber/lyft. For day-of city bus routes and times, we advise downloading Google Maps in advance.
+//             </Typography>
+
+//             <ul className="space-y-2 ml-4 list-disc white-bullets">
+//               <li>
+//                 <Typography
+//                   color="white"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   <strong>Amey's Taxi</strong> 613–546–1111
+//                 </Typography>
+//               </li>
+//               <li>
+//                 <Typography
+//                   color="white"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   <strong>Uber/lyft app</strong>
+//                 </Typography>
+//               </li>
+//               <li>
+//                 <Typography
+//                   color="white"
+//                   style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                   {...({} as any)}
+//                 >
+//                   <strong>City bus fare</strong> is $3.50 for 90 minutes of transit – ask for a transfer slip if taking more than one bus within 90 minutes
+//                 </Typography>
+//               </li>
+//             </ul>
+
+//             {/* Kingston Map Image */}
+//             <div className="mt-6">
+//               <div className="w-full rounded-lg overflow-hidden">
+//                 <img 
+//                   src="/image/kingston-map.png" 
+//                   alt="Kingston Map with Common Locations" 
+//                   className="w-full h-auto object-contain"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* Common Locations List */}
+//             <div className="mt-4">
+//               <Typography
+//                 variant="h4"
+//                 color="white"
+//                 className="mb-3 text-center"
+//                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                 {...({} as any)}
+//               >
+//                 Common Locations
+//               </Typography>
+              
+//               <ol className="space-y-2 ml-4 list-decimal white-numbers">
+//                 <li>
+//                   <Typography
+//                     color="white"
+//                     style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                     {...({} as any)}
+//                   >
+//                     <strong>Holiday Inn</strong>
+//                   </Typography>
+//                 </li>
+//                 <li>
+//                   <Typography
+//                     color="white"
+//                     style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                     {...({} as any)}
+//                   >
+//                     <strong>Via Rail Station</strong>
+//                   </Typography>
+//                 </li>
+//                 <li>
+//                   <Typography
+//                     color="white"
+//                     style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                     {...({} as any)}
+//                   >
+//                     <strong>MegaBus Station</strong>
+//                   </Typography>
+//                 </li>
+//                 <li>
+//                   <Typography
+//                     color="white"
+//                     style={{ fontFamily: 'Montserrat, sans-serif' }}
+//                     {...({} as any)}
+//                   >
+//                     <strong>Queen's University</strong>
+//                   </Typography>
+//                 </li>
+//               </ol>
+//             </div>
+//           </div>
+//         </div>
+
+//         <br />
+//         <br />
+                  
+//       </section>
+
+//       {/* Custom CSS for white bullet points and numbers */}
+//       <style jsx global>{`
+//         .white-bullets {
+//           list-style-type: disc;
+//           color: white;
+//         }
+//         .white-bullets li::marker {
+//           color: white;
+//         }
+//         ul.white-bullets {
+//           color: white;
+//         }
+//         .white-numbers {
+//           list-style-type: decimal;
+//           color: white;
+//         }
+//         .white-numbers li::marker {
+//           color: white;
+//         }
+//         ol.white-numbers {
+//           color: white;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
+// export default TransportationSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // "use client";
