@@ -25,10 +25,7 @@ export function SponsoredBy() {
         <br>
         </br>
         <Typography variant="lead" color="gray" className="mb-8 max-w-4xl mx-auto" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
-          FYIC 2025 is proudly presented by OSPE. Thank you to our sponsors – TBD!
-{/*           DDQIC, Suncor, Tatham Engineering, Circle5, Toromont CAT, Smith Engineering
-          Faculty of Chemical Engineering, Stroud, CIBC Capital Markets, Queen’s
-          University Faculty of Education, Isaac, INVISTA, Bounce, and Teck Resources Limited. */}
+          FYIC 2025 is proudly presented by OSPE. Thank you to our sponsors – talent4energy (T4E), ONTARIO SOCIETY OF PROFESSIONAL ENGINEERS (OSPE), Engineering Society of Queen's University, BGC, SMITH ENGINEERING (Queen's University), LINAMAR, HOW TO CHANGE THE WORLD, and ESSCO!
         </Typography>
 
         <br>
