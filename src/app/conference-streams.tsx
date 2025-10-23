@@ -23,7 +23,7 @@ export function ConferenceStreams() {
             style={{ fontFamily: 'Montserrat, sans-serif' }}
             {...({} as any)}
           >
-            FYIC 2025 workshops will be separated into two streams centered around our conference theme:
+            FYIC 2025 workshops will be separated into two streams ("Present" and "Future") centered around our conference theme:
           </Typography>
           
           <Typography
@@ -56,7 +56,7 @@ export function ConferenceStreams() {
               style={{ fontFamily: 'Montserrat, sans-serif' }}
               {...({} as any)}
             >
-              The Present stream will include workshops relating to your experience in university over the next few years.
+              The Present stream will include workshops relating to your experience in university and over the next few years.
             </Typography>
             
             <Typography
@@ -124,7 +124,8 @@ export function ConferenceStreams() {
             style={{ fontFamily: 'Montserrat, sans-serif' }}
             {...({} as any)}
           >
-            Both streams are designed to provide valuable insights and skills that will benefit you throughout your engineering education and career.
+            Both streams are designed to provide valuable insights and skills that will benefit you throughout your engineering education and career. Streams will be categorized as Present and Future, feel free to attend whatever workshop best fits your interest. Workshop availability will be
+            subject to room capacity. 
           </Typography>
         </div>
       </section>
