@@ -99,8 +99,8 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleEditPosterClick = () => {
-    window.location.href = "https://www.canva.com/design/DAGx3UuONwY/LehcEmNT2kfjp_8-qwHBPA/view?utm_content=DAGx3UuONwY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb01af3c8ea";
+  const handleDelegatePackageClick = () => {
+    window.open("/files/FYIC_2025_Delegate_Package.pdf", "_blank");
   };
 
   return (
@@ -115,22 +115,6 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-{/*           <div className="h-20 w-20 mr-4 flex items-center justify-center rounded-full overflow-hidden border-2 border-white bg-white p-1">
-            <img 
-              src="/image/IMG_9334.png" 
-              alt="FYIC Logo" 
-              className="h-full w-full object-contain"
-            />
-          </div> */}
-
-
-{/*           <div className="h-24 w-24 mr-4 flex items-center justify-center rounded-full border-1.5 border-white bg-white overflow-hidden">
-            <img 
-              src="/image/fyic-logo-cropped.png" 
-              alt="FYIC Logo" 
-            />
-          </div> */}
-
           <div className="size-24 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden">
             <img 
               src="/image/fyic-logo-cropped.png" 
@@ -138,7 +122,6 @@ export function Navbar() {
               className="h-[90%] w-[90%] object-contain"
             />
           </div>
-
           
           <Typography
             color={isScrolling ? "blue-gray" : "white"}
@@ -168,7 +151,7 @@ export function Navbar() {
             variant={isScrolling ? "filled" : "outlined"}
             color={isScrolling ? "blue" : "white"}
             className="flex items-center gap-2 rounded-full"
-            onClick={handleEditPosterClick}
+            onClick={handleDelegatePackageClick}
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             <PencilSquareIcon className="h-4 w-4" />
@@ -200,7 +183,7 @@ export function Navbar() {
                 {name}
               </NavItem>
             ))}
-            <NavItem href="https://www.canva.com/design/DAGx3UuONwY/yhy2P3xO8mH8WX0L0mirLQ/edit?utm_content=DAGx3UuONwY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+            <NavItem href="/files/FYIC_2025_Delegate_Package.pdf">
               <PencilSquareIcon className="h-5 w-5" style={{ fontFamily: 'Montserrat, sans-serif' }}/>
               Delegate Package
             </NavItem>
