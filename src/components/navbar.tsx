@@ -56,7 +56,7 @@ const NAV_MENU = [
     href: "/",
   },
   {
-    name: "Speakers",
+    name: "Speakers & Workshops",
     icon: UserCircleIcon,
     href: "/speakers",
   },
