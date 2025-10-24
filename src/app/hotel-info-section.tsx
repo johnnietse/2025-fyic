@@ -730,9 +730,9 @@ export default HotelInfoSection;
 //                 style={{ fontFamily: 'Montserrat, sans-serif' }}
 //                 {...({} as any)}
 //               >
-//                 Rooming assignments will be 4 delegates per room. Each room has 2 queen-size beds. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest extent possible. Delegates who have requested their own room or a room with only two people will receive invoices for additional payment for their own room.
-//                 {/* Rooming assignments will be 4 delegates per room, unless otherwise requested. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest
-//                 extent possible. */}
+//                 {/* Rooming assignments will be 4 delegates per room. Each room has 2 queen-size beds. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest extent possible. Delegates who have requested their own room or a room with only two people will receive invoices for additional payment for their own room. */}
+//                 Rooming assignments will be 4 delegates per room, unless otherwise requested. Rooming preferences and accessibility requests in your registration will be accommodated to the fullest
+//                 extent possible.
 //               </Typography>
 //             </div>
 //           </div>
