@@ -16,7 +16,7 @@ const STATS = [
     title: "Participants",
   },
   {
-    count: "10+",
+    count: "12+",
     title: "Speakers",
   },
   {
