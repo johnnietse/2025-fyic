@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     title: "2. What is the dress code for the conference?",
-    desc: "Attire varies throughout the conference. Casual wear is suitable for the opening ceremony and social. Business casual is expected during sessions on Days 2 and 3. For the banquet and case competition, formal attire is encouraged to complement the event’s elegant ambiance.",
+    desc: "Attire varies throughout the conference. Casual wear is suitable for the opening ceremony and social. Business casual is expected during sessions on Days 2 and 3 as well as the case competition on Day 3. For the banquet, semi-formal attire (e.g. suits, blazers, dresses, skirts, dress pants) is encouraged to complement the event’s elegant ambiance.",
   },
   {
     title: "3. Will food and snacks be provided during the conference?",
@@ -26,6 +26,8 @@ const FAQS = [
     title: "5. What should I do if I have additional questions?",
     desc: `Feel free to reach out by emailing us at 
       <a href="mailto:fyic@engsoc.queensu.ca" class="text-blue-500 underline">fyic@engsoc.queensu.ca</a> 
+      OR
+      <a href="mailto:fyic@essco.ca" class="text-blue-500 underline">fyic@essco.ca</a> 
       with the subject line: “FYIC Inquiry – [Your Name]”, or send us a direct message on 
       Instagram at <a href="https://www.instagram.com/fyic2025/" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">@fyic2025</a>.`,
   },
