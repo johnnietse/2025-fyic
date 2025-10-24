@@ -182,7 +182,7 @@ export function SpeakersContent() {
             {images.map((src, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-48 h-64 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer overflow-hidden"
+                className="flex-shrink-0 w-48 h-64 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer overflow-hidden relative"
                 onClick={() => openImage(index)}
               >
                 <img
@@ -190,10 +190,11 @@ export function SpeakersContent() {
                   alt={`Speaker Workshop Info ${index + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+                {/* Subtle slide indicator - removed the dark bar */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-center py-3">
                   <Typography
                     variant="small"
-                    className="font-semibold"
+                    className="font-semibold drop-shadow-md"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                     {...({} as any)}
                   >
@@ -271,7 +272,7 @@ export function SpeakersContent() {
             {/* Draggable Back to Gallery Icon */}
             <div
               ref={iconRef}
-              className={`fixed z-60 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-2xl cursor-pointer transition-all duration-200 ${
+              className={`fixed z-60 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 shadow-2xl cursor-pointer transition-all duration-200 ${
                 isDraggingIcon ? 'scale-110 shadow-xl' : 'hover:scale-105'
               }`}
               style={{
@@ -304,7 +305,7 @@ export function SpeakersContent() {
                   />
                 </svg>
                 <span className="text-xs font-semibold leading-none text-center">
-                  Back to Gallery
+                  Gallery
                 </span>
               </div>
             </div>
@@ -312,7 +313,7 @@ export function SpeakersContent() {
             {/* Close Button */}
             <button
               onClick={closeImage}
-              className="absolute top-4 right-4 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+              className="absolute top-4 right-4 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ×
             </button>
@@ -320,49 +321,52 @@ export function SpeakersContent() {
             {/* Navigation Arrows */}
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ‹
             </button>
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ›
             </button>
+
+            {/* Current Slide Indicator - Replaced the dark bar */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="bg-black/50 backdrop-blur-sm text-white rounded-full px-4 py-2 shadow-lg">
+                <Typography
+                  variant="small"
+                  className="font-semibold"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                  {...({} as any)}
+                >
+                  Slide {currentIndex + 1} of {images.length}
+                </Typography>
+              </div>
+            </div>
 
             {/* Zoom Controls */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
               <button
                 onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.5))}
-                className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
               >
                 Zoom Out
               </button>
               <button
                 onClick={() => setZoomLevel(1)}
-                className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
               >
-                Reset Zoom
+                Reset
               </button>
               <button
                 onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 3))}
-                className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
               >
                 Zoom In
               </button>
-            </div>
-
-            {/* Current Image Info */}
-            <div className="absolute top-4 left-4 text-white z-10 bg-black bg-opacity-50 rounded-lg px-3 py-2">
-              <Typography
-                variant="small"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                {...({} as any)}
-              >
-                Slide {currentIndex + 1} of {images.length}
-              </Typography>
             </div>
 
             {/* Image Container */}
@@ -384,9 +388,10 @@ export function SpeakersContent() {
             </div>
 
             {/* Instructions for Modal */}
-            <div className="absolute bottom-4 right-4 text-white text-sm bg-black bg-opacity-50 rounded-lg px-3 py-2 z-10">
+            <div className="absolute bottom-4 right-4 text-white text-sm bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 z-10 shadow-lg">
               <Typography
                 variant="small"
+                className="font-medium"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 {...({} as any)}
               >
@@ -444,14 +449,11 @@ export function SpeakersContent() {
 export default SpeakersContent;
 
 
-
-
-
-// // Recovable code in case if the code above doesn't work as expected
+// Recoverable code in case if the code above doesn't work
 // "use client";
 
 // import { Typography } from "@material-tailwind/react";
-// import { useState, useEffect } from "react";
+// import { useState, useEffect, useRef } from "react";
 
 // export function SpeakersContent() {
 //   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -460,6 +462,12 @@ export default SpeakersContent;
 //   const [isDragging, setIsDragging] = useState(false);
 //   const [startX, setStartX] = useState(0);
 //   const [scrollLeft, setScrollLeft] = useState(0);
+  
+//   // New state for draggable icon
+//   const [iconPosition, setIconPosition] = useState({ x: 20, y: 80 });
+//   const [isDraggingIcon, setIsDraggingIcon] = useState(false);
+//   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+//   const iconRef = useRef<HTMLDivElement>(null);
 
 //   const images = Array.from({ length: 11 }, (_, i) => 
 //     `/image/speaker-workshop-info-${i + 1}.png`
@@ -487,10 +495,8 @@ export default SpeakersContent;
 
 //   const handleWheel = (e: React.WheelEvent) => {
 //     if (e.deltaY < 0) {
-//       // Scroll up - zoom in
 //       setZoomLevel(prev => Math.min(prev + 0.1, 3));
 //     } else {
-//       // Scroll down - zoom out
 //       setZoomLevel(prev => Math.max(prev - 0.1, 0.5));
 //     }
 //   };
@@ -533,12 +539,52 @@ export default SpeakersContent;
 //     e.currentTarget.scrollLeft = scrollLeft - walk;
 //   };
 
+//   // Draggable icon functionality
+//   const handleIconMouseDown = (e: React.MouseEvent) => {
+//     if (iconRef.current) {
+//       setIsDraggingIcon(true);
+//       const rect = iconRef.current.getBoundingClientRect();
+//       setDragOffset({
+//         x: e.clientX - rect.left,
+//         y: e.clientY - rect.top
+//       });
+//     }
+//   };
+
+//   const handleIconMouseMove = (e: MouseEvent) => {
+//     if (!isDraggingIcon) return;
+    
+//     const newX = e.clientX - dragOffset.x;
+//     const newY = e.clientY - dragOffset.y;
+    
+//     // Constrain to viewport boundaries
+//     const maxX = window.innerWidth - (iconRef.current?.offsetWidth || 60);
+//     const maxY = window.innerHeight - (iconRef.current?.offsetHeight || 60);
+    
+//     setIconPosition({
+//       x: Math.max(10, Math.min(newX, maxX)),
+//       y: Math.max(10, Math.min(newY, maxY))
+//     });
+//   };
+
+//   const handleIconMouseUp = () => {
+//     setIsDraggingIcon(false);
+//   };
+
 //   useEffect(() => {
 //     document.addEventListener('keydown', handleKeyDown);
+    
+//     if (isDraggingIcon) {
+//       document.addEventListener('mousemove', handleIconMouseMove);
+//       document.addEventListener('mouseup', handleIconMouseUp);
+//     }
+    
 //     return () => {
 //       document.removeEventListener('keydown', handleKeyDown);
+//       document.removeEventListener('mousemove', handleIconMouseMove);
+//       document.removeEventListener('mouseup', handleIconMouseUp);
 //     };
-//   }, [selectedImage]);
+//   }, [selectedImage, isDraggingIcon, dragOffset]);
 
 //   return (
 //     <section className="py-8 px-8 lg:py-20">
@@ -674,6 +720,47 @@ export default SpeakersContent;
 //         {/* Magazine Popup Modal */}
 //         {selectedImage !== null && (
 //           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+//             {/* Draggable Back to Gallery Icon */}
+//             <div
+//               ref={iconRef}
+//               className={`fixed z-60 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-2xl cursor-pointer transition-all duration-200 ${
+//                 isDraggingIcon ? 'scale-110 shadow-xl' : 'hover:scale-105'
+//               }`}
+//               style={{
+//                 left: `${iconPosition.x}px`,
+//                 top: `${iconPosition.y}px`,
+//                 touchAction: 'none'
+//               }}
+//               onMouseDown={handleIconMouseDown}
+//               onClick={(e) => {
+//                 // Only trigger close if not dragging
+//                 if (!isDraggingIcon) {
+//                   closeImage();
+//                 }
+//               }}
+//               title="Click to go back to gallery | Drag to move"
+//             >
+//               <div className="flex flex-col items-center justify-center w-12 h-12">
+//                 <svg 
+//                   className="w-6 h-6 mb-1" 
+//                   fill="none" 
+//                   stroke="currentColor" 
+//                   viewBox="0 0 24 24" 
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <path 
+//                     strokeLinecap="round" 
+//                     strokeLinejoin="round" 
+//                     strokeWidth={2} 
+//                     d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+//                   />
+//                 </svg>
+//                 <span className="text-xs font-semibold leading-none text-center">
+//                   Back to Gallery
+//                 </span>
+//               </div>
+//             </div>
+
 //             {/* Close Button */}
 //             <button
 //               onClick={closeImage}
