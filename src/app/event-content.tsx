@@ -337,7 +337,7 @@ export default function ConferenceSchedule() {
         >
           this link
         </a>{" "}
-        instead.
+        instead. Also, please note that all sessions in all streams on Saturday will take place in Ellis Hall - Rooms 321, 324, and 226, respectively.
       </div>
     </div>
   );
