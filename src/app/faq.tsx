@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     title: "2. What is the dress code for the conference?",
-    desc: "Attire varies throughout the conference. Casual wear is suitable for the opening ceremony and social. Business casual is expected during sessions on Days 2 and 3 as well as the case competition on Day 3. For the banquet, semi-formal attire (e.g. suits, blazers, dresses, skirts, dress pants) is encouraged to complement the event’s elegant ambiance.",
+    desc: "Attire varies throughout the conference. Casual wear is suitable for the opening ceremony and social. Business casual is expected during sessions on Day 2 as well as the case competition on Day 3. For the banquet, semi-formal attire (e.g. suits, blazers, dresses, skirts, dress pants) is encouraged to complement the event’s elegant ambiance.",
   },
   {
     title: "3. Will food and snacks be provided during the conference?",
