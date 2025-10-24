@@ -443,7 +443,7 @@ export function TransportationSection() {
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                     {...({} as any)}
                   >
-                    <strong>JDUC (John Deutsch University Centre)</strong> - 120, 215, 3348, 428, 430L, A102, A103, A104, A202, A203, A204, A302, A303, A304
+                    <strong>JDUC (John Deutsch University Centre)</strong> - 120, 215, 334B, 428, 430L, A102, A103, A104, A202, A203, A204, A302, A303, A304
                   </Typography>
                 </li>
               </ul>
