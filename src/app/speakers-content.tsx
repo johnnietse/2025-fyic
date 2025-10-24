@@ -1,3 +1,4 @@
+// Most recent code
 "use client";
 
 import { Typography } from "@material-tailwind/react";
@@ -333,7 +334,7 @@ export function SpeakersContent() {
               ›
             </button>
 
-            {/* Current Slide Indicator - Replaced the dark bar */}
+            {/* Current Slide Indicator */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
               <div className="bg-black/50 backdrop-blur-sm text-white rounded-full px-4 py-2 shadow-lg">
                 <Typography
@@ -347,31 +348,58 @@ export function SpeakersContent() {
               </div>
             </div>
 
-            {/* Zoom Controls */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-              <button
-                onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.5))}
-                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
+            {/* Mobile Layout: Instructions above zoom controls */}
+            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 w-full max-w-xs">
+              {/* Instructions for Mobile - Above zoom controls */}
+              <div className="text-white text-sm bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg mb-3 md:hidden">
+                <Typography
+                  variant="small"
+                  className="font-medium text-center"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                  {...({} as any)}
+                >
+                  Scroll to zoom • Arrows to navigate
+                </Typography>
+              </div>
+
+              {/* Zoom Controls */}
+              <div className="flex gap-2 justify-center">
+                <button
+                  onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.5))}
+                  className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
+                >
+                  Zoom Out
+                </button>
+                <button
+                  onClick={() => setZoomLevel(1)}
+                  className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
+                >
+                  Reset
+                </button>
+                <button
+                  onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 3))}
+                  className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
+                >
+                  Zoom In
+                </button>
+              </div>
+            </div>
+
+            {/* Desktop Layout: Instructions in bottom right */}
+            <div className="absolute bottom-4 right-4 text-white text-sm bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 z-10 shadow-lg hidden md:block">
+              <Typography
+                variant="small"
+                className="font-medium"
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                {...({} as any)}
               >
-                Zoom Out
-              </button>
-              <button
-                onClick={() => setZoomLevel(1)}
-                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
-              >
-                Reset
-              </button>
-              <button
-                onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 3))}
-                className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
-              >
-                Zoom In
-              </button>
+                Scroll to zoom • Arrows to navigate • Space to reset
+              </Typography>
             </div>
 
             {/* Image Container */}
             <div 
-              className="max-w-full max-h-full overflow-auto cursor-zoom-in"
+              className="max-w-full max-h-full overflow-auto cursor-zoom-in mt-8 mb-32 md:mb-0 md:mt-0"
               onWheel={handleWheel}
             >
               <img
@@ -385,18 +413,6 @@ export function SpeakersContent() {
                   objectFit: 'contain'
                 }}
               />
-            </div>
-
-            {/* Instructions for Modal */}
-            <div className="absolute bottom-4 right-4 text-white text-sm bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 z-10 shadow-lg">
-              <Typography
-                variant="small"
-                className="font-medium"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                {...({} as any)}
-              >
-                Scroll to zoom • Arrows to navigate • Space to reset
-              </Typography>
             </div>
           </div>
         )}
@@ -441,6 +457,13 @@ export function SpeakersContent() {
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
+        
+        /* Mobile-specific touch improvements */
+        @media (max-width: 768px) and (orientation: portrait) {
+          .mobile-touch-zoom {
+            touch-action: pan-x pan-y pinch-zoom;
+          }
+        }
       `}</style>
     </section>
   );
@@ -449,7 +472,16 @@ export function SpeakersContent() {
 export default SpeakersContent;
 
 
+
+
+
+
+
+
+
+
 // Recoverable code in case if the code above doesn't work
+
 // "use client";
 
 // import { Typography } from "@material-tailwind/react";
@@ -634,7 +666,7 @@ export default SpeakersContent;
 //             {images.map((src, index) => (
 //               <div
 //                 key={index}
-//                 className="flex-shrink-0 w-48 h-64 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer overflow-hidden"
+//                 className="flex-shrink-0 w-48 h-64 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer overflow-hidden relative"
 //                 onClick={() => openImage(index)}
 //               >
 //                 <img
@@ -642,10 +674,11 @@ export default SpeakersContent;
 //                   alt={`Speaker Workshop Info ${index + 1}`}
 //                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 //                 />
-//                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+//                 {/* Subtle slide indicator - removed the dark bar */}
+//                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-center py-3">
 //                   <Typography
 //                     variant="small"
-//                     className="font-semibold"
+//                     className="font-semibold drop-shadow-md"
 //                     style={{ fontFamily: "Montserrat, sans-serif" }}
 //                     {...({} as any)}
 //                   >
@@ -723,7 +756,7 @@ export default SpeakersContent;
 //             {/* Draggable Back to Gallery Icon */}
 //             <div
 //               ref={iconRef}
-//               className={`fixed z-60 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-2xl cursor-pointer transition-all duration-200 ${
+//               className={`fixed z-60 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 shadow-2xl cursor-pointer transition-all duration-200 ${
 //                 isDraggingIcon ? 'scale-110 shadow-xl' : 'hover:scale-105'
 //               }`}
 //               style={{
@@ -756,7 +789,7 @@ export default SpeakersContent;
 //                   />
 //                 </svg>
 //                 <span className="text-xs font-semibold leading-none text-center">
-//                   Back to Gallery
+//                   Gallery
 //                 </span>
 //               </div>
 //             </div>
@@ -764,7 +797,7 @@ export default SpeakersContent;
 //             {/* Close Button */}
 //             <button
 //               onClick={closeImage}
-//               className="absolute top-4 right-4 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+//               className="absolute top-4 right-4 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
 //             >
 //               ×
 //             </button>
@@ -772,49 +805,52 @@ export default SpeakersContent;
 //             {/* Navigation Arrows */}
 //             <button
 //               onClick={prevImage}
-//               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+//               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
 //             >
 //               ‹
 //             </button>
 
 //             <button
 //               onClick={nextImage}
-//               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"
+//               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
 //             >
 //               ›
 //             </button>
+
+//             {/* Current Slide Indicator - Replaced the dark bar */}
+//             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+//               <div className="bg-black/50 backdrop-blur-sm text-white rounded-full px-4 py-2 shadow-lg">
+//                 <Typography
+//                   variant="small"
+//                   className="font-semibold"
+//                   style={{ fontFamily: "Montserrat, sans-serif" }}
+//                   {...({} as any)}
+//                 >
+//                   Slide {currentIndex + 1} of {images.length}
+//                 </Typography>
+//               </div>
+//             </div>
 
 //             {/* Zoom Controls */}
 //             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
 //               <button
 //                 onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.5))}
-//                 className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+//                 className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
 //               >
 //                 Zoom Out
 //               </button>
 //               <button
 //                 onClick={() => setZoomLevel(1)}
-//                 className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+//                 className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
 //               >
-//                 Reset Zoom
+//                 Reset
 //               </button>
 //               <button
 //                 onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 3))}
-//                 className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg hover:bg-opacity-70 transition-all"
+//                 className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg"
 //               >
 //                 Zoom In
 //               </button>
-//             </div>
-
-//             {/* Current Image Info */}
-//             <div className="absolute top-4 left-4 text-white z-10 bg-black bg-opacity-50 rounded-lg px-3 py-2">
-//               <Typography
-//                 variant="small"
-//                 style={{ fontFamily: "Montserrat, sans-serif" }}
-//                 {...({} as any)}
-//               >
-//                 Slide {currentIndex + 1} of {images.length}
-//               </Typography>
 //             </div>
 
 //             {/* Image Container */}
@@ -836,9 +872,10 @@ export default SpeakersContent;
 //             </div>
 
 //             {/* Instructions for Modal */}
-//             <div className="absolute bottom-4 right-4 text-white text-sm bg-black bg-opacity-50 rounded-lg px-3 py-2 z-10">
+//             <div className="absolute bottom-4 right-4 text-white text-sm bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 z-10 shadow-lg">
 //               <Typography
 //                 variant="small"
+//                 className="font-medium"
 //                 style={{ fontFamily: "Montserrat, sans-serif" }}
 //                 {...({} as any)}
 //               >
