@@ -6,14 +6,14 @@ import { useState } from "react";
 const SCHEDULE_DATA = {
   "Friday": [
     {
-      time: "11:45 AM - 5:30 PM",
+      time: "2:00 PM - 5:30 PM",
       title: "Arrival and Hotel Check In",
-      location: "Holiday Inn",
+      location: "Hotels - Holiday Inn",
       stream: "All Streams"
     },
     {
       time: "5:45 PM - 6:00 PM",
-      title: "Travel to Campus",
+      title: "Travel to Campus (Individual Transportation)",
       location: "",
       stream: "All Streams"
     },
@@ -24,77 +24,121 @@ const SCHEDULE_DATA = {
       stream: "All Streams"
     },
     {
-      time: "7:15 PM - 8:30 PM",
+      time: "7:15 PM - 8:15 PM",
       title: "Opening Ceremonies",
       location: "Ellis Hall - Auditorium",
       stream: "All Streams"
     },
     {
-      time: "8:45 PM - 9:45 PM",
+      time: "8:30 PM - 9:45 PM",
       title: "Social",
-      location: "Campus & Downtown",
+      location: "Queen's Campus & Downtown Kingston",
       stream: "All Streams"
-    }
+    },
+    {
+      time: "9:45 PM - 10:00 PM",
+      title: "Return to Hotels",
+      location: "",
+      stream: "All Streams"
+    },
+    
   ],
   "Saturday": [
     {
-      time: "8:00 AM - 8:30 AM",
+      time: "8:00 AM - 8:45 AM",
       title: "Walk/Shuttle to Campus",
       location: "",
       stream: "All Streams"
     },
     {
-      time: "9:00 AM - 9:30 AM",
+      time: "9:00 AM - 9:45 AM",
       title: "Breakfast",
       location: "Ellis Hall - 321",
       stream: "All Streams"
     },
     {
-      time: "10:00 AM - 10:30 AM",
-      title: "SASS: Uncrunching the numbers",
-      location: "",
+      time: "10:00 AM - 10:45 AM",
+      title: "SASS: Uncrunching the Numbers Workshop",
+      location: "Ellis Hall - 333",
       stream: "Present"
     },
     {
-      time: "10:00 AM - 10:30 AM",
-      title: "Relectric",
-      location: "",
+      time: "10:00 AM - 10:45 AM",
+      title: "Relectric Workshop",
+      location: "Ellis Hall - 324",
       stream: "Future"
     },
     {
-      time: "10:00 AM - 11:00 AM",
-      title: "Sessions",
-      location: "",
+      time: "10:00 AM - 10:15 AM",
+      title: "Finance and Admin Update",
+      location: "Ellis Hall - 226",
       stream: "VPX Stream"
     },
     {
-      time: "11:00 AM - 1:00 PM",
+      time: "10:30 AM - 10:45 AM",
+      title: "Services and Outreach Update",
+      location: "Ellis Hall - 226",
+      stream: "VPX Stream"
+    },
+    {
+      time: "11:00 AM - 11:15 AM",
+      title: "Sponsorship Session",
+      location: "Ellis Hall - 226",
+      stream: "VPX Stream"
+    },
+    
+    {
+      time: "11:30 AM - 1:15 PM",
       title: "Roundtable",
-      location: "",
+      location: "Ellis Hall - 226",
       stream: "VPX Stream"
     },
     {
-      time: "11:00 AM - 11:30 AM",
-      title: "4th & 5th Year Panel",
-      location: "",
+      time: "10:45 AM - 11:00 AM",
+      title: "Break",
+      location: "Ellis Hall",
       stream: "Present"
     },
     {
-      time: "11:00 AM - 11:30 AM",
-      title: "Baker Lab",
-      location: "",
+      time: "10:45 AM - 11:00 AM",
+      title: "Break",
+      location: "Ellis Hall",
       stream: "Future"
     },
     {
-      time: "12:00 PM - 1:00 PM",
-      title: "2nd & 3rd Year Panel",
-      location: "",
+      time: "11:15 AM - 12:00 PM",
+      title: "Baker Lab Workshop",
+      location: "Ellis Hall - 333",
       stream: "Present"
     },
     {
-      time: "12:00 PM - 1:00 PM",
-      title: "DDQIC",
-      location: "",
+      time: "11:15 AM - 12:00 PM",
+      title: "4th & 5th Year Panel",
+      location: "Ellis Hall - 324",
+      stream: "Future"
+    },
+    {
+      time: "12:00 PM - 12:15 PM",
+      title: "Break",
+      location: "Ellis Hall",
+      stream: "Present"
+    },
+    {
+      time: "12:00 PM - 12:15 PM",
+      title: "Break",
+      location: "Ellis Hall",
+      stream: "Future"
+    },
+    {
+      time: "12:30 PM - 1:15 PM",
+      title: "Talent4Energy Workshop",
+      location: "Ellis Hall - 333",
+      stream: "Present"
+    },
+    {
+      time: "12:30 PM - 1:15 PM",
+      title: "DDQIC Workshop",
+      location: Ellis Hall - 324"",
       stream: "Future"
     },
     {
@@ -105,39 +149,51 @@ const SCHEDULE_DATA = {
     },
     {
       time: "2:30 PM - 3:15 PM",
-      title: "Resume & Cover Letter",
-      location: "",
+      title: "Resume and Cover Letter Fundamentals Workshop",
+      location: "Ellis Hall - 333",
       stream: "Present"
     },
     {
       time: "2:30 PM - 3:15 PM",
-      title: "YCR",
-      location: "",
+      title: "Talent4Energy Workshop",
+      location: "Ellis Hall - 324",
       stream: "Future"
     },
     {
       time: "2:30 PM - 3:15 PM",
       title: "Roundtable",
-      location: "",
+      location: "Ellis Hall - 226",
       stream: "VPX Stream"
     },
     {
-      time: "3:15 PM - 4:45 PM",
-      title: "Sessions",
-      location: "",
-      stream: "VPX Stream"
-    },
-    {
-      time: "3:30 PM - 4:45 PM",
-      title: "Talent4Energy",
-      location: "",
+      time: "3:15 PM - 3:30 PM",
+      title: "Break",
+      location: "Ellis Hall",
       stream: "Present"
     },
     {
-      time: "3:30 PM - 4:45 PM",
-      title: "Talent4Energy",
-      location: "",
+      time: "3:15 PM - 3:30 PM",
+      title: "Break",
+      location: "Ellis Hall",
       stream: "Future"
+    },
+    {
+      time: "3:30 PM - 4:00 PM",
+      title: "Accountability Traffic Light Session",
+      location: "Ellis Hall - 226",
+      stream: "VPX Stream"
+    },
+    {
+      time: "4:15 PM - 4:30 PM",
+      title: "OA Led Accountability",
+      location: "Ellis Hall - 226",
+      stream: "VPX Stream"
+    },
+    {
+      time: "4:30 PM - 4:45 PM",
+      title: "Motion Writing",
+      location: "",
+      stream: "VPX Stream"
     },
     {
       time: "5:00 PM - 5:15 PM",
@@ -152,19 +208,19 @@ const SCHEDULE_DATA = {
       stream: "All Streams"
     },
     {
-      time: "6:30 PM - 6:45 PM",
-      title: "Shuttle From Hotel to Campus",
+      time: "6:45 PM - 7:00 PM",
+      title: "Shuttle From Hotel to Campus for banquet",
       location: "",
       stream: "All Streams"
     },
     {
-      time: "7:30 PM - 9:45 PM",
+      time: "7:15 PM - 9:30 PM",
       title: "Dinner/Banquet",
       location: "Wallace Hall - JDUC",
       stream: "All Streams"
     },
     {
-      time: "10:00 PM - 10:15 PM",
+      time: "9:45 PM - 10:00 PM",
       title: "Shuttle From Campus to Hotel",
       location: "",
       stream: "All Streams"
@@ -172,19 +228,19 @@ const SCHEDULE_DATA = {
   ],
   "Sunday": [
     {
-      time: "8:00 AM - 8:30 AM",
+      time: "8:00 AM - 8:45 AM",
       title: "Walk/Shuttle to Campus",
       location: "",
       stream: "All Streams"
     },
     {
-      time: "9:00 AM - 10:00 AM",
+      time: "9:00 AM - 9:45 AM",
       title: "Networking Breakfast",
       location: "Biosciences Complex - Atrium",
       stream: "All Streams"
     },
     {
-      time: "10:15 AM - 10:30 AM",
+      time: "9:45 AM - 10:00 AM",
       title: "Walk to Jeffrey Hall",
       location: "",
       stream: "All Streams"
@@ -202,37 +258,61 @@ const SCHEDULE_DATA = {
     //   stream: "Future"
     // },
     {
-      time: "10:30 AM - 3:45 PM",
+      time: "10:15 AM - 1:00 PM",
       title: "Plenary",
       location: "Kingston Hall - 204",
       stream: "VPX Stream"
     },
     {
-      time: "11:30 AM - 3:45 PM",
-      title: "Case Competition",
+      time: "10:15 AM - 10:30 AM",
+      title: "Case Competition Introduction",
+      location: "Jeffrey Hall - 155, 156",
+      stream: "Present"
+    },
+    {
+      time: "10:15 AM - 10:30 AM",
+      title: "Case Competition Introduction",
+      location: "Jeffrey Hall - 155, 156",
+      stream: "Future"
+    },
+    {
+      time: "10:45 AM - 12:00 PM",
+      title: "Case Competition Group Work Time",
+      location: "Jeffrey Hall - 155, 156",
+      stream: "Present"
+    },
+    {
+      time: "10:45 AM - 12:00 PM",
+      title: "Case Competition Group Work Time",
+      location: "Jeffrey Hall - 155, 156",
+      stream: "Future"
+    },
+    {
+      time: "12:15 PM - 1:00 PM",
+      title: "Case Competition Presentations & Judging",
       location: "Jeffrey Hall - 155, 156, 225, 234",
       stream: "Present"
     },
     {
-      time: "11:30 AM - 3:45 PM",
-      title: "Case Competition",
+      time: "12:15 PM - 1:00 PM",
+      title: "Case Competition Presentations & Judging",
       location: "Jeffrey Hall - 155, 156, 225, 234",
       stream: "Future"
     },
     {
-      time: "4:00 PM - 4:15 PM",
+      time: "1:00 PM - 1:15 PM",
       title: "Walk to Biosciences Complex",
       location: "",
       stream: "All Streams"
     },
     {
-      time: "4:15 PM - 5:15 PM",
+      time: "1:30 PM - 1:45 PM",
       title: "Closing Ceremonies",
       location: "Biosciences Complex - Atrium",
       stream: "All Streams"
     },
     {
-      time: "5:30 PM - 6:30 PM",
+      time: "2:00 PM - 2:30 PM",
       title: "Lunch",
       location: "Biosciences Complex - Atrium",
       stream: "All Streams"
