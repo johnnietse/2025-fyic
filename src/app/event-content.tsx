@@ -138,7 +138,7 @@ const SCHEDULE_DATA = {
     {
       time: "12:30 PM - 1:15 PM",
       title: "DDQIC Workshop",
-      location: Ellis Hall - 324"",
+      location: "Ellis Hall - 324"",
       stream: "Future"
     },
     {
