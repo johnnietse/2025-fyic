@@ -12,7 +12,7 @@ const Typography = dynamic(
 
 const STATS = [
   {
-    count: "90+",
+    count: "140+",
     title: "Participants",
   },
   {
@@ -20,7 +20,7 @@ const STATS = [
     title: "Speakers",
   },
   {
-    count: "6+",
+    count: "8+",
     title: "Workshops",
   },
   {
