@@ -68,7 +68,7 @@ export function SpeakersContent() {
   // Thumbnail carousel drag functionality
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
-    setStartX(e.pageX - e.currentTarget.offsetLeft);
+    setStartX(e.pageX - (e.currentTarget as HTMLElement).offsetLeft);
     setScrollLeft(e.currentTarget.scrollLeft);
   };
 
@@ -83,7 +83,7 @@ export function SpeakersContent() {
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - e.currentTarget.offsetLeft;
+    const x = e.pageX - (e.currentTarget as HTMLElement).offsetLeft;
     const walk = (x - startX) * 2;
     e.currentTarget.scrollLeft = scrollLeft - walk;
   };

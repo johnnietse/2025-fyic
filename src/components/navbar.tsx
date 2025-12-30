@@ -172,6 +172,7 @@ export function Navbar() {
                 color={isScrolling ? "blue" : "white"}
                 className="flex items-center gap-2 rounded-full"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+                {...({} as any)}
               >
                 <PencilSquareIcon className="h-4 w-4" />
                 Delegate Packages
