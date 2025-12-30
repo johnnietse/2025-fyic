@@ -87,66 +87,68 @@
 #         uses: actions/deploy-pages@v2
 
 
-name: CI/CD - Vercel Deployment (FYIC 2025)
+# name: CI/CD - Vercel Deployment (FYIC 2025)
 
-on:
-  push:
-    branches: ["live-demo", "main"]
-  pull_request:
-    branches: ["live-demo", "main"]
+# on:
+#   push:
+#     branches: ["live-demo", "main"]
+#   pull_request:
+#     branches: ["live-demo", "main"]
 
-# Sets permissions for GitHub Actions
-permissions:
-  contents: read
-  actions: read
+# # Sets permissions for GitHub Actions
+# permissions:
+#   contents: read
+#   actions: read
 
-jobs:
-  # Validation job - runs tests and checks before deployment
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# jobs:
+#   # Validation job - runs tests and checks before deployment
+#   validate:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "20"
+#           cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: TypeScript type check
-        run: npx tsc --noEmit
+#       - name: TypeScript type check
+#         run: npx tsc --noEmit
 
-      - name: Run ESLint
-        # run: npx eslint . --ext .js,.jsx,.ts,.tsx
-        run: npm run lint 2>/dev/null || echo "ESLint failed or not configured, continuing..."
+#       - name: Run ESLint
+#         # run: npx eslint . --ext .js,.jsx,.ts,.tsx
+#         run: npm run lint 2>/dev/null || echo "ESLint failed or not configured, continuing..."
       
-      - name: Build Next.js app
-        run: npm run build
+#       - name: Build Next.js app
+#         run: npm run build
 
-  # Vercel Deployment job - only runs on push to main branches
-  deploy:
-    needs: validate
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/live-demo' || github.ref == 'refs/heads/main')
-    runs-on: ubuntu-latest
+#   # Vercel Deployment job - only runs on push to main branches
+#   deploy:
+#     needs: validate
+#     if: github.event_name == 'push' && (github.ref == 'refs/heads/live-demo' || github.ref == 'refs/heads/main')
+#     runs-on: ubuntu-latest
     
-    environment:
-      name: Production
-      url: https://fyic2025.com
+#     environment:
+#       name: Production
+#       url: https://fyic2025.com
     
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          github-comment: true
-          github-deployment: true
+#       - name: Deploy to Vercel
+#         uses: amondnet/actions@v1
+#         with:
+#           vercel-token: ${{ secrets.VERCEL_TOKEN }}
+#           # vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+#           # vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+#           vercel-args: '--prod'
+#           # github-comment: true
+#           # github-deployment: true
+#           working-directory: ./
+
