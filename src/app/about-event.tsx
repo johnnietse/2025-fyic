@@ -90,7 +90,7 @@ export function AboutEvent() {
       <div className="relative w-full overflow-hidden">
         {/* Optimized background image */}
         <Image
-          src="/image/ourvision.png"
+          src="/image/ourvision.webp"
           alt="Queen's University Background"
           fill
           className="object-cover"
@@ -219,7 +219,7 @@ export function AboutEvent() {
           {/* Social Media Icons */}
           <div className="flex justify-center gap-6 mt-8">
             <a href="https://www.instagram.com/fyic2025/" target="_blank" rel="noopener noreferrer" aria-label="Follow FYIC 2025 on Instagram">
-              <FaInstagram className="text-white hover:text-pink-400 text-3xl transition duration-300" />
+              <FaInstagram className="text-white hover:text-blue-700 text-3xl transition duration-300" />
             </a>
 
             <a href="mailto:fyic@essco.ca" target="_blank" rel="noopener noreferrer" aria-label="Send an email to FYIC 2025">

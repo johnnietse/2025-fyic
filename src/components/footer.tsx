@@ -11,11 +11,11 @@ const INTERNAL_LINKS = [{ name: "Home", path: "/" },
 { name: "Our Team", path: "/team" }];
 
 
+import { FaInstagram, FaEnvelope } from "react-icons/fa";
+
 const SOCIAL_LINKS = [
-  { icon: "fa-brands fa-instagram", url: "https://www.instagram.com/fyic2025/" },
-  { icon: "fa-solid fa-envelope", url: "mailto:fyic@essco.ca" } // email link
-
-
+  { icon: FaInstagram, url: "https://www.instagram.com/fyic2025/", name: "Instagram" },
+  { icon: FaEnvelope, url: "mailto:fyic@essco.ca", name: "Email" }
 ];
 
 
@@ -27,26 +27,31 @@ export function Footer() {
           <Typography
             as={Link}
             href="/"
+            variant="h4"
+            className="mr-4 cursor-pointer py-1.5 font-bold text-gray-900"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+            {...({} as any)}
+          >
             FYIC 2025
-        </Typography>
-        <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
-          {INTERNAL_LINKS.map((link, index) => (
-            <li key={index}>
-              <Typography
-                as={Link}
-                href={link.path}
-                variant="small"
-                color="white"
-                className="font-Montserrat !text-gray-700 hover:!text-gray-900 transition-colors"
-                {...({} as any)}
-              >
-                {link.name}
-              </Typography>
-            </li>
-          ))}
-        </ul>
+          </Typography>
+          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
+            {INTERNAL_LINKS.map((link, index) => (
+              <li key={index}>
+                <Typography
+                  as={Link}
+                  href={link.path}
+                  variant="small"
+                  color="white"
+                  className="font-Montserrat !text-gray-700 hover:!text-gray-900 transition-colors"
+                  {...({} as any)}
+                >
+                  {link.name}
+                </Typography>
+              </li>
+            ))}
+          </ul>
 
-        {/* <div className="flex w-fit justify-center gap-2">
+          {/* <div className="flex w-fit justify-center gap-2">
             <IconButton size="sm" color="gray" variant="text">
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
@@ -58,36 +63,35 @@ export function Footer() {
             </IconButton>
           </div> */}
 
-        <div className="flex w-fit justify-center gap-2">
-          {SOCIAL_LINKS.map((social, index) => (
-            <a
-              key={index}
-              href={social.url}
-              rel="noopener noreferrer"
-              aria-label={`Open ${social.icon.split('-')[2]} in new tab`}
-
-            >
-              <IconButton size="sm" color="gray" variant="text" {...({} as any)}>
-                <i className={`${social.icon} text-lg`} />
-              </IconButton>
-            </a>
-          ))}
+          <div className="flex w-fit justify-center gap-2">
+            {SOCIAL_LINKS.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${social.name} in new tab`}
+                className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <social.icon className="text-lg" />
+              </a>
+            ))}
+          </div>
         </div>
+
+
+
+
+        <Typography
+          color="blue-gray"
+          className="text-center mt-12 font-Montserrat !text-gray-700"
+          {...({} as any)}
+        >
+          Copyright © {CURRENT_YEAR} FYIC: First Year Integration Conference
+        </Typography>
+
+
       </div>
-
-
-
-
-      <Typography
-        color="blue-gray"
-        className="text-center mt-12 font-Montserrat !text-gray-700"
-        {...({} as any)}
-      >
-        Copyright © {CURRENT_YEAR} FYIC: First Year Integration Conference
-      </Typography>
-
-
-    </div>
     </footer >
   );
 }

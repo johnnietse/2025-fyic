@@ -52,9 +52,9 @@ export function AttendeesSection() {
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
               <Typography
-                variant="h3"
+                variant="h2"
                 color="white"
-                className="mb-4 border-b border-white/30 pb-2"
+                className="mb-4 text-2xl font-bold border-b border-white/30 pb-2"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
@@ -71,9 +71,9 @@ export function AttendeesSection() {
 
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
               <Typography
-                variant="h3"
+                variant="h2"
                 color="white"
-                className="mb-4 border-b border-white/30 pb-2"
+                className="mb-4 text-2xl font-bold border-b border-white/30 pb-2"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
@@ -101,9 +101,9 @@ export function AttendeesSection() {
           <div className="space-y-6">
             <div className="bg-blue-900/40 backdrop-blur-sm p-6 rounded-lg border border-blue-400/30">
               <Typography
-                variant="h3"
+                variant="h2"
                 color="white"
-                className="mb-4 border-b border-blue-300/50 pb-2"
+                className="mb-4 text-2xl font-bold border-b border-blue-300/50 pb-2"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
@@ -112,18 +112,18 @@ export function AttendeesSection() {
 
               <div className="mb-4">
                 <Typography
-                  variant="h5"
+                  variant="h3"
                   color="white"
-                  className="mb-2"
+                  className="mb-2 text-lg font-semibold"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                   {...({} as any)}
                 >
                   Full Delegate Fee:
                 </Typography>
                 <Typography
-                  variant="h4"
+                  variant="paragraph"
                   color="white"
-                  className="font-bold"
+                  className="font-bold text-3xl"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                   {...({} as any)}
                 >
@@ -132,9 +132,9 @@ export function AttendeesSection() {
               </div>
 
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
-                className="mb-2"
+                className="mb-2 text-lg font-semibold"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
@@ -153,9 +153,9 @@ export function AttendeesSection() {
 
               <div className="bg-white/20 p-4 rounded border border-white/30 mt-4">
                 <Typography
-                  variant="h6"
+                  variant="h4"
                   color="white"
-                  className="mb-2"
+                  className="mb-2 text-base font-semibold"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                   {...({} as any)}
                 >
@@ -174,9 +174,9 @@ export function AttendeesSection() {
 
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
               <Typography
-                variant="h3"
+                variant="h2"
                 color="white"
-                className="mb-4 border-b border-white/30 pb-2"
+                className="mb-4 text-2xl font-bold border-b border-white/30 pb-2"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >

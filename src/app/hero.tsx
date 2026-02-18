@@ -53,7 +53,7 @@ function Hero() {
         loop
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        poster="/image/event.png"
+        poster="/image/event.webp"
         aria-label="FYIC 2025 Event Video"
         onError={() => {
           const fallback = document.getElementById('fallback-image');
@@ -198,7 +198,7 @@ function Hero() {
             {/* Tagline with emphasis */}
             <div className="inline-block border-l-4 border-blue-400 pl-2 sm:pl-4 py-1">
               <Typography
-                variant="h6"
+                variant="h2"
                 color="blue-100"
                 className="italic font-semibold text-lg sm:text-xl text-blue-50"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -226,7 +226,7 @@ function Hero() {
           {/* Call to action section */}
           <div className="mt-6 sm:mt-10 md:mt-12">
             <Typography
-              variant="h6"
+              variant="h2"
               color="white"
               className="mb-3 sm:mb-4 font-medium uppercase tracking-wider text-sm sm:text-base"
               style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}

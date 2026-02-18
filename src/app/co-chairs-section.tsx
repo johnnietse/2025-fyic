@@ -7,14 +7,7 @@ export function CoChairsSection() {
   return (
     <div className="relative w-full bg-white">
       {/* Background image that overlays the white background */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <Image
-          src="/image/co-chairs-bg.png"
-          alt="Co-chairs background"
-          fill
-          className="object-cover"
-        />
-      </div>
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-gradient-to-br from-blue-100 to-indigo-100"></div>
 
       <section className="relative z-10 container mx-auto px-4 py-16" style={{ zIndex: 2 }}>
         <br />
@@ -78,7 +71,7 @@ export function CoChairsSection() {
             {/* Combined Headshot */}
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 bg-white relative">
               <Image
-                src="/image/co-chairs-headshot.png"
+                src="/image/co-chairs-headshot.webp"
                 alt="Jaden Belliveau and Flaminia Testa"
                 fill
                 className="object-cover"

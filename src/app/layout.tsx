@@ -47,7 +47,9 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${dancingScript.variable} ${parisienne.variable} ${greatVibes.variable}`}>
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="preload" href="/image/event.png" as="image" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link rel="preconnect" href="https://cdn.userway.org" />
+        <link rel="preload" href="/image/event.webp" as="image" />
       </head>
       <body className={montserrat.className}>
         <Layout>
@@ -69,14 +71,6 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
 
-        {/* Font Awesome */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
       </body>
     </html>
   );
