@@ -27,31 +27,26 @@ export function Footer() {
           <Typography
             as={Link}
             href="/"
-            variant="h6"
-            className="text-gray-900"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
-            {...({} as any)}
-          >
             FYIC 2025
-          </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
-            {INTERNAL_LINKS.map((link, index) => (
-              <li key={index}>
-                <Typography
-                  as={Link}
-                  href={link.path}
-                  variant="small"
-                  color="white"
-                  className="font-Montserrat !text-gray-700 hover:!text-gray-900 transition-colors"
-                  {...({} as any)}
-                >
-                  {link.name}
-                </Typography>
-              </li>
-            ))}
-          </ul>
+        </Typography>
+        <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
+          {INTERNAL_LINKS.map((link, index) => (
+            <li key={index}>
+              <Typography
+                as={Link}
+                href={link.path}
+                variant="small"
+                color="white"
+                className="font-Montserrat !text-gray-700 hover:!text-gray-900 transition-colors"
+                {...({} as any)}
+              >
+                {link.name}
+              </Typography>
+            </li>
+          ))}
+        </ul>
 
-          {/* <div className="flex w-fit justify-center gap-2">
+        {/* <div className="flex w-fit justify-center gap-2">
             <IconButton size="sm" color="gray" variant="text">
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
@@ -63,37 +58,37 @@ export function Footer() {
             </IconButton>
           </div> */}
 
-          <div className="flex w-fit justify-center gap-2">
-            {SOCIAL_LINKS.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                rel="noopener noreferrer"
-                aria-label={`Open ${social.icon.split('-')[2]} in new tab`}
+        <div className="flex w-fit justify-center gap-2">
+          {SOCIAL_LINKS.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              rel="noopener noreferrer"
+              aria-label={`Open ${social.icon.split('-')[2]} in new tab`}
 
-              >
-                <IconButton size="sm" color="gray" variant="text" {...({} as any)}>
-                  <i className={`${social.icon} text-lg`} />
-                </IconButton>
-              </a>
-            ))}
-          </div>
+            >
+              <IconButton size="sm" color="gray" variant="text" {...({} as any)}>
+                <i className={`${social.icon} text-lg`} />
+              </IconButton>
+            </a>
+          ))}
         </div>
-
-
-
-
-        <Typography
-          color="blue-gray"
-          className="text-center mt-12 font-Montserrat !text-gray-700"
-          {...({} as any)}
-        >
-          Copyright © {CURRENT_YEAR} FYIC: First Year Integration Conference
-        </Typography>
-
-
       </div>
-    </footer>
+
+
+
+
+      <Typography
+        color="blue-gray"
+        className="text-center mt-12 font-Montserrat !text-gray-700"
+        {...({} as any)}
+      >
+        Copyright © {CURRENT_YEAR} FYIC: First Year Integration Conference
+      </Typography>
+
+
+    </div>
+    </footer >
   );
 }
 

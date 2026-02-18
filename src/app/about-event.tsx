@@ -152,47 +152,30 @@ export function AboutEvent() {
             Our Sponsors
           </Typography>
 
-
           <Typography
             variant="lead"
-            className="mt-6 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
-            {...({} as any)}>
+            className="text-center max-w-2xl mt-4 mb-8"
+            color="white"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+            {...({} as any)}
+          >
             <p>
-              Sponsor FYIC 2025!
+              We are proud to partner with leading organizations that share our
+              vision for the future of engineering.
             </p>
           </Typography>
 
-          <a href="/sponsors" target="_self">
-            <Button color="white" variant="filled" aria-label="Navigate to Sponsorship page" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
-
+          <a href="/sponsors" target="_self" className="inline-block mt-8">
+            <Button color="white" variant="filled" aria-label="Navigate to Sponsorship page" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 pointer-events-none" {...({} as any)}>
               Sponsorship Page
             </Button>
           </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </section>
       </div>
 
-
-
       {/* Fourth Section */}
-      <div className="relative w-full overflow-hidden">
-        {/* Optimized background image */}
+      <div className="relative w-full overflow-hidden min-h-[60vh] flex items-center justify-center">
+        {/* Optimized background image (7.7MB original -> Next.js optimized) */}
         <Image
           src="/image/team.png"
           alt="Our Team Background"
@@ -207,8 +190,11 @@ export function AboutEvent() {
 
           <Typography
             variant="lead"
-            className="mt-6 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
-            {...({} as any)}>
+            className="text-center max-w-2xl mt-4 mb-8"
+            color="white"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+            {...({} as any)}
+          >
             <p className="mb-6">
               FYIC 2025 is fully run and organized by students.
             </p>
@@ -221,8 +207,8 @@ export function AboutEvent() {
 
 
 
-          <a href="/team" target="_self">
-            <Button color="white" aria-label="Navigate to Our Team page" variant="filled" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
+          <a href="/team" target="_self" className="inline-block mt-8">
+            <Button color="white" aria-label="Navigate to Our Team page" variant="filled" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 pointer-events-none" {...({} as any)}>
               Our Team
             </Button>
           </a>
@@ -250,8 +236,8 @@ export function AboutEvent() {
 
           <br>
           </br>
-        </section>
-      </div>
+        </section >
+      </div >
 
 
 

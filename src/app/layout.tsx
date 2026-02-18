@@ -47,6 +47,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${dancingScript.variable} ${parisienne.variable} ${greatVibes.variable}`}>
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="preload" href="/image/event.png" as="image" />
       </head>
       <body className={montserrat.className}>
         <Layout>

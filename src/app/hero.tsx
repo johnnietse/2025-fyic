@@ -102,47 +102,49 @@ function Hero() {
         <div className="text-center w-full max-w-5xl px-4 py-8">
           {/* Conference details - top section with accent color */}
           <div className="mb-4 sm:mb-6 bg-blue-800/30 backdrop-blur-sm rounded-lg py-3 px-4 sm:px-6 inline-block">
-            <Typography
-              variant="h5"
-              color="white"
-              className="mb-1 font-medium tracking-wider text-sm sm:text-base"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
-              {...({} as any)}
-            >
-              7-9 NOVEMBER @ KINGSTON
-            </Typography>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
-              <div className="h-px w-8 sm:w-12 bg-blue-400 opacity-60 hidden sm:block"></div>
+            <div className="flex flex-col items-center justify-center">
               <Typography
-                variant="h4"
+                variant="small"
                 color="white"
-                className="font-bold text-blue-100 text-xl sm:text-2xl"
+                className="mb-1 font-medium tracking-wider text-sm sm:text-base uppercase"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
-                FYIC 2025
+                7-9 NOVEMBER @ KINGSTON
               </Typography>
-              <div className="h-px w-8 sm:w-12 bg-blue-400 opacity-60 hidden sm:block"></div>
-            </div>
 
-            <Typography
-              variant="h6"
-              color="blue-100"
-              className="mt-1 font-light flex items-center justify-center gap-2 text-xs sm:text-sm"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
-              {...({} as any)}
-            >
-              <span className="font-semibold text-blue-200">Presented by OSPE</span>
-              <div className="relative h-4 sm:h-5 w-12 bg-white/80 p-0.5 rounded">
-                <Image
-                  src="/logos/ospe-logo.png"
-                  alt="OSPE Logo"
-                  fill
-                  className="object-contain p-0.5"
-                />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+                <div className="h-px w-8 sm:w-12 bg-blue-400 opacity-60 hidden sm:block"></div>
+                <Typography
+                  variant="h2"
+                  color="white"
+                  className="font-bold text-blue-100 text-xl sm:text-2xl"
+                  style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                  {...({} as any)}
+                >
+                  FYIC 2025
+                </Typography>
+                <div className="h-px w-8 sm:w-12 bg-blue-400 opacity-60 hidden sm:block"></div>
               </div>
-            </Typography>
+
+              <Typography
+                variant="small"
+                color="blue-100"
+                className="mt-1 font-light flex items-center justify-center gap-2 text-xs sm:text-sm"
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                {...({} as any)}
+              >
+                <span className="font-semibold text-blue-200">Presented by OSPE</span>
+                <div className="relative h-4 sm:h-5 w-12 bg-white/80 p-0.5 rounded">
+                  <Image
+                    src="/logos/ospe-logo.png"
+                    alt="OSPE Logo"
+                    fill
+                    className="object-contain p-0.5"
+                  />
+                </div>
+              </Typography>
+            </div>
           </div>
 
           {/* Main title with gradient text */}
