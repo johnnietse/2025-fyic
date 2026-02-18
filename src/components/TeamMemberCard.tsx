@@ -29,7 +29,7 @@ const TeamMemberCard: FC<TeamMemberProps> = ({ name, pronouns, role, imageUrl, l
       </h3>
       <p className="text-sm text-gray-600 mb-3">{role}</p>
       {linkedInUrl && (
-        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" aria-label={`View ${name}'s LinkedIn profile`}>
           <Linkedin size={24} />
         </a>
       )}

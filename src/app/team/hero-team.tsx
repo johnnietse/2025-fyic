@@ -2,6 +2,7 @@
 
 import { Typography, Button } from "@material-tailwind/react";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import Image from "next/image";
 import "../globals.css";
 
 
@@ -11,37 +12,26 @@ export function AboutTeam() {
     <>
 
       {/* First Section */}
-      <div className="relative w-full bg-[url('/image/our-team.png')] bg-cover bg-no-repeat">
-        <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-16">
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-
-          <Typography variant="h1" className="text-center lg:max-w-3xl" color="white" style={{ fontFamily: 'Montserrat, sans-serif' }}   {...({} as any)}>
+      <div className="relative w-full overflow-hidden min-h-[60vh] flex items-center justify-center">
+        {/* Optimized background image (7.7MB original -> Next.js optimized) */}
+        <Image
+          src="/image/our-team.png"
+          alt="Our Team Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
+        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-24">
+          <Typography
+            variant="h1"
+            className="text-center lg:max-w-3xl font-bold"
+            color="white"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+            {...({} as any)}
+          >
             Our Team
           </Typography>
-
-        
-          
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-
         </section>
       </div>
 

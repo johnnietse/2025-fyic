@@ -7,10 +7,14 @@ export function CoChairsSection() {
   return (
     <div className="relative w-full bg-white">
       {/* Background image that overlays the white background */}
-      <div
-        className="absolute inset-0 bg-[url('/image/co-chairs-bg.png')] bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ zIndex: 1 }}
-      />
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <Image
+          src="/image/co-chairs-bg.png"
+          alt="Co-chairs background"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       <section className="relative z-10 container mx-auto px-4 py-16" style={{ zIndex: 2 }}>
         <br />

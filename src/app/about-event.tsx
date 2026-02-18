@@ -3,6 +3,7 @@
 import { Typography, Button } from "@material-tailwind/react";
 import { FaInstagram, FaLinkedin, FaFacebook, FaEnvelope } from "react-icons/fa";
 import AboutCard from "@/components/about-card";
+import Image from "next/image";
 import "./globals.css";
 import { TypographyProps } from "@material-tailwind/react";
 
@@ -30,24 +31,23 @@ export function AboutEvent() {
 
 
 
-      <div className="relative w-full bg-[url('/image/aboutusmain.png')] bg-cover bg-no-repeat">
-        <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-16" id="about-us">
-          <br />
-          <br />
-          <br />
-          <br />
-          <Typography variant="h1" className="text-center lg:max-w-3xl" color="white" {...({} as any)}>
+      <div className="relative w-full overflow-hidden">
+        {/* Optimized background image */}
+        <Image
+          src="/image/aboutusmain.png"
+          alt="About Us Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
+        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-24" id="about-us">
+          <Typography variant="h1" className="text-center lg:max-w-3xl font-bold" color="white" {...({} as any)}>
             About Us
           </Typography>
 
-          <br />
-          <br />
-          <br />
-
           <Typography
             variant="lead"
-            className="mt-2 lg:max-w-8xl mb-8 w-full text-left font-Montserrat text-white"      
+            className="mt-6 lg:max-w-4xl mb-8 w-full text-justify font-Montserrat text-white"
             {...({} as any)}
           >
             A conference hosted by engineering students, for engineering students.
@@ -71,16 +71,11 @@ export function AboutEvent() {
             <br />
             <br />
             This year, our theme is
-            ‘A Present for the Future’. We aim to inspire the next
+            <span className="font-bold underline ml-1">‘A Present for the Future’</span>. We aim to inspire the next
             generation of bright minds to design sustainable solutions that will benefit generations to come.
             With additional emphasis on personal development, delegates will learn skills that will help them
             grow into the engineers they want to be.
           </Typography>
-          
-          <br />
-          <br />
-          <br />
-          <br />
         </section>
       </div>
 
@@ -89,31 +84,29 @@ export function AboutEvent() {
 
 
 
-      
+
 
       {/* Second Section */}
-
-      <div className="relative w-full bg-[url('/image/ourvision.png')] bg-cover bg-no-repeat">
-        <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-16">
-          <br />
-          <br />
-          <br />
-          <br />
-
-          <Typography variant="h1" className="text-center lg:max-w-3xl" color="white"  {...({} as any)}>
+      <div className="relative w-full overflow-hidden">
+        {/* Optimized background image */}
+        <Image
+          src="/image/ourvision.png"
+          alt="Queen's University Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
+        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-24">
+          <Typography variant="h2" className="text-center lg:max-w-3xl font-bold" color="white"  {...({} as any)}>
             About Queen's University
           </Typography>
 
-          <br />
-          <br />
-
           <Typography
             variant="lead"
-            className="mt-2 lg:max-w-10xl mb-8 w-full text-left font-Montserrat text-white"
+            className="mt-6 lg:max-w-4xl mb-8 w-full text-justify font-Montserrat text-white"
             {...({} as any)}
           >
-            <p className="mb-4">
+            <p className="mb-6">
               FYIC 2025 is proudly hosted by Smith
               Engineering at Queen’s University, where we
               are reimagining engineering education.
@@ -124,19 +117,13 @@ export function AboutEvent() {
               community engagement.
             </p>
 
-            <br />
-            <br />
-
-            <p className="mb-4">
+            <p className="mb-6">
               Smith Engineering is cultivating a new generation of engineers—leaders with deep
               technical expertise and a strong sense of societal, environmental, and ethical
               responsibility. Through interdisciplinary collaboration, hands-on learning, and a
               vibrant research culture, we are preparing problem-solvers for the challenges of
               tomorrow.
             </p>
-
-            <br />
-            <br />
 
             <p>
               Ranked among the top 10 universities worldwide in the 2022 Times Higher Education Impact
@@ -145,47 +132,34 @@ export function AboutEvent() {
               of engineering is being built today.
             </p>
           </Typography>
-          
-          <br />
-          <br />
-          <br />
-          <br />
         </section>
       </div>
 
 
 
-
       {/* Third Section */}
-      <div className="relative w-full bg-[url('/image/sponsors.png')] bg-cover bg-no-repeat">
-        <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-16">
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <Typography variant="h1" className="text-center font-Montserrat" color="white" {...({} as any)}>
+      <div className="relative w-full overflow-hidden">
+        {/* Optimized background image */}
+        <Image
+          src="/image/sponsors.png"
+          alt="Sponsors Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
+        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-24">
+          <Typography variant="h2" className="text-center font-Montserrat font-bold" color="white" {...({} as any)}>
             Our Sponsors
           </Typography>
 
-          
-          <br>
-          </br>
-          <br>
-          </br>
 
           <Typography
             variant="lead"
-            className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
+            className="mt-6 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
             {...({} as any)}>
-            <p className="mb-4">
+            <p>
               Sponsor FYIC 2025!
             </p>
-
           </Typography>
 
           <a href="/sponsors" target="_self">
@@ -196,24 +170,20 @@ export function AboutEvent() {
           </a>
 
 
-          
 
 
 
 
 
-          
-          
 
 
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
-          <br>
-          </br>
+
+
+
+
+
+
+
 
         </section>
       </div>
@@ -221,38 +191,32 @@ export function AboutEvent() {
 
 
       {/* Fourth Section */}
-      <div className="relative w-full bg-[url('/image/team.png')] bg-cover bg-no-repeat">
-        <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-16">
-          <br>
-          </br>
-          <br>
-          </br>
-
-          <Typography variant="h1" className="text-center font-Montserrat" color="white" {...({} as any)}>
+      <div className="relative w-full overflow-hidden">
+        {/* Optimized background image */}
+        <Image
+          src="/image/team.png"
+          alt="Our Team Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
+        <section className="relative z-10 container mx-auto flex flex-col items-center px-4 py-24">
+          <Typography variant="h2" className="text-center font-Montserrat font-bold" color="white" {...({} as any)}>
             Our Team
           </Typography>
 
-          <br>
-          </br>
-          <br>
-          </br>
-
           <Typography
             variant="lead"
-            className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
+            className="mt-6 lg:max-w-4xl mb-8 w-full text-center font-Montserrat text-white"
             {...({} as any)}>
-            <p className="mb-4">
-              FYIC 2025 is fully run and organized by students. 
+            <p className="mb-6">
+              FYIC 2025 is fully run and organized by students.
             </p>
-            
-            <p className="mb-4">
+
+            <p>
               The executive team consists of a passionate group of Smith Engineering students (from all disciplines) dedicated to delivering an inspiring and impactful conference experience for first-year delegates across Ontario.
             </p>
-
           </Typography>
-
-
 
 
 
@@ -264,32 +228,26 @@ export function AboutEvent() {
           </a>
 
 
-          <br>
-          </br>
-          <br>
-          </br>
-          
+
+
           {/* Social Media Icons */}
           <div className="flex justify-center gap-6 mt-8">
-            <a href="https://www.instagram.com/fyic2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_self" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/fyic2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_self" rel="noopener noreferrer" aria-label="Follow us on Instagram">
               <FaInstagram className="text-white hover:text-pink-400 text-3xl transition duration-300" />
             </a>
 
-
-            <a href="mailto:fyic@essco.ca" target="_self" rel="noopener noreferrer">
+            <a href="mailto:fyic@essco.ca" target="_self" rel="noopener noreferrer" aria-label="Send us an email">
               <FaEnvelope className="text-white hover:text-yellow-400 text-3xl transition duration-300" />
             </a>
-            
 
 
 
-            
+
+
           </div>
 
 
-          
-          <br>
-          </br>
+
           <br>
           </br>
         </section>

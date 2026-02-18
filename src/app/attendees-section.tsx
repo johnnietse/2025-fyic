@@ -22,9 +22,17 @@ export function AttendeesSection() {
   };
 
   return (
-    <div className="relative w-full bg-[url('/image/attendee-bg.png')] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full overflow-hidden min-h-screen">
+      {/* Optimized background image */}
+      <Image
+        src="/image/attendee-bg.png"
+        alt="Attendees Background"
+        fill
+        className="object-cover"
+        priority
+      />
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
+      <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
 
       <section className="relative z-10 container mx-auto px-4 py-16">
         <br />

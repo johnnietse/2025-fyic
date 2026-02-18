@@ -207,6 +207,7 @@ export function Navbar() {
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
           style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
           {...({} as any)}
         >

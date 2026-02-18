@@ -5,7 +5,14 @@ import Image from "next/image";
 
 export function TransportationSection() {
   return (
-    <div className="relative w-full bg-[url('/image/transportation-bg.png')] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full overflow-hidden min-h-screen">
+      {/* Optimized background image */}
+      <Image
+        src="/image/transportation-bg.png"
+        alt="Transportation Background"
+        fill
+        className="object-cover"
+      />
       {/* More translucent overlay */}
       <div className="absolute inset-0 h-full w-full bg-black/40" />
 
@@ -27,7 +34,7 @@ export function TransportationSection() {
           {/* Left Column - Transportation Options */}
           <div className="space-y-4">
             <Typography
-              variant="h3"
+              variant="h2"
               color="white"
               className="mb-4 text-center lg:text-left border-b border-white/30 pb-2"
               style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -39,7 +46,7 @@ export function TransportationSection() {
             <div className="space-y-3">
               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                 <Typography
-                  variant="h5"
+                  variant="h3"
                   color="white"
                   className="mb-1"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -59,7 +66,7 @@ export function TransportationSection() {
 
               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                 <Typography
-                  variant="h5"
+                  variant="h3"
                   color="white"
                   className="mb-1"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -79,7 +86,7 @@ export function TransportationSection() {
 
               <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                 <Typography
-                  variant="h5"
+                  variant="h3"
                   color="white"
                   className="mb-1"
                   style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -114,7 +121,7 @@ export function TransportationSection() {
           <div className="space-y-4">
             <div className="bg-white/10 p-5 rounded-lg backdrop-blur-sm">
               <Typography
-                variant="h4"
+                variant="h2"
                 color="white"
                 className="mb-3 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -146,7 +153,7 @@ export function TransportationSection() {
 
             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
               <Typography
-                variant="h5"
+                variant="h2"
                 color="white"
                 className="mb-1 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -171,7 +178,7 @@ export function TransportationSection() {
         {/* Additional Transportation Info */}
         <div className="mt-8 w-full max-w-4xl bg-white/10 p-5 rounded-lg backdrop-blur-sm">
           <Typography
-            variant="h4"
+            variant="h2"
             color="white"
             className="mb-4 text-center border-b border-white/30 pb-2"
             style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -183,7 +190,7 @@ export function TransportationSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white/15 p-4 rounded-lg">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-1"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -203,7 +210,7 @@ export function TransportationSection() {
 
             <div className="bg-white/15 p-4 rounded-lg">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-1"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -309,7 +316,7 @@ export function TransportationSection() {
             {/* Common Locations List */}
             <div className="mt-4">
               <Typography
-                variant="h4"
+                variant="h3"
                 color="white"
                 className="mb-3 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -400,7 +407,7 @@ export function TransportationSection() {
             {/* Washroom Locations List */}
             <div>
               <Typography
-                variant="h4"
+                variant="h3"
                 color="white"
                 className="mb-4 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -534,7 +541,7 @@ export function TransportationSection() {
             {/* Water Bottle Fill Stations */}
             <div className="flex flex-col items-center">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-2 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -556,7 +563,7 @@ export function TransportationSection() {
             {/* AEDs */}
             <div className="flex flex-col items-center">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-2 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -578,7 +585,7 @@ export function TransportationSection() {
             {/* Prayer and Meditation Spaces */}
             <div className="flex flex-col items-center">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-2 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
@@ -600,7 +607,7 @@ export function TransportationSection() {
             {/* Food Available for Purchase */}
             <div className="flex flex-col items-center">
               <Typography
-                variant="h5"
+                variant="h3"
                 color="white"
                 className="mb-2 text-center"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}

@@ -163,7 +163,7 @@ export function SpeakersContent() {
         {/* Image Gallery */}
         <div className="mt-8">
           <Typography
-            variant="h4"
+            variant="h3"
             color="blue-gray"
             className="mb-6 text-center"
             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
@@ -224,7 +224,7 @@ export function SpeakersContent() {
           <div className="text-center mt-8 mb-12">
             <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
               <Typography
-                variant="h5"
+                variant="h4"
                 color="blue-gray"
                 className="mb-3"
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
@@ -310,9 +310,9 @@ export function SpeakersContent() {
               </div>
             </div>
 
-            {/* Close Button */}
             <button
               onClick={closeImage}
+              aria-label="Close magazine viewer"
               className="absolute top-4 right-4 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ×
@@ -321,6 +321,7 @@ export function SpeakersContent() {
             {/* Navigation Arrows */}
             <button
               onClick={prevImage}
+              aria-label="Previous slide"
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ‹
@@ -328,6 +329,7 @@ export function SpeakersContent() {
 
             <button
               onClick={nextImage}
+              aria-label="Next slide"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-all backdrop-blur-sm"
             >
               ›
@@ -363,18 +365,21 @@ export function SpeakersContent() {
               <div className="flex gap-2 justify-center">
                 <button
                   onClick={() => setZoomLevel(prev => Math.max(prev - 0.2, 0.5))}
+                  aria-label="Zoom out"
                   className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
                 >
                   Zoom Out
                 </button>
                 <button
                   onClick={() => setZoomLevel(1)}
+                  aria-label="Reset zoom level"
                   className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
                 >
                   Reset
                 </button>
                 <button
                   onClick={() => setZoomLevel(prev => Math.min(prev + 0.2, 3))}
+                  aria-label="Zoom in"
                   className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/70 transition-all shadow-lg text-sm md:text-base"
                 >
                   Zoom In

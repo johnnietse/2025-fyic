@@ -60,6 +60,7 @@ function Hero() {
         }}
       >
         <source src="/image/event.mp4" type="video/mp4" />
+        <track kind="captions" src="" label="No captions available" />
       </video>
       <div id="fallback-image" className="absolute top-0 left-0 w-full h-full hidden">
         <Image
@@ -237,6 +238,7 @@ function Hero() {
                 <IconButton
                   className="rounded-full bg-blue-600 hover:bg-blue-500 p-4 sm:p-6 md:p-8 z-10 hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-500/30"
                   onClick={triggerEffect}
+                  aria-label="Experience something special"
                   {...({} as any)}
                 >
                   <PlayIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
