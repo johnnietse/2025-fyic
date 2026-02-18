@@ -54,6 +54,7 @@ function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
         poster="/image/event.png"
+        aria-label="FYIC 2025 Event Video"
         onError={() => {
           const fallback = document.getElementById('fallback-image');
           if (fallback) fallback.style.display = 'block';

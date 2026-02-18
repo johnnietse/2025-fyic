@@ -163,7 +163,7 @@ export function AboutEvent() {
           </Typography>
 
           <a href="/sponsors" target="_self">
-            <Button color="white" variant="filled" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
+            <Button color="white" variant="filled" aria-label="Navigate to Sponsorship page" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
 
               Sponsorship Page
             </Button>
@@ -222,7 +222,7 @@ export function AboutEvent() {
 
 
           <a href="/team" target="_self">
-            <Button color="white" variant="filled" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
+            <Button color="white" aria-label="Navigate to Our Team page" variant="filled" className="bg-gray-200 text-black hover:bg-gray-400 transition-all duration-500 ease-in-out transform hover:scale-105 mt-8" {...({} as any)}>
               Our Team
             </Button>
           </a>
@@ -232,11 +232,11 @@ export function AboutEvent() {
 
           {/* Social Media Icons */}
           <div className="flex justify-center gap-6 mt-8">
-            <a href="https://www.instagram.com/fyic2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_self" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <a href="https://www.instagram.com/fyic2025/" target="_blank" rel="noopener noreferrer" aria-label="Follow FYIC 2025 on Instagram">
               <FaInstagram className="text-white hover:text-pink-400 text-3xl transition duration-300" />
             </a>
 
-            <a href="mailto:fyic@essco.ca" target="_self" rel="noopener noreferrer" aria-label="Send us an email">
+            <a href="mailto:fyic@essco.ca" target="_blank" rel="noopener noreferrer" aria-label="Send an email to FYIC 2025">
               <FaEnvelope className="text-white hover:text-yellow-400 text-3xl transition duration-300" />
             </a>
 

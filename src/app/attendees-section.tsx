@@ -29,7 +29,6 @@ export function AttendeesSection() {
         alt="Attendees Background"
         fill
         className="object-cover"
-        priority
       />
       {/* Overlay for better readability */}
       <div className="absolute inset-0 h-full w-full bg-gray-900/60 z-0" />
@@ -220,15 +219,15 @@ export function AttendeesSection() {
                 src={conferenceImages[activeImage]}
                 alt={`Past conference ${activeImage + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 896px"
-                priority
               />
             </div>
 
             {/* Navigation Arrows */}
             <button
               onClick={prevImage}
+              aria-label="Previous image"
               className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white text-gray-800 z-10"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -237,6 +236,7 @@ export function AttendeesSection() {
             </button>
             <button
               onClick={nextImage}
+              aria-label="Next image"
               className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white text-gray-800 z-10"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
