@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Dancing_Script, Parisienne, Great_Vibes } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
-import Script from "next/script";
+import { DelayedScripts } from "@/components/delay-scripts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -58,18 +58,7 @@ export default function RootLayout({
         </Layout>
 
         {/* Analytics Script */}
-        <Script
-          data-site="https://2025-fyic.vercel.app/"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-          strategy="afterInteractive"
-        />
-
-        {/* Userway Accessibility Widget */}
-        <Script
-          src="https://cdn.userway.org/widget.js"
-          data-account="7EpVmNijkz"
-          strategy="lazyOnload"
-        />
+        <DelayedScripts />
 
       </body>
     </html>

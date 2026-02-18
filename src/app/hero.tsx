@@ -63,6 +63,17 @@ function Hero() {
         <source src="/image/event.mp4" type="video/mp4" />
         <track kind="captions" src="" label="No captions available" />
       </video>
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <Image
+          src="/image/event.webp"
+          fill
+          className="object-cover"
+          alt="FYIC 2025 Event Background"
+          priority
+          fetchPriority="high"
+          quality={75}
+        />
+      </div>
       <div id="fallback-image" className="absolute top-0 left-0 w-full h-full hidden">
         <Image
           src="/image/event.png"
@@ -132,6 +143,7 @@ function Hero() {
                 color="blue-100"
                 className="mt-1 font-light flex items-center justify-center gap-2 text-xs sm:text-sm"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                as="div"
                 {...({} as any)}
               >
                 <span className="font-semibold text-blue-200">Presented by OSPE</span>

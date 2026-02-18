@@ -66,9 +66,9 @@ export function EmergencyContact() {
             Emergency Contact
           </Typography>
           <Typography
-            variant="lead"
             className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
+            as="div"
             {...({} as any)}
           >
             In case of emergency during the event, please use the following contact information. For immediate, life-threatening emergencies, always call 911 first. You can also use the{" "}

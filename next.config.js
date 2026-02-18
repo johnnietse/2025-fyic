@@ -9,7 +9,13 @@ const nextConfig = {
     ],
   },
   experimental: {
-    optimizePackageImports: ['@material-tailwind/react']
+    optimizePackageImports: [
+      '@material-tailwind/react',
+      'framer-motion',
+      'lucide-react',
+      'react-icons',
+      '@heroicons/react'
+    ]
   },
   typescript: {
     ignoreBuildErrors: true,
