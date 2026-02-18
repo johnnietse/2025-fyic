@@ -38,11 +38,11 @@ export function SponsorsSection() {
               <div className="space-y-6">
                 {[
                   "On behalf of the First Year Integration Conference 2025 team, I want to sincerely thank you for your generous support. Your sponsorship was essential in making this year's conference possible, and truly made a profound impact on countless first year students.",
-                  
+
                   "The First Year Integration Conference is designed to help first-year engineering students adjust to university life by building connections, gaining valuable insights, and developing the skills they need to succeed. Thanks to your contribution, we were able to create a welcoming and engaging environment where delegates could meet other motivated and like minded engineering students, explore opportunities beyond the classroom and truly get a grasp of what engineering in Ontario has to offer.",
-                  
+
                   "Your support has not only enriched the experience of this year's participants but will also leave a lasting impact on their future careers. By investing in first-year students, you are helping to inspire the next generation of engineers regardless of discipline, fostering a brighter, more innovative future for Ontario and beyond.",
-                  
+
                   "We are deeply grateful for your belief in the potential of these young minds and for your commitment to their growth and success. Together, we are building a stronger, more dynamic engineering community, one that paves the way for a brighter, more prosperous tomorrow."
                 ].map((paragraph, index) => (
                   <Typography
@@ -76,8 +76,8 @@ export function SponsorsSection() {
                     variant="h3"
                     color="blue-gray"
                     className="text-3xl mb-1"
-                    style={{ 
-                      fontFamily: "'Dancing Script', cursive",
+                    style={{
+                      fontFamily: "var(--font-dancing-script), cursive",
                       fontWeight: '700'
                     }}
                     {...({} as any)}
@@ -88,7 +88,7 @@ export function SponsorsSection() {
                     variant="h6"
                     color="blue-gray"
                     className="text-base font-medium"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                     {...({} as any)}
                   >
                     Sponsorship Director
@@ -99,11 +99,6 @@ export function SponsorsSection() {
           </div>
         </div>
       </section>
-
-      {/* Load cursive fonts from Google Fonts */}
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
-      `}</style>
     </div>
   );
 }

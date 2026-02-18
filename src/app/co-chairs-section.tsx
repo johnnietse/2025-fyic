@@ -1,29 +1,26 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
+import Image from "next/image";
 
 export function CoChairsSection() {
   return (
     <div className="relative w-full bg-white">
       {/* Background image that overlays the white background */}
-      <div 
+      <div
         className="absolute inset-0 bg-[url('/image/co-chairs-bg.png')] bg-cover bg-center bg-no-repeat opacity-20"
         style={{ zIndex: 1 }}
       />
-      
-      
-      <section className="relative z-10 container mx-auto px-4 py-16" style={{ zIndex: 2 }}>
 
-        <br>
-        </br>
-        <br>
-        </br>
-        
+      <section className="relative z-10 container mx-auto px-4 py-16" style={{ zIndex: 2 }}>
+        <br />
+        <br />
+
         <div className="text-center mb-12">
-          <Typography 
-            variant="h1" 
-            className="text-center mb-4 text-gray-900" 
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          <Typography
+            variant="h1"
+            className="text-center mb-4 text-gray-900"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
             {...({} as any)}
           >
             MEET THE FYIC 2025 CO-CHAIRS
@@ -36,7 +33,7 @@ export function CoChairsSection() {
             <Typography
               color="gray-800"
               className="mb-6 text-justify"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
+              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
               {...({} as any)}
             >
               Dear Delegates,
@@ -56,7 +53,7 @@ export function CoChairsSection() {
               <Typography
                 color="gray-800"
                 className="mb-2"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
                 Warm regards,
@@ -64,7 +61,7 @@ export function CoChairsSection() {
               <Typography
                 color="gray-800"
                 className="text-2xl"
-                style={{ fontFamily: "'Parisienne', cursive" }}
+                style={{ fontFamily: "var(--font-parisienne), cursive" }}
                 {...({} as any)}
               >
                 Jaden Belliveau and Flaminia Testa
@@ -75,20 +72,22 @@ export function CoChairsSection() {
           {/* Combined Headshot and Name Tags */}
           <div className="flex flex-col items-center">
             {/* Combined Headshot */}
-            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 bg-white">
-              <img 
-                src="/image/co-chairs-headshot.png" 
-                alt="Jaden Belliveau and Flaminia Testa" 
-                className="w-full h-full object-cover"
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 bg-white relative">
+              <Image
+                src="/image/co-chairs-headshot.png"
+                alt="Jaden Belliveau and Flaminia Testa"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 256px, 320px"
               />
             </div>
-            
+
             {/* Combined Name Tag */}
             <div className="bg-[#afbbff] px-6 py-3 rounded-full">
               <Typography
                 color="black"
                 className="font-semibold text-center"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
                 Flaminia Testa (she/her) & Jaden Belliveau (he/him)
@@ -96,19 +95,9 @@ export function CoChairsSection() {
             </div>
           </div>
         </div>
-        <br>
-        </br>
-        <br>
-        </br>
+        <br />
+        <br />
       </section>
-
-      {/* Add font import for signature style */}
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-        .font-feeling-passionate {
-          font-family: 'Parisienne', cursive;
-        }
-      `}</style>
     </div>
   );
 }

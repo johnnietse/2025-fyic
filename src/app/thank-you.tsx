@@ -7,9 +7,9 @@ export function ThankYou() {
     <section className="py-16 px-8 bg-gradient-to-br from-blue-50 to-gray-100">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
-          <Typography 
-            variant="h1" 
-            color="blue-gray" 
+          <Typography
+            variant="h1"
+            color="blue-gray"
             className="mb-6 text-4xl md:text-5xl font-bold"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
             {...({} as any)}
@@ -54,18 +54,18 @@ export function ThankYou() {
               <Typography
                 color="blue-gray"
                 className="text-lg mb-2"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
                 Sincerely,
               </Typography>
-              
+
               <Typography
                 variant="h4"
                 color="blue-gray"
                 className="text-3xl md:text-4xl mt-4"
-                style={{ 
-                  fontFamily: "'Dancing Script', cursive, 'Great Vibes', cursive, 'Parisienne', cursive, sans-serif",
+                style={{
+                  fontFamily: "var(--font-dancing-script), var(--font-great-vibes), var(--font-parisienne), cursive, sans-serif",
                   fontWeight: 'normal'
                 }}
                 {...({} as any)}
@@ -81,11 +81,6 @@ export function ThankYou() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
       </div>
-
-      {/* Load cursive fonts from Google Fonts */}
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap');
-      `}</style>
     </section>
   );
 }

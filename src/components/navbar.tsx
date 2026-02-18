@@ -21,6 +21,7 @@ import {
   PencilSquareIcon,
   ChevronDownIcon
 } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -30,7 +31,7 @@ interface NavItemProps {
 function NavItem({ children, href }: NavItemProps) {
   // Check if the link is external (starts with http)
   const isExternal = href && href.startsWith('http');
-  
+
   return (
     <li>
       <Typography
@@ -40,7 +41,7 @@ function NavItem({ children, href }: NavItemProps) {
         rel={isExternal ? "noopener noreferrer" : undefined}
         variant="paragraph"
         className="flex items-center gap-2 font-medium transition-colors hover:text-blue-500"
-        style={{ fontFamily: 'Montserrat, sans-serif' }}
+        style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
         {...({} as any)}
       >
         {children}
@@ -128,36 +129,38 @@ export function Navbar() {
       blurred={false}
       color={isScrolling ? "white" : "transparent"}
       className="fixed top-0 z-50 border-0 transition-all duration-300"
-      style={{ fontFamily: 'Montserrat, sans-serif' }}
+      style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
       {...({} as any)}
     >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="size-24 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden">
-            <img 
-              src="/image/fyic-logo-cropped.png" 
-              alt="FYIC Logo" 
-              className="h-[90%] w-[90%] object-contain"
+          <div className="size-24 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden relative">
+            <Image
+              src="/image/fyic-logo-cropped.png"
+              alt="FYIC Logo"
+              width={86}
+              height={86}
+              className="object-contain"
+              priority
             />
           </div>
-          
+
           <Typography
             color={isScrolling ? "blue-gray" : "white"}
             className="text-xl font-bold"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
             {...({} as any)}
           >
             FYIC 2025
           </Typography>
         </div>
         <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
+          className={`ml-10 hidden items-center gap-6 lg:flex ${isScrolling ? "text-gray-900" : "text-white"
+            }`}
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" style={{ fontFamily: 'Montserrat, sans-serif' }}/>
+              <Icon className="h-5 w-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
               <span>{name}</span>
             </NavItem>
           ))}
@@ -171,7 +174,7 @@ export function Navbar() {
                 variant={isScrolling ? "filled" : "outlined"}
                 color={isScrolling ? "blue" : "white"}
                 className="flex items-center gap-2 rounded-full"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
                 <PencilSquareIcon className="h-4 w-4" />
@@ -181,14 +184,14 @@ export function Navbar() {
             </MenuHandler>
             <MenuList
               className="bg-white"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
+              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
               {...({} as any)}
             >
               {DELEGATE_PACKAGES.map((packageItem, index) => (
                 <MenuItem
                   key={index}
                   onClick={() => handlePackageClick(packageItem.href)}
-                  className="flex items-center gap-2 hover:bg-blue-50 transition-colors"
+                  className="flex items-center gap-2 hover:bg-blue-50 transition-colors text-blue-gray-900"
                   {...({} as any)}
                 >
                   <PencilSquareIcon className="h-4 w-4" />
@@ -204,7 +207,7 @@ export function Navbar() {
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
-          style={{ fontFamily: 'Montserrat, sans-serif' }}
+          style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
           {...({} as any)}
         >
           {open ? (
@@ -215,11 +218,11 @@ export function Navbar() {
         </IconButton>
       </div>
       <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-          <ul className="flex flex-col gap-4 text-gray-900" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
+          <ul className="flex flex-col gap-4 text-gray-900" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href}>
-                <Icon className="h-5 w-5" style={{ fontFamily: 'Montserrat, sans-serif' }}/>
+                <Icon className="h-5 w-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
                 {name}
               </NavItem>
             ))}
@@ -228,7 +231,7 @@ export function Navbar() {
               <Typography
                 variant="small"
                 className="font-semibold text-gray-500 mb-2"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
                 Delegate Packages
@@ -243,7 +246,7 @@ export function Navbar() {
                     rel="noopener noreferrer"
                     variant="paragraph"
                     className="flex items-center gap-2 font-medium transition-colors hover:text-blue-500 pl-2"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                     {...({} as any)}
                   >
                     <PencilSquareIcon className="h-4 w-4" />
