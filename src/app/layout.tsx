@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${dancingScript.variable} ${parisienne.variable} ${greatVibes.variable}`}>
       <head>
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/image/fyic-logo-cropped.png" type="image/png" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://cdn.userway.org" />
         <link rel="preload" href="/image/event.webp" as="image" />
