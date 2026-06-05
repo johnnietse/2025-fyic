@@ -1,11 +1,16 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "2025-fyic",
+  "main": ".worker-next/index.mjs",
   "compatibility_date": "2026-06-05",
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "pages_build_output_dir": ".next",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".worker-next/assets"
+  },
+  "pages_build_output_dir": ".vercel/output/static",
   "observability": {
     "enabled": true
   }
