@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat, Dancing_Script, Parisienne, Great_Vibes } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
 import { DelayedScripts } from "@/components/delay-scripts";
@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     "FYIC 2025: Empowering the Next Generation of Engineers. Join us for Ontario's premier leadership and integration conference.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -53,8 +60,10 @@ export default function RootLayout({
       </head>
       <body className={montserrat.className}>
         <Layout>
-          {children}
-          <FixedPlugin />
+          <div className="relative flex min-h-screen flex-col w-full overflow-x-hidden">
+            {children}
+            <FixedPlugin />
+          </div>
         </Layout>
 
         {/* Analytics Script */}
