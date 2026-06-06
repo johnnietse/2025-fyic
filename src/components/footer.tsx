@@ -28,13 +28,13 @@ export function Footer() {
             as={Link}
             href="/"
             variant="h4"
-            className="mr-4 cursor-pointer py-1.5 font-bold text-gray-900"
+            className="mr-4 cursor-pointer py-1.5 font-bold text-gray-900 shrink-0"
             style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
             {...({} as any)}
           >
             FYIC 2025
           </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
+          <ul className="flex flex-wrap justify-center my-4 md:my-0 mx-auto items-center gap-4 text-center">
             {INTERNAL_LINKS.map((link, index) => (
               <li key={index}>
                 <Typography

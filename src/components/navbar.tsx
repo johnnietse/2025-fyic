@@ -160,7 +160,7 @@ export function Navbar() {
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
+              <Icon className="h-5 w-5 shrink-0" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
               <span>{name}</span>
             </NavItem>
           ))}
@@ -223,8 +223,8 @@ export function Navbar() {
           <ul className="flex flex-col gap-4 text-gray-900" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href}>
-                <Icon className="h-5 w-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
-                {name}
+                <Icon className="h-5 w-5 shrink-0" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }} />
+                <span>{name}</span>
               </NavItem>
             ))}
             {/* Separate items for mobile view */}
@@ -250,8 +250,8 @@ export function Navbar() {
                     style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                     {...({} as any)}
                   >
-                    <PencilSquareIcon className="h-4 w-4" />
-                    {packageItem.name}
+                    <PencilSquareIcon className="h-4 w-4 shrink-0" />
+                    <span>{packageItem.name}</span>
                   </Typography>
                 ))}
               </div>

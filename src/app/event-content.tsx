@@ -382,10 +382,10 @@ export default function ConferenceSchedule() {
                         key={`${stream}-${index}`}
                         className={`p-3 rounded-lg border-l-4 ${StreamColors[stream as keyof typeof StreamColors]}`}
                       >
-                        <div className="font-semibold text-sm md:text-base">{event.title}</div>
-                        <div className="text-xs md:text-sm text-gray-600 mt-1">{event.time}</div>
+                        <div className="font-semibold text-sm md:text-base break-words">{event.title}</div>
+                        <div className="text-xs md:text-sm text-gray-600 mt-1 break-words">{event.time}</div>
                         {event.location && (
-                          <div className="text-xs text-gray-500 mt-1 italic">{event.location}</div>
+                          <div className="text-xs text-gray-500 mt-1 italic break-words">{event.location}</div>
                         )}
                       </div>
                     );
