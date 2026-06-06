@@ -100,7 +100,7 @@ export function Navbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
+      () => window.innerWidth >= 1280 && setOpen(false)
     );
   }, []);
 
@@ -155,7 +155,7 @@ export function Navbar() {
           </Typography>
         </div>
         <ul
-          className={`ml-2 hidden items-center gap-4 lg:gap-6 lg:flex flex-wrap justify-center ${isScrolling ? "text-gray-900" : "text-white"
+          className={`ml-2 hidden items-center gap-4 xl:gap-6 xl:flex flex-wrap justify-center ${isScrolling ? "text-gray-900" : "text-white"
             }`}
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
@@ -166,7 +166,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <Menu>
             <MenuHandler>
               <Button
@@ -206,7 +206,7 @@ export function Navbar() {
           variant="text"
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
+          className="ml-auto inline-block xl:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
           {...({} as any)}
