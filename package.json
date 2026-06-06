@@ -7,7 +7,7 @@
   "homepage": "https://demos.creative-tim.com/nextjs-tailwind-event-landing-page",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/build.js",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -47,6 +47,5 @@
     "tailwindcss": "3",
     "typescript": "^5.8.3",
     "wrangler": "^4.98.0"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }
