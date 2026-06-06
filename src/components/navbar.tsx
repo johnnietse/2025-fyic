@@ -132,9 +132,9 @@ export function Navbar() {
       style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
       {...({} as any)}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center">
-          <div className="size-24 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden relative">
+          <div className="size-24 shrink-0 mr-4 flex items-center justify-center rounded-full border-1 border-white bg-white overflow-hidden relative">
             <Image
               src="/image/fyic-logo-cropped.png"
               alt="FYIC Logo"
@@ -155,7 +155,7 @@ export function Navbar() {
           </Typography>
         </div>
         <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${isScrolling ? "text-gray-900" : "text-white"
+          className={`ml-2 hidden items-center gap-4 lg:gap-6 lg:flex flex-wrap justify-center ${isScrolling ? "text-gray-900" : "text-white"
             }`}
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
@@ -173,11 +173,11 @@ export function Navbar() {
                 size="sm"
                 variant={isScrolling ? "filled" : "outlined"}
                 color={isScrolling ? "blue" : "white"}
-                className="flex items-center gap-2 rounded-full"
+                className="flex items-center gap-2 rounded-full shrink-0"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                 {...({} as any)}
               >
-                <PencilSquareIcon className="h-4 w-4" />
+                <PencilSquareIcon className="h-5 w-5 shrink-0" />
                 Delegate Packages
                 <ChevronDownIcon className="h-3 w-3" />
               </Button>
@@ -194,7 +194,7 @@ export function Navbar() {
                   className="flex items-center gap-2 hover:bg-blue-50 transition-colors text-blue-gray-900"
                   {...({} as any)}
                 >
-                  <PencilSquareIcon className="h-4 w-4" />
+                  <PencilSquareIcon className="h-5 w-5 shrink-0" />
                   {packageItem.name}
                 </MenuItem>
               ))}
@@ -219,7 +219,7 @@ export function Navbar() {
         </IconButton>
       </div>
       <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
+        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5 max-h-[80vh] overflow-y-auto overflow-x-hidden" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
           <ul className="flex flex-col gap-4 text-gray-900" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href}>
@@ -250,7 +250,7 @@ export function Navbar() {
                     style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
                     {...({} as any)}
                   >
-                    <PencilSquareIcon className="h-4 w-4 shrink-0" />
+                    <PencilSquareIcon className="h-5 w-5 shrink-0" />
                     <span>{packageItem.name}</span>
                   </Typography>
                 ))}
