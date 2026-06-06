@@ -42,3 +42,6 @@ yarn.lock
 
 # downloads
 drive-download-20260606T112910Z-3-001/
+
+# open-next
+.open-next/
