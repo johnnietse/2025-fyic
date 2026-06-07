@@ -30,7 +30,8 @@
 
   <br />
 
-  [**🌐 Live Site**](https://fyic2025.com/) · [**📋 Report Bug**](https://github.com/johnnietse/2025-fyic/issues) · [**💬 Request Feature**](https://github.com/johnnietse/2025-fyic/issues)
+  [**🌐 Live Site**](https://fyic2025.com/) · [**🔄 Backup Site**](https://2025-fyic.vercel.app/)<br/>
+  [**📋 Report Bug**](https://github.com/johnnietse/2025-fyic/issues) · [**💬 Request Feature**](https://github.com/johnnietse/2025-fyic/issues)
 
 </div>
 
@@ -583,7 +584,8 @@ As the **Webmaster for FYIC 2025**, I am responsible for creating, maintaining, 
 
 ## 🚀 Demo
 
-You can view the live version of the website [here](https://fyic2025.com/).
+You can view the live version of the website [here](https://fyic2025.com/).  
+If the primary domain is ever unreachable, our **emergency backup site** is available [here](https://2025-fyic.vercel.app/).
 
 ---
 
