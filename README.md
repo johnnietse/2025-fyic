@@ -671,7 +671,7 @@ All source code, assets, and related materials within this repository are the in
 ---
 
 <div align="center">
-  <sub>Built by <a href="https://github.com/johnnietse">Johnnie Tse</a></strong> for the engineering students who attend FYIC 2025 conference at Queen's University in Kingston, Ontario, Canada</sub>
+  <sub>Built by <a href="https://github.com/johnnietse">Johnnie Tse</a></strong> for the engineering students attending the FYIC 2025 conference at Queen’s University in Kingston, Ontario, Canada.</sub>
 </div>
 
 
