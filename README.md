@@ -655,19 +655,6 @@ This repository utilizes **GitHub Actions** for continuous integration and conti
 
 ---
 
-## 👥 Contributors
-
-Thanks to these wonderful people who contributed to this project:
-
-| Avatar | Name | Role |
-|--------|------|------|
-| [@johnnietse](https://github.com/johnnietse) | **Johnnie Tse (Yan Ho Tse)** | Lead Webmaster & Full-Stack Developer |
-| [@sajadevo](https://github.com/sajadevo) | **Sajad** | Contributor |
-| [@maisamaf](https://github.com/maisamaf) | **Maisam** | Contributor |
-| [@sanam453](https://github.com/sanam453) | **Sanam Hamza** | Contributor |
-
----
-
 ## 🙏 Acknowledgements
 
 - **Original Template:** This project is based on the [NextJS Tailwind Event Landing Page](https://github.com/creativetimofficial/nextjs-tailwind-event-landing-page) template created by [Creative Tim](https://www.creative-tim.com).
@@ -684,5 +671,5 @@ All source code, assets, and related materials within this repository are the in
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for the engineering students of Ontario</sub>
+  <sub>Built by Johnnie Tse for the engineering students who attend FYIC 2025</sub>
 </div>
