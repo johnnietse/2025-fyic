@@ -671,5 +671,5 @@ All source code, assets, and related materials within this repository are the in
 ---
 
 <div align="center">
-  <sub>Built by Johnnie Tse for the engineering students who attend FYIC 2025</sub>
+  <sub>Built by @Johnnie Tse for the engineering students who attend FYIC 2025</sub>
 </div>
