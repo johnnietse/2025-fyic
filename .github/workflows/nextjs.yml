@@ -161,6 +161,9 @@ on:
   pull_request:
     branches: ["live-demo", "main"]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   actions: read
@@ -175,25 +178,37 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
-      # CRITICAL: Check for vulnerable Next.js version
+      # CRITICAL: Check for vulnerable Next.js version using proper semver comparison
       - name: Check Next.js Version
         run: |
           NEXT_VERSION=$(node -p "require('./package.json').dependencies.next")
           echo "Current Next.js version: $NEXT_VERSION"
           
-          # Check if version is vulnerable (15.0.0 to 15.5.6, 16.0.0 to 16.0.6)
-          if [[ "$NEXT_VERSION" =~ ^15\.[0-5]\.[0-6] ]] || [[ "$NEXT_VERSION" =~ ^15\.5\.[0-6] ]] || [[ "$NEXT_VERSION" =~ ^16\.0\.[0-6] ]]; then
-            echo "❌ CRITICAL: Vulnerable Next.js version detected!"
-            echo "Update to: 15.5.7 (if on 15.x) or 16.0.10 (if on 16.x)"
+          # Use Node.js semver-aware comparison to check for vulnerable ranges:
+          #   15.x: vulnerable < 15.5.7
+          #   16.x: vulnerable < 16.0.7
+          IS_VULNERABLE=$(node -e "
+            const v = '$NEXT_VERSION';
+            const [major, minor, patch] = v.split('.').map(Number);
+            const vulnerable =
+              (major === 15 && (minor < 5 || (minor === 5 && patch < 7))) ||
+              (major === 16 && (minor === 0 && patch < 7));
+            console.log(vulnerable ? 'true' : 'false');
+          ")
+          
+          if [ "$IS_VULNERABLE" = "true" ]; then
+            echo "❌ CRITICAL: Vulnerable Next.js version detected: $NEXT_VERSION"
+            echo "Patched versions: >=15.5.7 (15.x) or >=16.0.7 (16.x)"
+            echo "See: CVE-2025-55182, CVE-2025-66478"
             exit 1
           else
-            echo "✅ Next.js version is secure"
+            echo "✅ Next.js version $NEXT_VERSION is secure"
           fi
 
   validate:
@@ -206,7 +221,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
