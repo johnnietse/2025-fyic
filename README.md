@@ -2,7 +2,7 @@
 
   <!-- Status Badges -->
   <a href="https://github.com/johnnietse/2025-fyic/actions"><img src="https://img.shields.io/github/actions/workflow/status/johnnietse/2025-fyic/nextjs.yml?branch=main&style=for-the-badge&label=CI%2FCD&logo=githubactions&logoColor=white" alt="CI/CD Status" /></a>
-  <a href="https://2025-fyic.vercel.app/"><img src="https://img.shields.io/badge/Deployment-Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white" alt="Deployment Status" /></a>
+  <a href="https://fyic2025.com/"><img src="https://img.shields.io/badge/Deployment-Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white" alt="Deployment Status" /></a>
   <a href="https://github.com/johnnietse/2025-fyic/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" /></a>
   
   <br />
@@ -30,7 +30,7 @@
 
   <br />
 
-  [**🌐 Live Site**](https://2025-fyic.vercel.app/) · [**📋 Report Bug**](https://github.com/johnnietse/2025-fyic/issues) · [**💬 Request Feature**](https://github.com/johnnietse/2025-fyic/issues)
+  [**🌐 Live Site**](https://fyic2025.com/) · [**📋 Report Bug**](https://github.com/johnnietse/2025-fyic/issues) · [**💬 Request Feature**](https://github.com/johnnietse/2025-fyic/issues)
 
 </div>
 
@@ -582,7 +582,7 @@ As the **Webmaster for FYIC 2025**, I am responsible for creating, maintaining, 
 
 ## 🚀 Demo
 
-You can view the live version of the website [here](https://2025-fyic.vercel.app/).
+You can view the live version of the website [here](https://fyic2025.com/).
 
 ---
 
