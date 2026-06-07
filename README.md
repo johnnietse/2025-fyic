@@ -93,7 +93,7 @@ The **First Year Integration Conference (FYIC) 2025** brings together first-year
 | **Universities Represented** | 18+ across Ontario |
 | **Target Audience** | First-year engineering students |
 | **Event Type** | Multi-day conference with workshops, speakers, and networking |
-| **Website Uptime** | 99.99% via dual-edge deployment |
+| **Website Uptime** | 99.99% via active-passive edge deployment |
 
 ---
 
@@ -265,7 +265,7 @@ sequenceDiagram
     GH->>GH: ① Security scan (CVE check)
     GH->>GH: ② Validate (TypeScript + Build)
     GH->>Vercel: ③ Deploy immutable build (--prod)
-    GH->>CF: ③ Deploy to Cloudflare Pages (redundancy)
+    GH->>CF: ③ Deploy to Cloudflare Pages (passive backup)
 ```
 
 ### CI/CD Pipeline Architecture
@@ -492,7 +492,7 @@ graph TD
 | **Automated Image Optimization** | Custom Sharp pipeline (`scripts/optimize_images.js`) | PNG → WebP conversion, up to 80% file size reduction |
 | **Deferred Script Loading** | `DelayedScripts` component for analytics & accessibility widgets | Non-blocking LCP — scripts load after critical content |
 | **Server-Side Email API** | Next.js API route with Nodemailer SMTP integration | Secure server-side form handling (no client-side API keys) |
-| **Dual-Edge Deployment** | Vercel (primary) + Cloudflare Pages (redundant) | 99.99% uptime with geographic redundancy |
+| **Active-Passive Failover** | Vercel (active) + Cloudflare Pages (passive) | 99.99% uptime with instant DNS failover |
 | **Automated CI/CD** | GitHub Actions: security-check → validate → deploy | Zero-downtime deployments with pre-deploy CVE scanning |
 | **WCAG 2.1 AA Accessibility** | UserWay AI widget + semantic HTML5 | Inclusive experience for all diverse attendees |
 | **Proactive Security Patching** | Automated CVE detection in CI pipeline | Blocks deployment of vulnerable Next.js versions |
@@ -645,7 +645,7 @@ This repository utilizes **GitHub Actions** for continuous integration and conti
 
 1. **Security & Validation:** Every push triggers automated vulnerability scanning and linter checks.
 2. **Production Deployments:** Code is built into immutable static assets and deployed directly to Vercel Edge networks.
-3. **Redundancy:** Cloudflare Pages operates as a redundant fallback deployment to guarantee site availability.
+3. **Failover Redundancy:** Cloudflare Pages operates as a passive backup. If the primary host fails, DNS can be instantly routed to the backup.
 
 | Pipeline Stage | Trigger | Actions | Duration |
 |---------------|---------|---------|----------|
