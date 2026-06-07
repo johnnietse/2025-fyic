@@ -480,6 +480,7 @@ graph TD
 ## ✨ Features
 
 - **Responsive Layout:** Fully responsive design to ensure a smooth experience on both desktop and mobile devices.
+- **Zoom-Adaptive Navigation:** Custom viewport-ratio calculations ensure the navigation bar elegantly transitions to a mobile menu at high zoom scales, preventing layout breaking.
 - **Event Information:** Easily accessible event details, schedules, and registration information.
 - **Modern Design:** Clean and minimalistic design with Material Tailwind and Tailwind CSS, ensuring fast loading and a great user experience.
 

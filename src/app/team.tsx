@@ -120,7 +120,7 @@ const teamMembers = [
         name: 'Johnnie Tse',
         role: 'Webmaster',
         imageUrl: '/image/Johnnie_Tse_Headshot_2025.jpg',
-        linkedInUrl: 'https://www.linkedin.com/in/johnnie-tse-10a9b91b0/',
+        linkedInUrl: 'https://www.linkedin.com/in/johnnie-tse-10a9b91b0/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bw3K1GK35Qe23A9OupU2c6w%3D%3D',
       },
 
 
