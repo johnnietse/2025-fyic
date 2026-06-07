@@ -87,7 +87,7 @@ export function Footer() {
           className="text-center mt-12 font-Montserrat !text-gray-700"
           {...({} as any)}
         >
-          Copyright © {CURRENT_YEAR} FYIC: First Year Integration Conference
+          Copyright © 2025 FYIC: First Year Integration Conference
         </Typography>
 
 
