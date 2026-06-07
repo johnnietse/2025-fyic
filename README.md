@@ -139,7 +139,7 @@ graph TB
         GitHub["🐙 GitHub Repository"]
         Actions["⚙️ GitHub Actions<br/>Security Scan → Validate → Deploy"]
         Vercel["▲ Vercel<br/>Primary Production"]
-        Cloudflare["☁️ Cloudflare Pages<br/>Redundant Deployment"]
+        Cloudflare["☁️ Cloudflare Pages<br/>Passive Backup"]
     end
 
     Browser --> CDN
@@ -292,7 +292,7 @@ flowchart TD
     Deploy --> CFDeploy["☁️ Cloudflare Pages<br/><small>Automatic via Git integration</small>"]
 
     VercelDeploy --> Live["🌐 Live at fyic2025.com"]
-    CFDeploy --> Backup["🔄 Redundant backup deployment"]
+    CFDeploy --> Backup["🔄 Passive failover deployment"]
 ```
 
 ### Image Optimization Pipeline
@@ -592,7 +592,7 @@ You can view the live version of the website [here](https://2025-fyic.vercel.app
 
 | Tool | Version | Required |
 |------|---------|----------|
-| **Node.js** | ≥ 20.x | ✅ |
+| **Node.js** | ≥ 22.x | ✅ |
 | **npm** | ≥ 10.x | ✅ |
 | **Git** | ≥ 2.x | ✅ |
 
