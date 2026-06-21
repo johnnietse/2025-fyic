@@ -256,24 +256,3 @@ jobs:
           vercel-version: 'latest'
           github-comment: true
           github-deployment: true
-
-  deploy-render:
-    needs: [security-check, validate]
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/live-demo' || github.ref == 'refs/heads/main')
-    runs-on: ubuntu-latest
-
-    environment:
-      name: Render Backup
-      url: https://2025-fyic.onrender.com
-
-    steps:
-      - name: Trigger Render Deploy Hook
-        run: |
-          echo "🚀 Triggering Render.com backup deployment..."
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "${{ secrets.RENDER_DEPLOY_HOOK_URL }}")
-          if [ "$RESPONSE" -eq 200 ] || [ "$RESPONSE" -eq 201 ]; then
-            echo "✅ Render deploy hook triggered successfully (HTTP $RESPONSE)"
-          else
-            echo "⚠️ Render deploy hook returned HTTP $RESPONSE — deployment may not have started"
-            exit 1
-          fi

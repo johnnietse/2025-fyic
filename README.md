@@ -270,7 +270,7 @@ sequenceDiagram
     GH->>GH: ② Validate (TypeScript + Build)
     GH->>Vercel: ③ Deploy immutable build (--prod)
     GH->>CF: ③ Deploy to Cloudflare Pages (passive backup)
-    GH->>GH: ③ Trigger Render deploy hook (secondary backup)
+    GH->>GH: ③ Render auto-deploys via Git integration (secondary backup)
 ```
 
 ### CI/CD Pipeline Architecture
@@ -295,7 +295,7 @@ flowchart TD
 
     Deploy --> VercelDeploy["▲ Vercel Deployment<br/><small>amondnet/vercel-action@v25</small><br/><small>--prod flag</small>"]
     Deploy --> CFDeploy["☁️ Cloudflare Pages<br/><small>Automatic via Git integration</small>"]
-    Deploy --> RenderDeploy["🟢 Render Deployment<br/><small>Deploy hook trigger via curl</small><br/><small>Node.js web service</small>"]
+    Deploy --> RenderDeploy["🟢 Render Deployment<br/><small>Automatic via Git integration</small><br/><small>Node.js web service</small>"]
 
     VercelDeploy --> Live["🌐 Live at fyic2025.com"]
     CFDeploy --> Backup["🔄 Passive failover deployment"]
@@ -358,7 +358,7 @@ flowchart LR
 | **Image Processing** | Sharp | 0.34.x | High-performance image resizing and WebP conversion |
 | **Hosting (Primary)** | Vercel | — | Edge-optimized Next.js hosting with global CDN |
 | **Hosting (Backup 1)** | Cloudflare Pages | — | Passive backup deployment via OpenNext adapter |
-| **Hosting (Backup 2)** | Render | — | Secondary backup web service via deploy hooks |
+| **Hosting (Backup 2)** | Render | — | Secondary backup Node.js web service via automatic Git integration |
 | **Adapter** | @opennextjs/cloudflare | 1.19.11 | Next.js → Cloudflare Workers compatibility layer |
 | **CI/CD** | GitHub Actions | — | Automated security scanning, validation, and deployment |
 | **Accessibility** | UserWay AI Widget | — | Automated WCAG 2.1 AA compliance layer |
@@ -638,7 +638,7 @@ For the contact form email functionality, the following environment variables ar
 | `VERCEL_TOKEN` | Vercel deployment token (CI/CD only) | CI/CD |
 | `VERCEL_ORG_ID` | Vercel organization ID (CI/CD only) | CI/CD |
 | `VERCEL_PROJECT_ID` | Vercel project ID (CI/CD only) | CI/CD |
-| `RENDER_DEPLOY_HOOK_URL` | Render deploy hook URL (CI/CD only) | CI/CD |
+
 
 ### Available Scripts
 
@@ -665,7 +665,7 @@ This repository utilizes **GitHub Actions** for continuous integration and conti
 | **Security Check** | Push / PR to `main`, `live-demo` | `npm ci` → Next.js CVE version check | ~40s |
 | **Validate** | After security passes | `npm ci` → `tsc --noEmit` → `next build` | ~1m |
 | **Deploy (Vercel)** | Push to `main` or `live-demo` only | Vercel production deploy (`--prod`) | ~1m |
-| **Deploy (Render)** | Push to `main` or `live-demo` only | Render deploy hook trigger via `curl` | ~2m |
+| **Deploy (Render)** | Push to `main` or `live-demo` | Automatic via Git integration (Node.js web service) | ~2m |
 
 ---
 
