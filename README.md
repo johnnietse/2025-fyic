@@ -594,7 +594,7 @@ As the **Webmaster for FYIC 2025**, I am responsible for creating, maintaining, 
 You can view the live version of the website [here](https://fyic2025.com/).  
 If the primary domain is ever unreachable, our **emergency backup sites** are available:
 - **Backup 1 (Vercel):** [2025-fyic.vercel.app](https://2025-fyic.vercel.app/)
-- **Backup 2 (Render):** [2025-fyic.onrender.com](https://2025-fyic.onrender.com/)
+- **Backup 2 (Render):** [fyic2025.onrender.com](https://fyic2025.onrender.com/)
 
 ---
 
