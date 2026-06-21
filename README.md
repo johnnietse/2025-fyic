@@ -295,7 +295,7 @@ flowchart TD
 
     Deploy --> VercelDeploy["▲ Vercel Deployment<br/><small>amondnet/vercel-action@v25</small><br/><small>--prod flag</small>"]
     Deploy --> CFDeploy["☁️ Cloudflare Pages<br/><small>Automatic via Git integration</small>"]
-    Deploy --> RenderDeploy["🟢 Render Deployment<br/><small>Deploy hook trigger via curl</small><br/><small>Static site build</small>"]
+    Deploy --> RenderDeploy["🟢 Render Deployment<br/><small>Deploy hook trigger via curl</small><br/><small>Node.js web service</small>"]
 
     VercelDeploy --> Live["🌐 Live at fyic2025.com"]
     CFDeploy --> Backup["🔄 Passive failover deployment"]
@@ -358,7 +358,7 @@ flowchart LR
 | **Image Processing** | Sharp | 0.34.x | High-performance image resizing and WebP conversion |
 | **Hosting (Primary)** | Vercel | — | Edge-optimized Next.js hosting with global CDN |
 | **Hosting (Backup 1)** | Cloudflare Pages | — | Passive backup deployment via OpenNext adapter |
-| **Hosting (Backup 2)** | Render | — | Secondary backup static site via deploy hooks |
+| **Hosting (Backup 2)** | Render | — | Secondary backup web service via deploy hooks |
 | **Adapter** | @opennextjs/cloudflare | 1.19.11 | Next.js → Cloudflare Workers compatibility layer |
 | **CI/CD** | GitHub Actions | — | Automated security scanning, validation, and deployment |
 | **Accessibility** | UserWay AI Widget | — | Automated WCAG 2.1 AA compliance layer |
