@@ -17,7 +17,7 @@
   
   <!-- Infrastructure Badges -->
   <img src="https://img.shields.io/badge/Vercel-Production-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-  <img src="https://img.shields.io/badge/Cloudflare-Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare" />
+  <img src="https://img.shields.io/badge/Cloudflare-DNS/CDN-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare" />
   <img src="https://img.shields.io/badge/Render-Backup-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
   <img src="https://img.shields.io/badge/Node.js-22-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/WCAG-2.1_AA-4CAF50?style=for-the-badge" alt="WCAG 2.1 AA" />
@@ -141,7 +141,6 @@ graph TB
         GitHub["🐙 GitHub Repository"]
         Actions["⚙️ GitHub Actions<br/>Security Scan → Validate → Deploy"]
         Vercel["▲ Vercel<br/>Primary Production"]
-        Cloudflare["☁️ Cloudflare Pages<br/>Passive Backup"]
         Render["🟢 Render<br/>Secondary Backup"]
     end
 
@@ -162,7 +161,6 @@ graph TB
 
     GitHub --> Actions
     Actions --> Vercel
-    Actions --> Cloudflare
     Actions --> Render
 ```
 
@@ -269,7 +267,6 @@ sequenceDiagram
     GH->>GH: ① Security scan (CVE check)
     GH->>GH: ② Validate (TypeScript + Build)
     GH->>Vercel: ③ Deploy immutable build (--prod)
-    GH->>CF: ③ Deploy to Cloudflare Pages (passive backup)
     GH->>GH: ③ Render auto-deploys via Git integration (secondary backup)
 ```
 
@@ -294,11 +291,9 @@ flowchart TD
     Build --> |"❌ Build fails"| FailBuild["🚫 Pipeline Fails"]
 
     Deploy --> VercelDeploy["▲ Vercel Deployment<br/><small>amondnet/vercel-action@v25</small><br/><small>--prod flag</small>"]
-    Deploy --> CFDeploy["☁️ Cloudflare Pages<br/><small>Automatic via Git integration</small>"]
     Deploy --> RenderDeploy["🟢 Render Deployment<br/><small>Automatic via Git integration</small><br/><small>Node.js web service</small>"]
 
     VercelDeploy --> Live["🌐 Live at fyic2025.com"]
-    CFDeploy --> Backup["🔄 Passive failover deployment"]
     RenderDeploy --> RenderBackup["🔄 Secondary backup deployment"]
 ```
 
@@ -357,9 +352,7 @@ flowchart LR
 | **Email** | Nodemailer | 7.x | Server-side email delivery via SMTP |
 | **Image Processing** | Sharp | 0.34.x | High-performance image resizing and WebP conversion |
 | **Hosting (Primary)** | Vercel | — | Edge-optimized Next.js hosting with global CDN |
-| **Hosting (Backup 1)** | Cloudflare Pages | — | Passive backup deployment via OpenNext adapter |
-| **Hosting (Backup 2)** | Render | — | Secondary backup Node.js web service via automatic Git integration |
-| **Adapter** | @opennextjs/cloudflare | 1.19.11 | Next.js → Cloudflare Workers compatibility layer |
+| **Hosting (Backup)** | Render | — | Secondary backup Node.js web service via automatic Git integration |
 | **CI/CD** | GitHub Actions | — | Automated security scanning, validation, and deployment |
 | **Accessibility** | UserWay AI Widget | — | Automated WCAG 2.1 AA compliance layer |
 | **CSS Processing** | PostCSS + Autoprefixer + cssnano | — | CSS post-processing, vendor prefixing, and minification |
@@ -501,7 +494,7 @@ graph TD
 | **Automated Image Optimization** | Custom Sharp pipeline (`scripts/optimize_images.js`) | PNG → WebP conversion, up to 80% file size reduction |
 | **Deferred Script Loading** | `DelayedScripts` component for analytics & accessibility widgets | Non-blocking LCP — scripts load after critical content |
 | **Server-Side Email API** | Next.js API route with Nodemailer SMTP integration | Secure server-side form handling (no client-side API keys) |
-| **Active-Passive-Passive Failover** | Vercel (active) + Cloudflare Pages (passive) + Render (passive) | 99.99% uptime with multi-tier DNS failover |
+| **Active-Passive Failover** | Vercel (active) + Render (passive) | 99.99% uptime with multi-tier DNS failover via Cloudflare |
 | **Automated CI/CD** | GitHub Actions: security-check → validate → deploy | Zero-downtime deployments with pre-deploy CVE scanning |
 | **WCAG 2.1 AA Accessibility** | UserWay AI widget + semantic HTML5 | Inclusive experience for all diverse attendees |
 | **Proactive Security Patching** | Automated CVE detection in CI pipeline | Blocks deployment of vulnerable Next.js versions |
@@ -658,7 +651,7 @@ This repository utilizes **GitHub Actions** for continuous integration and conti
 
 1. **Security & Validation:** Every push triggers automated vulnerability scanning and linter checks.
 2. **Production Deployments:** Code is built into immutable static assets and deployed directly to Vercel Edge networks.
-3. **Failover Redundancy:** Cloudflare Pages operates as a passive backup. Render.com operates as a secondary backup. If the primary host fails, DNS can be instantly routed to either backup.
+3. **Failover Redundancy:** Render.com operates as a passive backup. If the primary host fails, Cloudflare DNS can instantly route traffic to the backup.
 
 | Pipeline Stage | Trigger | Actions | Duration |
 |---------------|---------|---------|----------|

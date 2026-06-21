@@ -34,7 +34,6 @@
     "three": "^0.176.0"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.19.11",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "20",
     "@types/react": "^19.1.3",
